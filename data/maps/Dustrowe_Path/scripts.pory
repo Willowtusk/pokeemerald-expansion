@@ -1,0 +1,103 @@
+mapscripts Dustrowe_Path_MapScripts{
+
+}
+
+script DUSTROWE_PATH_WINNIE{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("WOOF!", MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script DUSTROWE_PATH_LILY_BATTLE{
+    lockall
+    playse(SE_PIN)
+    faceplayer
+    applymovement(2, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(48)
+    trainerbattle_single(TRAINER_LILY_1, LILY_DUSTROWE_INTRO, LILY_DUSTROWE_OUTRO, LILY_AND_WINNIE_LEAVE_DUSTROWE)
+    setvar(VAR_TALK_TO_MOM_1, 7)
+}
+
+
+script LILY_AND_WINNIE_LEAVE_DUSTROWE{
+    msgbox(
+        "Thanks for battling with me!", MSGBOX_AUTOCLOSE
+    )
+    turnobject(2, DIR_NORTH)
+    delay(48)
+    msgbox(
+        "WINNIE!\p", MSGBOX_AUTOCLOSE
+    )
+    playmoncry(SPECIES_POOCHYENA, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox(
+        "You ready to go back home girl?", MSGBOX_AUTOCLOSE
+    )
+    applymovement(1, SIMPLE_MOVE_DOWN)
+    waitmovement(1)
+    faceplayer
+    msgbox(
+        "Well I guess I better go now.\p"
+        "I'll see you later {PLAYER}!", MSGBOX_AUTOCLOSE
+    )
+    applymovement(2, LILY_LEAVES_DUSTROWE_PATH)
+    waitmovement(2)
+    applymovement (1, WINNIE_LEAVES_DUSTROWE_PATH)
+    waitmovement(1)
+    removeobject(2)
+    removeobject(1)
+    setflag(FLAG_LILY_DEFEATED_1)
+    releaseall
+}
+
+text LILY_DUSTROWE_INTRO{
+    "Oh Hey {PLAYER}!\p"
+    "I was wondering when I would\nsee you again!\p"
+    "I'm just taking WINNIE out\nfor a little stroll.\p"
+    "Have I told you I became a\nPokémon trainer recently?\p"
+    "Here, let me show you all the\ncool friends i've caught!"
+}
+
+text LILY_DUSTROWE_OUTRO{
+    "Hehe that was fun!"
+}
+
+movement LILY_LEAVES_DUSTROWE_PATH{
+    walk_right * 10
+}
+
+movement WINNIE_LEAVES_DUSTROWE_PATH{
+    walk_down * 1
+    walk_right * 10
+}
+
+script HIKER_DUSTROWE_PATH{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Howdy there partner!\p"
+        "Up ahead you'll hit Dustrowe City.\nA miner's paradise!"
+    ))
+    waitmessage
+    releaseall
+}
+
+script QUICK_CLAW_OBTAINED{
+    lockall
+    giveitem(ITEM_QUICK_CLAW, 1)
+    removeobject(5)
+    setflag(FLAG_RECEIVED_QUICK_CLAW)
+    releaseall
+}
+
+script SHARP_BEAK_OBTAINED{
+    lockall
+    giveitem(ITEM_SHARP_BEAK, 1)
+    removeobject(4)
+    setflag(FLAG_RECEIVED_SHARP_BEAK)
+    releaseall
+}

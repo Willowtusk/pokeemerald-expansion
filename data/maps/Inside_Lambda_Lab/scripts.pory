@@ -1,0 +1,86 @@
+mapscripts Inside_Lambda_Lab_MapScripts{
+
+}
+
+script LAMBDA_HELIXGRUNT_1_BATTLE{   
+    trainerbattle_single(TRAINER_HELIX_GRUNT_LAMBDA_1, TEAM_HELIX_GRUNT_1_INTRO, TEAM_HELIX_GRUNT_1_OUTRO)
+    msgbox("How did you beat me??")
+    closemessage
+}
+
+script LAMBDA_HELIXGRUNT_2_BATTLE{
+    trainerbattle_single(TRAINER_HELIX_GRUNT_LAMBDA_2, TEAM_HELIX_GRUNT_2_INTRO, TEAM_HELIX_GRUNT_2_OUTRO)
+    msgbox("Good luck against the boss kiddo.")
+    closemessage
+}
+
+script JENNINGS_BATTLE_1{
+    trainerbattle_single(TRAINER_HELIX_ADMIN_JENNINGS_1, JENNINGS_1_INTRO, JENNINGS_1_OUTRO, JENNINGS_LEAVE_LAMBDA)
+}
+
+text TEAM_HELIX_GRUNT_1_INTRO{
+    "Listen kid, I don't know who you are.\p"
+    "But we're in the middle of some REAL\nimportant business here!"
+}
+
+text TEAM_HELIX_GRUNT_1_OUTRO{
+    "Wait what?!"
+}
+
+text TEAM_HELIX_GRUNT_2_INTRO{
+    "A lab is no place for a kid like you!\p"
+    "I'll kick you to the curb so our\nboss doesn't have to deal with you."
+}
+
+text TEAM_HELIX_GRUNT_2_OUTRO{
+    "You've earned the ire of our boss now!"
+}
+
+text JENNINGS_1_INTRO{
+    "Well hello there.\p"
+    "What am I doing here?\p"
+    "I should be asking you the same thing!\p"
+    "I work for the mighty Team Helix!\p"
+    "Formed by the remnants of Team Aqua\n"
+    "and Magma!\p"
+    "Our goal is to uncover the secrets of\n"
+    "the Pokemon genome.\p"
+    "and you will not stand in our way!"
+    
+}
+
+text JENNINGS_1_OUTRO{
+    "You have some fight in you after all.\p"
+    "But you cannot deny us for long!"
+
+}
+
+script JENNINGS_LEAVE_LAMBDA{
+    lockall
+    faceplayer
+    msgbox(format(
+        "I suppose I should reward you\nfor your efforts.\p"
+        "Here take this TM."
+    ))
+    waitmessage
+    closemessage
+    giveitem(ITEM_TM17)
+    msgbox(format(
+        "That contains the move Protect.\p"
+        "It will shield you from an\nopponents move for one turn.\p"
+        "You may have thwarted our research here.\p"
+        "but this won't be the last\nyou see of Team Helix!"
+    ))
+    waitmessage
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_DOOR)
+    removeobject(3)
+    removeobject(2)
+    removeobject(1)
+    setflag(FLAG_JENNINGS_DEFEATED)
+    setvar(VAR_JENNINGS_DEFEATED_LAMBDA, 1)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+}

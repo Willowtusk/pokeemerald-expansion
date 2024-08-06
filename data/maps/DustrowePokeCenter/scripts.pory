@@ -1,0 +1,55 @@
+mapscripts DustrowePokeCenter_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Dustrowe_City_Respawn_OnTransition
+}
+
+script Dustrowe_City_Respawn_OnTransition{
+    setrespawn(HEAL_LOCATION_DUSTROWE_CITY)
+    end
+}
+
+script Dustrowe_Nurse_Script{
+    lock
+    faceplayer
+    msgbox("Hi there!\nwould you like me to heal your party?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        incrementgamestat(GAME_STAT_USED_POKECENTER)
+        applymovement(2, Common_Movement_WalkInPlaceFasterLeft)
+        waitmovement(0)
+        dofieldeffect(FLDEFF_POKECENTER_HEAL)
+        waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+        applymovement(2, Common_Movement_WalkInPlaceFasterDown)
+        waitmovement(0)
+        special(HealPlayerParty)
+        msgbox("Come again soon!")
+        waitmessage
+        release
+        end
+    }
+    else{
+        msgbox("Have a nice day", MSGBOX_NPC)
+    }
+}
+
+script Dustrowe_Pokecenter_Old_Man{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Why hello youngster!\p"
+        "What are you doing way out here?"
+    ))
+    closemessage
+    releaseall
+}
+
+script Dustrowe_Pokecenter_Old_Woman{
+    lockall
+    faceplayer
+    msgbox(format(
+        "I love this town...\p"
+        "Lived here ever since I was young.\p"
+        "I don't think I could ever leave\n"
+        "with how homesick I'd get."
+    ))
+    closemessage
+    releaseall
+}

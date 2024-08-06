@@ -1,0 +1,36 @@
+mapscripts Dustrowe_Building_2_MapScripts{
+
+}
+
+
+script Dustrowe_Building_2_Hiker{
+    lockall
+    faceplayer
+    msgbox(format(
+        "This is a real beaut right here!\p"
+        "This will fetch a pretty penny!"
+    ))
+    closemessage
+    releaseall
+}
+
+script Dustrowe_Building_2_Camper{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Look what me and my pa\ndug up!"
+    ))
+    closemessage
+    releaseall
+}
+
+script Dustrowe_Building_2_Fossil{
+    lockall
+    msgbox(format(
+        "A beautiful fossil!\p"
+        "Bet this will fetch a good price"
+    ))
+    closemessage
+    releaseall
+}
+

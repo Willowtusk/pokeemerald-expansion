@@ -1,0 +1,73 @@
+mapscripts SelunaMarket_MapScripts{
+
+}
+
+script Seluna_Pokemart_Employee{
+        lockall
+        faceplayer
+        message("What can I do for you today?")
+        waitmessage
+        pokemart(Seluna_Mart)
+        msgbox("Come again!")
+        closemessage
+        releaseall
+}
+
+mart Seluna_Mart{
+    ITEM_POTION
+    ITEM_POKE_BALL
+    ITEM_REPEL
+    ITEM_TM10
+}
+
+script Leah_Market_Battle{
+
+    trainerbattle_single(TRAINER_LEAH_1, Leah_Market_Intro, Leah_Market_Outro, Leah_Market_Leave)
+}
+
+
+text Leah_Market_Intro{
+    "Hey {PLAYER}!\p"
+    "This market has so much cool stuff!\p"
+    "I forgot to mention this, but I\n"
+    "LOVE Pokemon battling!\p"
+    "In fact, we should battle right now!"
+}
+
+text Leah_Market_Outro{
+    "Wow you just got your first Pokemon\n"
+    "and you're already that strong?\p"
+}
+
+script Leah_Market_Leave{
+    lockall
+    msgbox(format(
+        "Wow you're crazy strong!\p"
+        "You should venture out of town and\ntake on the first gym!\p"
+        "Here let me give you this,\nit might help!"
+    ))
+    closemessage
+    giveitem(ITEM_EXP_SHARE)
+    msgbox(format(
+        "That EXP SHARE should allow you to\nlevel up your Pokemon easy!"
+    ))
+    waitmessage
+    closemessage
+    delay(48)
+    msgbox(format(
+        "Oh! You should take these too!"
+    ))
+    giveitem(ITEM_POTION, 10)
+    giveitem(ITEM_POKE_BALL, 10)
+    msgbox(format(
+        "After that battle I think I need\n"
+        "some fresh air though..\p"
+        "I'll see ya around!"
+    ))
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    setflag(FLAG_LEAH_MARKET_INTERACTION)
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_TALK_TO_MOM_1, 6)
+    releaseall
+}

@@ -1,0 +1,25 @@
+mapscripts DustroweMart_MapScripts{
+
+}
+
+script Dustrowe_Mart_Clerk{
+    lockall
+    faceplayer
+    message(
+        "Welcome to Dustrowe!\p"
+        "How can I assist you?"
+    )
+    waitmessage
+    pokemart(Dustrowe_Mart)
+    msgbox("Thanks for shopping!")
+    closemessage
+    releaseall
+}
+
+mart Dustrowe_Mart{
+    ITEM_POTION
+    ITEM_POKE_BALL
+    ITEM_REPEL
+    ITEM_ESCAPE_ROPE
+    ITEM_TM39
+}

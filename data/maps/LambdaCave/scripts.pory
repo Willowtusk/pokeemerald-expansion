@@ -1,0 +1,96 @@
+mapscripts LambdaCave_MapScripts{
+
+
+}
+
+script CHARCOAL_ITEM_RECEIVED{
+    lockall
+    giveitem(ITEM_CHARCOAL, 1)
+    removeobject(1)
+    setflag(FLAG_RECEIVED_CHARCOAL)
+    releaseall
+}
+
+script NINJA_BOY_LAMBDA_CAVE_1{
+    trainerbattle_single(TRAINER_NINJA_OWEN, NINJA_LAMBA_1_INTRO, NINJA_LAMBA_1_OUTRO)
+    goto(Rematch_Trainer_NINJA_BOY_OWEN)
+}
+
+text NINJA_LAMBA_1_INTRO{
+    "My mom tells me not to play in caves!"
+}
+
+text NINJA_LAMBA_1_OUTRO{
+    "Aww now I'll be caught."
+}
+
+script NINJA_BOY_LAMBDA_CAVE_2{
+    trainerbattle_single(TRAINER_NINJA_ALEC, NINJA_LAMBA_2_INTRO, NINJA_LAMBA_2_OUTRO)
+    goto(Rematch_Trainer_NINJA_BOY_ALEC)
+}
+
+text NINJA_LAMBA_2_INTRO{
+    "Aha I gotcha, let's fight!"
+}
+
+text NINJA_LAMBA_2_OUTRO{
+    "Where'd my smoke bomb go!?"
+}
+
+script NINJA_BOY_LAMBDA_CAVE_3{
+    trainerbattle_single(TRAINER_NINJA_GABE, NINJA_LAMBA_3_INTRO, NINJA_LAMBA_3_OUTRO)
+    goto(Rematch_Trainer_NINJA_BOY_GABE)
+}
+
+text NINJA_LAMBA_3_INTRO{
+    "I'm the leader of the ninja gang!\p"
+    "My friends helped me evolve\nmy Pokémon!\p"
+    "Be prepared to lose kid!"
+}
+
+text NINJA_LAMBA_3_OUTRO{
+    "I guess you're the leader now..."
+}
+
+script SMOKE_BALL_OBTAINED{
+    lockall
+    giveitem(ITEM_SMOKE_BALL, 1)
+    removeobject(5)
+    setflag(FLAG_SMOKE_BALL_OBTAINED)
+    releaseall
+}
+
+script Rematch_Trainer_NINJA_BOY_GABE{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_NINJA_GABE, NINJA_LAMBA_3_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+
+script Rematch_Trainer_NINJA_BOY_OWEN{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_NINJA_OWEN, NINJA_LAMBA_1_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+script Rematch_Trainer_NINJA_BOY_ALEC{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_NINJA_ALEC, NINJA_LAMBA_2_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}

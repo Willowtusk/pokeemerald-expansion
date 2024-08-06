@@ -1,0 +1,50 @@
+mapscripts SelunaCave_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_OLD_MAN_SELUNACAVE, 0: UMBRA_OLD_MAN 
+    ]
+
+}
+
+
+
+script GYM_RENOVATION_SIGN{
+    lockall
+    msgbox("Under Renovations for the Seluna Gym")
+    closemessage
+    releaseall
+}
+
+
+
+script UMBRA_OLD_MAN{
+    lockall
+    faceplayer
+    playse(SE_PIN)
+    applymovement(1,Common_Movement_ExclamationMark)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    delay(48)
+    msgbox(format(
+        "Hey youngster, how'd you end up here?\p"
+        "You must be the new kid who just moved in.\p"
+        "Best get back to your family, a cave is no place for children"
+        ))
+    closemessage
+    setvar(VAR_OLD_MAN_SELUNACAVE, 1)
+    setvar(VAR_MYNPC_FIRST_INTERACTION, 1)
+    clearflag(FLAG_SELUNA_CAVE_HIDE_MYNPC)
+    releaseall
+}
+
+script SELUNA_OLD_MAN_DIALOGUE_1{
+    lockall
+    faceplayer
+    msgbox(format(
+        "We're in the process of building a new gym here!\p"
+        "It should be ready within a couple of weeks, if you can gather all the other gym badges first.\p"
+        "But that'll be a mighty challenge haha!"
+    ))
+    closemessage
+    releaseall
+}
+

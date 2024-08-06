@@ -6108,11 +6108,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 #if P_FAMILY_GOTHITA
     [SPECIES_GOTHITA] =
     {
-        .baseHP        = 45,
+        .baseHP        = 60,
         .baseAttack    = 30,
-        .baseDefense   = 50,
-        .baseSpeed     = 45,
-        .baseSpAttack  = 55,
+        .baseDefense   = 55,
+        .baseSpeed     = 55,
+        .baseSpAttack  = 65,
         .baseSpDefense = 65,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 200,
@@ -6174,11 +6174,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_GOTHORITA] =
     {
-        .baseHP        = 60,
+        .baseHP        = 70,
         .baseAttack    = 45,
         .baseDefense   = 70,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 75,
+        .baseSpeed     = 70,
+        .baseSpAttack  = 80,
         .baseSpDefense = 85,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 100,
@@ -6239,11 +6239,11 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_GOTHITELLE] =
     {
-        .baseHP        = 70,
+        .baseHP        = 85,
         .baseAttack    = 55,
         .baseDefense   = 95,
         .baseSpeed     = 65,
-        .baseSpAttack  = 95,
+        .baseSpAttack  = 110,
         .baseSpDefense = 110,
         .types = MON_TYPES(TYPE_PSYCHIC),
         .catchRate = 50,
@@ -8597,9 +8597,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .baseHP        = 50,
         .baseAttack    = 30,
         .baseDefense   = 55,
-        .baseSpeed     = 20,
-        .baseSpAttack  = 65,
-        .baseSpDefense = 55,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 70,
+        .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_GHOST, TYPE_FIRE),
         .catchRate = 190,
         .expYield = 55,
@@ -8661,12 +8661,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_LAMPENT] =
     {
-        .baseHP        = 60,
+        .baseHP        = 75,
         .baseAttack    = 40,
-        .baseDefense   = 60,
-        .baseSpeed     = 55,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 60,
+        .baseDefense   = 65,
+        .baseSpeed     = 75,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 70,
         .types = MON_TYPES(TYPE_GHOST, TYPE_FIRE),
         .catchRate = 90,
         .expYield = 130,
@@ -8727,7 +8727,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_CHANDELURE] =
     {
-        .baseHP        = 60,
+        .baseHP        = 75,
         .baseAttack    = 55,
         .baseDefense   = 90,
         .baseSpeed     = 80,

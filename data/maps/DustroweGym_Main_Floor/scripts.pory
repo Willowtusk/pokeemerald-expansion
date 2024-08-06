@@ -1,0 +1,190 @@
+mapscripts DustroweGym_Main_Floor_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION{
+        if(defeated(DUSTROWE_TRAINER_MATT)){
+            setflag(FLAG_TEMP_GYM_ROCK_1)
+            setobjectxyperm(5, 11, 16)
+        }
+        if(defeated(DUSTROWE_TRAINER_ALYSSA)){
+            setflag(FLAG_TEMP_GYM_ROCK_2)
+            setobjectxyperm(6, 2, 10)
+        }
+    }
+
+}
+
+script Dustrowe_Gym_Advice{
+    lockall
+    faceplayer
+    if(!(flag(FLAG_BADGE01_GET))){
+    msgbox(format(
+        "Hey there!\p"
+        "You here to attempt the Dustrowe Gym?\p"
+        "Well let me warn you,\nthis is a dual type gym!\p"
+        "Leader Johnny uses both Fighting\nAND Ground types.\p"
+        "You'll have to put on your\nthinking cap for this one!\p"
+        "Oh, and the gym air has been rerouted\nto resemble a sandstorm.\p"
+        "Keeps the leader and his trainers\nin their element I hear.."
+    ))
+    closemessage
+    releaseall
+    }
+    else{
+        msgbox(format(
+            "Wow that was like really impressive!\p"
+            "Congrats on your first badge!\p"
+            "What's your name?\p"
+            "I'd like to engrave your accomplishment\non this statue here!"
+        ))
+        closemessage
+        releaseall
+    }
+}
+
+script Gym_Leader_Johnny{
+    trainerbattle_single(TRAINER_LEADER_JOHNNY, Leader_Johnny_Intro, Leader_Johnny_Outro, Leader_Johnny_Defeated)
+    msgbox(format(
+        "You sure gave me a run\nfor my money kid\p"
+        "Go show all the other gyms\nhow strong ya are!"
+    ))
+
+}
+
+text Leader_Johnny_Intro{
+
+    "Woah now, never seen your\nface around these parts!\p"
+    "The name's Johnny, and I'm\nthe gym leader here.\p"
+    "You come prepared?\n" 
+    "I don't just use one type yaknow?\p"
+    "Think you got what it takes\nto take me down?\p"
+    "Let's see what you're made of then!"
+
+}
+
+text Leader_Johnny_Outro{
+    "Well i'll be!\p"
+    "You got me good!\p"
+    "Here, take this SOOT BADGE.\n"
+    "You've earned it."
+}
+
+script Leader_Johnny_Defeated{
+    message (Dustrowe_City_Soot_Badge_Received)
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(Soot_Badge_Info)
+    setflag(FLAG_BADGE01_GET)
+    setflag(FLAG_DEFEATED_RUSTBORO_GYM)
+    goto(Give_Power_Up_Punch)
+    end
+}
+
+text Dustrowe_City_Soot_Badge_Received{
+    "{PLAYER} received the SOOT BADGE\n"
+    "from Johnny."
+}
+
+text Soot_Badge_Info{
+    "With this BADGE, you'll be able to\n"
+    "make use of the HM move CUT.\p"
+    "You've also earned this."
+}
+
+script Give_Power_Up_Punch{
+    giveitem(ITEM_TM05)
+    msgbox(format(
+        "This contains the move\n"
+        "POWER UP PUNCH\p"
+        "This sucker right here will\n"
+        "not only do damage, but make the\l"
+        "user stronger at the same time!"
+        ))
+    closemessage
+    return
+}
+
+
+script DUSTROWE_GYM_TRAINER_MATT{
+    trainerbattle_single(DUSTROWE_TRAINER_MATT, DUSTROWE_MATT_INTRO, DUSTROWE_MATT_OUTRO)
+    if (!flag(FLAG_TEMP_GYM_ROCK_1)){
+        call(DUSTROWE_ROCK_BREAK_1)
+        setobjectxyperm(5, 11, 16)
+    }
+    else{
+       msgbox("Go on kid, straight to JOHNNY!", MSGBOX_AUTOCLOSE) 
+    }
+}
+
+script DUSTROWE_GYM_TRAINER_ALYSSA{
+    trainerbattle_single(DUSTROWE_TRAINER_ALYSSA, DUSTROWE_ALYSSA_INTRO, DUSTROWE_ALYSSA_OUTRO)
+    if (!flag(FLAG_TEMP_GYM_ROCK_2)){
+        call(DUSTROWE_ROCK_BREAK_2)
+        setobjectxyperm(6, 2, 10)
+    }
+    else{
+    msgbox("Gasp.... I need a minute", MSGBOX_AUTOCLOSE)
+    }
+}
+
+text DUSTROWE_MATT_INTRO{
+    "Ah! A new gym challenger!\p"
+    "If you can beat my fighting types,\n"
+    "I'll break this rock behind me!"
+}
+
+text DUSTROWE_MATT_OUTRO{
+    "Guess we need more training..."
+}
+
+script DUSTROWE_ROCK_BREAK_1{
+    lockall
+    turnobject(5, DIR_NORTH)
+    delay(48)
+    msgbox("HIIIIYA")
+    waitmessage
+    closemessage
+    playse(SE_M_ROCK_THROW)
+    waitse
+    applymovement(3, Movement_SmashRock)
+    waitmovement(3)
+    removeobject(3)
+    setflag(FLAG_TEMP_GYM_ROCK_1)
+    applymovement(5, SIMPLE_WALK_RIGHT)
+    waitmovement(5)
+    turnobject(5, DIR_WEST)
+    delay(48)
+    releaseall
+}
+
+movement SIMPLE_WALK_RIGHT{
+    walk_right
+}
+
+text DUSTROWE_ALYSSA_INTRO{
+    "I've been training my ground types to\n"
+    "withstand any hit!\p"
+    "Get ready to be pummeled challenger!"
+}
+
+text DUSTROWE_ALYSSA_OUTRO{
+    "Whew, made me work up a sweat."
+}
+
+script DUSTROWE_ROCK_BREAK_2{
+    lockall
+    turnobject(6, DIR_NORTH)
+    delay(48)
+    msgbox("HIIIIYA")
+    waitmessage
+    closemessage
+    playse(SE_M_ROCK_THROW)
+    waitse
+    applymovement(4, Movement_SmashRock)
+    waitmovement(4)
+    removeobject(4)
+    setflag(FLAG_TEMP_GYM_ROCK_2)
+    applymovement(6, SIMPLE_WALK_RIGHT)
+    waitmovement(6)
+    turnobject(6, DIR_WEST)
+    delay(48)
+    releaseall
+}

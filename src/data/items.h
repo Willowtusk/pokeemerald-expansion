@@ -163,7 +163,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POKE_BALL] =
     {
         .name = _("Poké Ball"),
-        .price = 200,
+        .price = 100,
         .description = COMPOUND_STRING(
             "A tool used for\n"
             "catching wild\n"
@@ -600,7 +600,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POTION] =
     {
         .name = _("Potion"),
-        .price = (I_PRICE >= GEN_7) ? 200 : 300,
+        .price = 100,
         .holdEffectParam = 20,
         .description = COMPOUND_STRING(
             "Restores the HP of\n"
@@ -2128,8 +2128,8 @@ const struct Item gItemsInfo[] =
     [ITEM_REPEL] =
     {
         .name = _("Repel"),
-        .price = (I_PRICE >= GEN_7) ? 400 : 350,
-        .holdEffectParam = 100,
+        .price = 40,
+        .holdEffectParam = 40,
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
             "Pokémon for 100\n"
@@ -10453,19 +10453,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_CALM_MIND,
     },
 
-    [ITEM_TM_ROAR] =
+    [ ITEM_TM_POWER_UP_PUNCH] =
     {
         .name = _("TM05"),
         .price = 1000,
         .description = COMPOUND_STRING(
-            "A savage roar that\n"
-            "makes the foe flee \n"
-            "to end the battle."),
+            "A savage punch that\n"
+            "raises the attack of \n"
+            "the user."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_ROAR,
+        .secondaryId = MOVE_POWER_UP_PUNCH,
     },
 
     [ITEM_TM_TOXIC] =
@@ -10531,7 +10531,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_HIDDEN_POWER] =
     {
         .name = _("TM10"),
-        .price = 3000,
+        .price = 500,
         .description = COMPOUND_STRING(
             "The attack power\n"
             "varies among\n"
@@ -10976,7 +10976,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_ROCK_TOMB] =
     {
         .name = _("TM39"),
-        .price = 3000,
+        .price = 1500,
         .description = COMPOUND_STRING(
             "Stops the foe from\n"
             "moving with rocks.\n"
@@ -11156,37 +11156,44 @@ const struct Item gItemsInfo[] =
     [ITEM_TM51] =
     {
         .name = _("TM51"),
-        .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .price = 500,
+        .description = COMPOUND_STRING(
+            "May cause flinching."), // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_EXTRASENSORY, // Todo
     },
 
     [ITEM_TM52] =
     {
         .name = _("TM52"),
-        .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .price = 500,
+        .description = COMPOUND_STRING(
+            "May also injure\n" 
+            "nearby Pokémon."), // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_FLAME_BURST, // Todo
     },
 
     [ITEM_TM53] =
     {
         .name = _("TM53"),
-        .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .price = 500,
+        .description = COMPOUND_STRING(
+            "May poison opponent\n"
+            "inflicts double\n" 
+            "damage if target\n"
+            "is already poisoned."), // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_BARB_BARRAGE, // Todo
     },
 
     [ITEM_TM54] =

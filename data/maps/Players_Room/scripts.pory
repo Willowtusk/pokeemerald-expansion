@@ -1,0 +1,17 @@
+mapscripts Players_Room_MapScripts{
+
+}
+
+script POTION_ITEM{
+    lockall
+    msgbox(
+        "Received the Running Shoes!\p"
+        "There was a Potion underneath!"
+        )
+    closemessage
+    giveitem(ITEM_POTION, 1)
+    removeobject(1)
+    setflag(FLAG_SYS_B_DASH)
+    setflag(FLAG_RUNNING_SHOES_ITEM)
+    releaseall
+}

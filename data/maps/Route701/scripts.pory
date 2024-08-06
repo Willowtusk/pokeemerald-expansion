@@ -1,0 +1,89 @@
+mapscripts Route701_MapScripts{
+
+}
+
+script FOUND_HARD_STONE{
+    lockall
+    giveitem(ITEM_HARD_STONE, 1)
+    removeobject(1)
+    setflag(FLAG_HARD_STONE)
+    releaseall
+}
+
+script LEDGE_SIGN{
+    lockall
+    msgbox("Some ledges are impassable from one side.")
+    closemessage
+    releaseall
+}
+
+script FOUND_SOFT_SAND{
+    lockall
+    giveitem(ITEM_SOFT_SAND, 1)
+    removeobject(2)
+    setflag(FLAG_SOFT_SAND)
+    releaseall
+}
+
+script Route_701_Hiker_Battle{
+    trainerbattle_single(TRAINER_HIKER_MIKE_701, Route_701_HIKER_INTRO, Route_701_HIKER_OUTRO)
+    goto(Rematch_Trainer_HIKER_MIKE)
+}
+
+text Route_701_HIKER_INTRO{
+    "Oi kid, do you know where the nearest\ntown is?"
+}
+
+text Route_701_HIKER_OUTRO{
+    "You got me good....\nI'm in mighty need of a load off."
+}
+
+script ROUTE_701_ARTIST{
+    faceplayer
+    lockall
+    msgbox(format(
+    "What is an artist doing out here\n you might ask?\p"
+    "Well art is to be captured in nature, no?"
+    ))
+    closemessage
+    releaseall
+}
+
+script Route_701_Bugcatcher_Battle{
+    trainerbattle_single(TRAINER_BILL_701, Route_701_CATCHER_INTRO, Route_701_CATCHER_OUTRO)
+    goto(Rematch_Trainer_BUG_CATCHER_BILL)
+}
+
+text Route_701_CATCHER_INTRO{
+    "I just love finding new types of bugs!\p"
+    "Wanna see some I just caught?"
+}
+
+text Route_701_CATCHER_OUTRO{
+    "Aw, my bugs couldn't win."
+}
+
+script Rematch_Trainer_HIKER_MIKE{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_HIKER_MIKE_701, Route_701_HIKER_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+
+script Rematch_Trainer_BUG_CATCHER_BILL{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_BILL_701, Route_701_CATCHER_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+

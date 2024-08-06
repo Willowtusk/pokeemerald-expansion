@@ -1,0 +1,37 @@
+mapscripts Dustrowe_Brother_Building_MapScripts{
+
+}
+
+script Dustrowe_Brother_Building_Brother{
+    lockall
+    faceplayer
+    if(var(VAR_DUSTROWE_SIBLINGS) == 0){
+        msgbox(format(
+            "I think I made my sister\nmad again...\p"
+            "I keep mistaking her makeup\nfor my body lotion..\p"
+            "Maybe I need some glasses or something.\p"
+            "Would you mind returning these to her for me?\p"
+        ))
+        closemessage
+        msgbox(format(
+            "Received the Makeup!\p"
+        
+        ))
+        playfanfare(MUS_OBTAIN_ITEM)
+        waitfanfare
+        waitmessage
+        msgbox(format(
+            "Better go give this to the sister."
+        ))
+        closemessage
+        setvar(VAR_DUSTROWE_SIBLINGS, 1)
+        releaseall
+    }
+    else{
+        msgbox(format(
+            "I hope she doesn't stay mad\nat me..."
+        ))
+        closemessage
+        releaseall
+    }
+}

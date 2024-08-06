@@ -1,0 +1,136 @@
+{
+  "id": "MAP_DUSTROWE_CITY",
+  "name": "DustroweCity",
+  "layout": "LAYOUT_DUSTROWE_CITY",
+  "music": "MUS_FALLARBOR",
+  "region_map_section": "MAPSEC_DUSTROWE_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_VOLCANIC_ASH",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_DUSTROWE_PATH",
+      "offset": -32,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_DUSTROWE_PATH",
+      "offset": -32,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 26,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Dustrowe_Generator_Man",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 12,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Dustrowe_Little_Girl",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DUSTROWE_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_DUSTROWE_POKE_CENTER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_DUSTROWE_BUILDING_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_DUSTROWE_SISTER_BUILDING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_DUSTROWE_BROTHER_BUILDING",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_DUSTROWE_BUILDING_1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_DUSTROWE_GYM_MAIN_FLOOR",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 38,
+      "elevation": 0,
+      "var": "VAR_TALK_TO_MOM_1",
+      "var_value": "6",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 38,
+      "elevation": 0,
+      "var": "VAR_TALK_TO_MOM_1",
+      "var_value": "6",
+      "script": "NULL"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Dustrowe_Gym_Sign"
+    }
+  ]
+}

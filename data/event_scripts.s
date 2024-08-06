@@ -1074,3 +1074,46 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+
+	.include "data/maps/SelunaTown_General/scripts.inc"
+
+	.include "data/maps/SelunaCave/scripts.inc"
+
+	.include "data/maps/PlayerHouse/scripts.inc"
+
+	.include "data/maps/Players_Room/scripts.inc"
+
+	.include "data/maps/SelunaPokemonLab/scripts.inc"
+
+	.include "data/maps/LeahsHouse/scripts.inc"
+
+	.include "data/maps/SelunaMarket/scripts.inc"
+
+	.include "data/maps/Route701/scripts.inc"
+
+	.include "data/maps/Research_Lab_Lambda/scripts.inc"
+
+	.include "data/maps/Inside_Lambda_Lab/scripts.inc"
+
+	.include "data/maps/LambdaCave/scripts.inc"
+
+	.include "data/maps/Dustrowe_Path/scripts.inc"
+
+	.include "data/maps/DustroweCity/scripts.inc"
+
+	.include "data/maps/DustroweMart/scripts.inc"
+
+	.include "data/maps/DustrowePokeCenter/scripts.inc"
+
+	.include "data/maps/Dustrowe_Building_1/scripts.inc"
+
+	.include "data/maps/Dustrowe_Building_2/scripts.inc"
+
+	.include "data/maps/Dustrowe_Sister_Building/scripts.inc"
+
+	.include "data/maps/Dustrowe_Brother_Building/scripts.inc"
+
+	.include "data/maps/DustroweGym_Main_Floor/scripts.inc"
+
+	.include "data/maps/Route701_2/scripts.inc"

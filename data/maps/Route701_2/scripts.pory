@@ -1,0 +1,110 @@
+mapscripts Route701_2_MapScripts{
+
+}
+
+script Fisherman_Route701{
+    lockall
+    faceplayer
+    if(!(flag(FLAG_RECEIVED_OLD_ROD))){
+    msgbox(format(
+        "Grr the fish aren't biting today...\p"
+        "Maybe you can do better than me."
+    ))
+    closemessage
+    giveitem(ITEM_OLD_ROD, 1)
+    msgbox(format(
+        "That oughta get you started!"
+    ))
+    waitmessage
+    setflag(FLAG_RECEIVED_OLD_ROD)
+    }
+    else {
+        msgbox("Caught any big ones yet?")
+        closemessage
+    }
+    releaseall
+}
+
+script Azurill_Route701{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_AZURILL, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("ZUUU!", MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script ITEM_BRIGHTPOWDER_OBTAINED{
+    lockall
+    giveitem(ITEM_BRIGHT_POWDER, 1)
+    removeobject(3)
+    setflag(FLAG_ITEM_ROUTE_701_BRIGHT_POWDER)
+    releaseall
+}
+
+script BOY_ROUTE701{
+    lockall
+    faceplayer
+    msgbox("I'm a long way from home...")
+    closemessage
+    releaseall
+}
+
+script CAMPER_LARRY_Route701{
+    trainerbattle_single(TRAINER_ROUTE701_LARRY, LARRY_701_INTRO, LARRY_701_OUTRO)
+    goto(Rematch_Trainer_CAMPER_LARRY_701)
+}
+
+text LARRY_701_INTRO{
+    "Hope you brought your camping supplies!\p"
+    "I know I did!"
+}
+
+text LARRY_701_OUTRO{
+    "Guess I should have brought more firewood."
+}
+
+script Rematch_Trainer_CAMPER_LARRY_701{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_ROUTE701_LARRY, LARRY_701_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+
+script Route_701_Lass_Battle{
+    trainerbattle_single(TRAINER_LASS_EMILY_701, Route_701_Lass_Intro, Route_701_Lass_Outro)
+    goto(Rematch_Trainer_LASS_EMILY)
+}
+
+script Rematch_Trainer_LASS_EMILY{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_LASS_EMILY_701, Route_701_Lass_Outro)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+
+text Route_701_Lass_Intro{
+    "I just love cute Pokémon!"
+}
+
+text Route_701_Lass_Outro{
+    "Aww my cuties didn't win."
+}
+
+script SEA_INCENSE_OBTAINED{
+    lockall
+    giveitem(ITEM_SEA_INCENSE, 1)
+    removeobject(7)
+    setflag(FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE)
+    releaseall
+}

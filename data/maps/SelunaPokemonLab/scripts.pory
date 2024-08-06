@@ -1,0 +1,254 @@
+mapscripts SelunaPokemonLab_MapScripts{
+
+}
+
+script ChoosingAStarter_Piplup{
+    lockall
+    if(!(flag(FLAG_FENNEKIN_STARTER) || flag(FLAG_CHIKORITA_STARTER) || flag(FLAG_PIPLUP_STARTER))){
+        showmonpic(SPECIES_PIPLUP, 10,3)
+        playmoncry(SPECIES_PIPLUP, CRY_MODE_ENCOUNTER)
+        waitmoncry
+        msgbox("Would you like to choose\nthe Water Type Piplup?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon (SPECIES_PIPLUP, 5)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                clearflag(FLAG_LEAH_HOUSE_INTERACTION)
+                setvar(VAR_TALK_TO_MOM_1, 3)
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Piplup!")
+                removeobject(2)
+                setflag(FLAG_PIPLUP_STARTER)
+                setflag(FLAG_SYS_POKEMON_GET)
+                call(NicknamePartyMon)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Piplup!")
+                removeobject(2)
+                setflag(FLAG_PIPLUP_STARTER)
+                call(NicknameBoxMon)
+            }
+            else{
+                hidemonpic
+                msgbox("No More Room")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(Starter_NotChosen)
+        }
+    
+    }    
+    else{
+        msgbox("(I shouldn't take another)")
+    }
+    
+waitmessage
+releaseall
+end
+}
+
+script NicknamePartyMon{
+    msgbox("Would you like to give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+
+script NicknameBoxMon{
+    msgbox("Would you like to give it a nickname"?, MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    msgbox("Transferred to PC")
+
+}
+
+text Starter_NotChosen{
+    "You did not choose a Pokemon"
+
+}
+
+
+
+
+script ChoosingAStarter_Chikorita{
+    lockall
+    if(!(flag(FLAG_FENNEKIN_STARTER) || flag(FLAG_CHIKORITA_STARTER) || flag(FLAG_PIPLUP_STARTER))){
+        showmonpic(SPECIES_CHIKORITA, 10,3)
+        playmoncry(SPECIES_CHIKORITA, CRY_MODE_ENCOUNTER)
+        waitmoncry
+        msgbox("Would you like to choose\nthe Grass Type Chikorita?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon (SPECIES_CHIKORITA, 5)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                clearflag(FLAG_LEAH_HOUSE_INTERACTION)
+                setvar(VAR_TALK_TO_MOM_1, 3)
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Chikorita!")
+                removeobject(3)
+                setflag(FLAG_CHIKORITA_STARTER)
+                setflag(FLAG_SYS_POKEMON_GET)
+                call(NicknamePartyMon)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Chikorita!")
+                removeobject(3)
+                setflag(FLAG_CHIKORITA_STARTER)
+                call(NicknameBoxMon)
+            }
+            else{
+                hidemonpic
+                msgbox("No More Room")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(Starter_NotChosen)
+        }
+    
+    }    
+    else{
+        msgbox("(I shouldn't take another)")
+    }
+    
+waitmessage
+releaseall
+end
+}
+
+
+
+
+
+script ChoosingAStarter_Fennekin{
+    lockall
+    if(!(flag(FLAG_FENNEKIN_STARTER) || flag(FLAG_CHIKORITA_STARTER) || flag(FLAG_PIPLUP_STARTER))){
+        showmonpic(SPECIES_FENNEKIN, 10,3)
+        playmoncry(SPECIES_FENNEKIN, CRY_MODE_ENCOUNTER)
+        waitmoncry
+        msgbox("Would you like to choose\nthe Fire Type Fennekin?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon (SPECIES_FENNEKIN, 5)
+            if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+                clearflag(FLAG_LEAH_HOUSE_INTERACTION)
+                setvar(VAR_TALK_TO_MOM_1, 3)
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Fennekin!")
+                removeobject(4)
+                setflag(FLAG_FENNEKIN_STARTER)
+                setflag(FLAG_SYS_POKEMON_GET)
+                call(NicknamePartyMon)
+            }
+            elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Fennekin!")
+                removeobject(4)
+                setflag(FLAG_FENNEKIN_STARTER)
+                call(NicknameBoxMon)
+            }
+            else{
+                hidemonpic
+                msgbox("No More Room")
+            }
+        }
+        else{
+            hidemonpic
+            msgbox(Starter_NotChosen)
+
+        }
+    }
+    else{
+        msgbox("(I shouldn't take another)")
+    }
+waitmessage
+releaseall
+end
+}
+
+script Professor_ChooseYourStarter_MOVE_ONE{
+    lockall
+    msgbox("{PLAYER}!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVE_UP_ONE)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_SOUTH)
+    faceplayer
+    msgbox(format(
+        "There you are!\n"
+        "I've been trying to get ahold of you all day.\p"
+        "Have you ever thought about traveling the region?"
+        "Me and mom think it would be good for you to go out and see the world.\p"
+        "But, you can't travel the world without a companion can you?\p"
+        "I think it's finally time for you to get a Pokemon {PLAYER}.\p"
+        "My field research has allowed me to spare some Pokemon for your journey!\p"
+        "Why don't you pick one?"
+        ))
+    waitmessage
+    setvar(VAR_TALK_TO_MOM_1, 2)
+    releaseall
+    end
+
+}
+
+script Professor_ChooseYourStarter_MOVE_TWO{
+    lockall
+    msgbox("{PLAYER}!")
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVE_UP_AND_LEFT)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_SOUTH)
+    faceplayer
+    msgbox(format(
+        "There you are!\n"
+        "I've been trying to get ahold of you all day.\p"
+        "Have you ever thought about traveling the region?\p"
+        "Me and mom think it would be good for you to go out and see the world.\p"
+        "But, you can't travel the world without a companion can you?\p"
+        "I think it's finally time for you to get a Pokemon {PLAYER}.\p"
+        "My field research has allowed me to spare some Pokemon for your journey!\p"
+        "Why don't you pick one?"
+        ))
+    waitmessage
+    setvar(VAR_TALK_TO_MOM_1, 2)
+    releaseall
+    end
+
+}
+
+
+
+movement MOVE_UP_ONE{
+    walk_up
+}
+
+movement MOVE_UP_AND_LEFT{
+    walk_up
+    walk_left
+}
+
+script DAD_LAB_CONVO_1{
+    lockall
+    faceplayer
+    if (var(VAR_TALK_TO_MOM_1) <= 5){
+        msgbox(format(
+        "You should go see our new neighbor that just moved in last week.\p"
+        "She seems nice, I think her name is Leah."
+    ))
+    closemessage
+    releaseall
+    }
+    else {
+        msgbox(format(
+            "Why don't you head out to\nDustrowe Town?\p"
+            "It's just down the road here."
+        ))
+        closemessage
+        releaseall
+    }
+}

@@ -214,7 +214,13 @@
 #define MAPSEC_ALTERING_CAVE                0xD2
 #define MAPSEC_NAVEL_ROCK                   0xD3
 #define MAPSEC_TRAINER_HILL                 0xD4
-#define MAPSEC_NONE                         0xD5
+#define MAPSEC_SELUNA_TOWN                  0xD5
+#define MAPSEC_ROUTE_701                    0xD6
+#define MAPSEC_RESEARCH_OUTPOST_LAMBDA      0xD7
+#define MAPSEC_LAMBDA_CAVE                  0xD8
+#define MAPSEC_DUSTROWE_PATH                0xD9
+#define MAPSEC_DUSTROWE_CITY                0xE1
+#define MAPSEC_NONE                         0xE2
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE
@@ -225,3 +231,4 @@
 #define KANTO_MAPSEC_COUNT (KANTO_MAPSEC_END - KANTO_MAPSEC_START + 1)
 
 #endif //GUARD_REGIONMAPSEC_H
+

@@ -1,0 +1,98 @@
+const LOCALID_MYNPC = 1
+mapscripts SelunaTown_General_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_MYNPC_FIRST_INTERACTION, 1: SELUNA_LILY_INTERACTION_1
+    ]
+}
+
+
+script SELUNA_LILY_INTERACTION_1{
+    lockall
+    playse(SE_PIN)
+    applymovement(LOCALID_MYNPC, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(48)
+    applymovement(LOCALID_MYNPC, SIMPLE_MOVE_UP)
+    waitmovement(0)
+    msgbox(format(
+        "{PLAYER}! where have you been?\p"
+        "... You don't remember me?\p"
+        "You must have hit your head pretty bad down in that cave...\p"
+        "It's Lily, your sister!\p"
+        "Mom has been worried sick about you!\p"
+        "You better go back home and tell her you're okay, before she gets really upset.\p"
+        "I need to go take care of Winnie so I'll see you later!"
+        ))
+    closemessage
+    applymovement(LOCALID_MYNPC, MOVING_OFFSCREEN)
+    waitmovement(0)
+    removeobject(LOCALID_MYNPC)
+    setflag(FLAG_SELUNA_CAVE_HIDE_MYNPC)
+    setvar(VAR_MYNPC_FIRST_INTERACTION, 2)
+    setflag(FLAG_LEAH_HOUSE_INTERACTION)
+    releaseall
+}
+
+
+movement MOVING_OFFSCREEN{
+    walk_down * 8
+}
+movement SIMPLE_MOVE_UP{
+    walk_up * 2
+}
+
+script PLAYERS_HOUSE_SIGN{
+    lockall
+    msgbox("{PLAYER}'s House")
+    closemessage
+    releaseall
+}
+
+script SELUNE_LAB_EARLY{
+    lockall
+    msgbox("Probably should go see Mom first")
+    applymovement(OBJ_EVENT_ID_PLAYER, SIMPLE_MOVE_DOWN)
+    waitmovement(0)
+    closemessage
+    releaseall
+}
+
+script Selune_Town_Market_Sign{
+    lockall
+    msgbox(
+        "Seluna Town Market\n"
+        "Freshest in town!"
+        )
+    closemessage
+    releaseall
+}
+
+script Selune_Town_Lab_Sign{
+    lockall
+    msgbox(
+        "Seluna Town Pokemon Lab"
+        )
+    closemessage
+    releaseall
+}
+
+script Selune_Town_Leahs_House_Sign{
+    lockall
+    msgbox(
+        "Leah's House"
+    )
+    closemessage
+    releaseall
+}
+
+
+script Route_701_Access{
+    lockall
+    msgbox(format(
+        "I should check some other things\n in town out first"
+        ))
+    applymovement(OBJ_EVENT_ID_PLAYER, SIMPLE_MOVE_UP)
+    waitmovement(0)
+    closemessage
+    releaseall 
+}

@@ -1,0 +1,30 @@
+mapscripts Research_Lab_Lambda_MapScripts{
+
+}
+
+script SCIENTIST_LAMBDA_1{
+    lockall
+    faceplayer
+    msgbox(format(
+        "This is the Lambda base for Team Helix!\p"
+        "I mean uh....\nscientists who wanna help save the world!"
+    ))
+    closemessage
+    releaseall
+}
+
+script SCIENTIST_LAMBDA_2{
+    lockall
+    faceplayer
+    msgbox(format(
+        "We're currently using this cave to\nobtain specimens\p"
+        "Please come back later."
+    ))
+    closemessage
+    releaseall
+}
+
+script REMOVE_SCIENTIST_BLOCKING_CAVE{
+    removeobject(2)
+    setvar(VAR_JENNINGS_DEFEATED_LAMBDA, 2)
+}

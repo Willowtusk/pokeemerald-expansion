@@ -1,0 +1,98 @@
+{
+  "id": "MAP_RESEARCH_LAB_LAMBDA",
+  "name": "Research_Lab_Lambda",
+  "layout": "LAYOUT_RESEARCH_LAB_LAMBDA",
+  "music": "MUS_DESERT",
+  "region_map_section": "MAPSEC_RESEARCH_OUTPOST_LAMBDA",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE701_2",
+      "offset": -10,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 10,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SCIENTIST_LAMBDA_1",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
+      "x": 17,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SCIENTIST_LAMBDA_2",
+      "flag": "FLAG_JENNINGS_DEFEATED"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 16,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_INSIDE_LAMBDA_LAB",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_LAMBDA_CAVE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_JENNINGS_DEFEATED_LAMBDA",
+      "var_value": "1",
+      "script": "REMOVE_SCIENTIST_BLOCKING_CAVE"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_JENNINGS_DEFEATED_LAMBDA",
+      "var_value": "1",
+      "script": "REMOVE_SCIENTIST_BLOCKING_CAVE"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_JENNINGS_DEFEATED_LAMBDA",
+      "var_value": "1",
+      "script": "REMOVE_SCIENTIST_BLOCKING_CAVE"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}

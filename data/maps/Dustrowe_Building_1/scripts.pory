@@ -1,0 +1,24 @@
+mapscripts Dustrowe_Building_1_MapScripts{
+
+}
+
+script ITEM_KINGS_ROCK_OBTAINED{
+    lockall
+    giveitem(ITEM_KINGS_ROCK)
+    removeobject(1)
+    setflag(FLAG_RECEIVED_KINGS_ROCK)
+    releaseall
+}
+
+script Dustrowe_Building_1_Youngster{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Oh hiya there!\p"
+        "My parents found this weird rock\n"
+        "while working down in the mine.\p"
+        "It's yours if you want it."
+    ))
+    closemessage
+    releaseall
+}

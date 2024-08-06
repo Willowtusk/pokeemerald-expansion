@@ -1,0 +1,45 @@
+mapscripts DustroweCity_MapScripts{
+
+}
+
+script Dustrowe_Gym_Sign{
+    lockall
+    msgbox("Dustrowe Gym")
+    closemessage
+    releaseall
+}
+
+script DEFEAT_RIVAL_1{
+    lockall
+    msgbox("Let's see what Lily is doing", MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, SIMPLE_MOVE_DOWN)
+    releaseall
+}
+
+script Dustrowe_Generator_Man{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Did you know that this town is\n"
+        "powered by the tears of defeated\l"
+        "gym challengers?\p"
+        ". . .\p"
+        "Haha just kidding!"
+    ))
+    closemessage
+    releaseall
+}
+
+script Dustrowe_Little_Girl{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Gym leader Johnny is able to\n"
+        "power this whole city with just\l"
+        "his gym!\p"
+        "There's a rumor that a coal mine\n"
+        "runs just under it."
+    ))
+    closemessage
+    releaseall
+}

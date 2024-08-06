@@ -1,0 +1,92 @@
+mapscripts PlayerHouse_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Seluna_Town_Respawn_OnTransition
+
+}
+
+script Seluna_Town_Respawn_OnTransition{
+    setrespawn(HEAL_LOCATION_SELUNA_TOWN)
+    end
+}
+
+script NO_ENTRY_SISTERS_ROOM{
+    
+    lockall
+    msgbox(format(
+        "(This goes to Lily's room.)\p"
+        "(Probably shouldn't go there yet.)"
+    ))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, SIMPLE_MOVE_DOWN)
+    waitmovement(0)
+    releaseall
+    }
+
+
+
+
+script MOM_FIRST_VISIT{
+    if(var(VAR_TALK_TO_MOM_1) == 0){
+        lockall
+        faceplayer
+        msgbox(format(
+            "Hey {PLAYER}!\p"
+            "Where have you been?\p"
+            "Your dad.... I mean the professor, would like to speak with you.\p"
+            "I think he has something he wants to show you.\p"
+            "You should go pay him a visit!\p"
+            "He should be in the lab close by.\p"
+            "Oh, and don't forget your shoes! They should be in your room."
+            
+        ))
+        setvar(VAR_TALK_TO_MOM_1, 1)
+        setflag(FLAG_LEAH_MARKET_INTERACTION)
+        
+        closemessage
+        releaseall
+    }
+    elif(var(VAR_TALK_TO_MOM_1) >= 3){
+        lockall
+        faceplayer
+        msgbox("You look tired hon, want me to heal\n your pokemon?", MSGBOX_YESNO)
+            if(var(VAR_RESULT) == YES){
+                incrementgamestat(GAME_STAT_USED_POKECENTER)
+                fadescreen(FADE_TO_BLACK)
+                special(HealPlayerParty)
+                playfanfare(MUS_HEAL)
+                waitfanfare
+                closemessage
+                fadescreen(FADE_FROM_BLACK)
+                msgbox("Now thats better!")
+                waitmessage
+                release
+            }
+            else{
+                faceplayer
+                msgbox("Okay sweetie be safe!")
+            }  
+        closemessage
+        releaseall
+    }
+    else{
+        lockall
+        faceplayer
+        msgbox(format(
+            "Oh don't you worry about your old mom.\p"
+            "I'll be here until you get back."
+             ))
+            closemessage
+            releaseall
+    }
+
+    
+}
+
+
+
+
+movement SIMPLE_MOVE_DOWN{
+    walk_down
+}
+
+
+

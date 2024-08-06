@@ -1,0 +1,42 @@
+mapscripts Dustrowe_Sister_Building_MapScripts{
+
+}
+
+script Dustrowe_Sister_Building_Girl{
+    lockall
+    faceplayer
+    if(var(VAR_DUSTROWE_SIBLINGS) == 1){
+        msgbox(format(
+            ". . .\p"
+            "So he gave you my makeup to return?\p"
+            "You gave the Makeup back!"
+        ))
+        playfanfare(MUS_OBTAIN_ITEM)
+        waitfanfare
+        msgbox(format(
+            "I guess you talked some sense into him.\p"
+            "Thanks for returning it to me\nI want you to have this.\p"
+            "Me and my brother used to teach\nour Pokémon this\p"
+            "We never lost a battle during those days..."
+        ))
+        closemessage
+        giveitem(ITEM_TM32)
+        setvar(VAR_DUSTROWE_SIBLINGS, 2)
+        releaseall
+    }
+    elif(var(VAR_DUSTROWE_SIBLINGS) == 2){
+        msgbox(format(
+            "Thanks again for your help!"
+        ))
+        closemessage
+        releaseall
+    }
+    else{
+        msgbox(format(
+            "Ugh my brother stole my makeup again..\p"
+            "I'd go get it back but he\nnever listens to me."
+        ))
+        closemessage
+        releaseall
+    }
+}

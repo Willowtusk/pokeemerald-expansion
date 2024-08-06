@@ -6,7 +6,7 @@
     F(DRAGON_CLAW) \
     F(WATER_PULSE) \
     F(CALM_MIND) \
-    F(ROAR) \
+    F(POWER_UP_PUNCH) \
     F(TOXIC) \
     F(HAIL) \
     F(BULK_UP) \
@@ -51,7 +51,10 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(EXTRASENSORY) \
+    F(FLAME_BURST) \
+    F(BARB_BARRAGE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
