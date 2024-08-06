@@ -100,8 +100,7 @@ Leah_Market_Leave_Text_0:
 Leah_Market_Leave_Text_1:
 # 52 "data/maps/SelunaMarket/scripts.pory"
 	.string "That EXP SHARE should allow you to\n"
-	.string "level up your Pokemon easy!\p"
-	.string "$"
+	.string "level up your Pokemon easy!$"
 
 Leah_Market_Leave_Text_2:
 # 58 "data/maps/SelunaMarket/scripts.pory"
