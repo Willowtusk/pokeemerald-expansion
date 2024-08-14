@@ -218,9 +218,9 @@ text ALLY_OUTRO{
 }
 
 script ALLY_GIVE_LEFTOVERS{
-    msgbox("Here take this for besting me.")
+    msgbox("Here, take this for besting me.", MSGBOX_AUTOCLOSE)
     giveitem(ITEM_LEFTOVERS, 1)
-    return
+    releaseall
 }
 
 movement MOVE_LEFT_ONE{
