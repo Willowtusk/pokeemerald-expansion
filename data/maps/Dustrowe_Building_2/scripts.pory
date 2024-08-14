@@ -27,8 +27,8 @@ script Dustrowe_Building_2_Camper{
 script Dustrowe_Building_2_Fossil{
     lockall
     msgbox(format(
-        "A beautiful fossil!\p"
-        "Bet this will fetch a good price"
+        "... Quite an ugly fossil.\p"
+        "No collector would want this."
     ))
     closemessage
     releaseall

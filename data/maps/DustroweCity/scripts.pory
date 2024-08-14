@@ -1,4 +1,9 @@
 mapscripts DustroweCity_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION{
+        if(flag(FLAG_BADGE01_GET)){
+            setobjectxyperm(3, 27, 25)
+        }
+    }
 
 }
 
@@ -42,4 +47,27 @@ script Dustrowe_Little_Girl{
     ))
     closemessage
     releaseall
+}
+
+script Leaving_Dustrowe_NPC{
+    lockall
+    faceplayer
+    if(!(flag(FLAG_BADGE01_GET))){
+    msgbox(format(
+        "Sorry, but this area is reserved for\n"
+        "trained martial artists only.\p"
+        "Come back when you are worthy."
+    ), MSGBOX_AUTOCLOSE
+    )
+    }
+    elif(flag(FLAG_BADGE01_GET)){
+        msgbox(format(
+            "So you have the SOOT Badge!\p"
+            "You may proceed."
+        ), MSGBOX_AUTOCLOSE
+        )
+        setobjectxyperm(3, 27, 25)
+    }
+    releaseall
+    end
 }

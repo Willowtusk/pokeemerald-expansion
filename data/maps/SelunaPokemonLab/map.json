@@ -101,6 +101,24 @@
       "var": "VAR_TALK_TO_MOM_1",
       "var_value": "1",
       "script": "Professor_ChooseYourStarter_MOVE_TWO"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TALK_TO_MOM_1",
+      "var_value": "2",
+      "script": "Choose_Starter"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TALK_TO_MOM_1",
+      "var_value": "2",
+      "script": "Choose_Starter"
     }
   ],
   "bg_events": [

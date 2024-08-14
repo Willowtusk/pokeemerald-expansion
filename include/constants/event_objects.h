@@ -374,6 +374,9 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_HELIX_GRUNT_F_1         0x1125
+#define OBJ_EVENT_PAL_TAG_HELIX_GRUNT_M_1         0x1126
+#define OBJ_EVENT_PAL_TAG_HELIX_JENNINGS         0x1127
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

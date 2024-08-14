@@ -70,6 +70,7 @@
 #define MAP_DUSTROWE_PATH       (61 | (0 << 8))
 #define MAP_DUSTROWE_CITY       (62 | (0 << 8))
 #define MAP_ROUTE701_2          (63 | (0 << 8))
+#define MAP_ROUTE702            (64 | (0 << 8))
 
 // gMapGroup_IndoorSeluna
 #define MAP_SELUNA_CAVE        (0 | (1 << 8))

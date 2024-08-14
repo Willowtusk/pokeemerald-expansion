@@ -4620,6 +4620,16 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Route701_2/border.bin",
       "blockdata_filepath": "data/layouts/Route701_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE702",
+      "name": "Route702_Layout",
+      "width": 54,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route702/border.bin",
+      "blockdata_filepath": "data/layouts/Route702/map.bin"
     }
   ]
 }

@@ -380,6 +380,8 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     TRAINER_CLASS(HELIX_GRUNT, "TEAM HELIX", 5),
     TRAINER_CLASS(HELIX_MAGMA, "TEAM HELIX", 5),
     TRAINER_CLASS(HELIX_ADMIN, "HELIX ADMIN", 20),
+    TRAINER_CLASS(SCIENTIST, "SCIENTIST", 5),
+    TRAINER_CLASS(CHOSEN, "CHOSEN", 7),
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =

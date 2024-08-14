@@ -50,13 +50,11 @@ Dustrowe_Brother_Building_Brother_Text_0:
 	.string "for my body lotion..\p"
 	.string "Maybe I need some glasses or something.\p"
 	.string "Would you mind returning these to her\n"
-	.string "for me?\p"
-	.string "$"
+	.string "for me?$"
 
 Dustrowe_Brother_Building_Brother_Text_1:
 # 17 "data/maps/Dustrowe_Brother_Building/scripts.pory"
-	.string "Received the Makeup!\p"
-	.string "$"
+	.string "Received the Makeup!$"
 
 Dustrowe_Brother_Building_Brother_Text_2:
 # 24 "data/maps/Dustrowe_Brother_Building/scripts.pory"

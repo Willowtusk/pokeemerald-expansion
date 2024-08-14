@@ -11570,7 +11570,7 @@
               {
                 "min_level": 8,
                 "max_level": 9,
-                "species": "SPECIES_GEODUDE"
+                "species": "SPECIES_WOOBAT"
               },
               {
                 "min_level": 8,
@@ -11615,12 +11615,12 @@
               {
                 "min_level": 8,
                 "max_level": 9,
-                "species": "SPECIES_DWEBBLE"
+                "species": "SPECIES_GEODUDE"
               },
               {
                 "min_level": 8,
                 "max_level": 9,
-                "species": "SPECIES_DWEBBLE"
+                "species": "SPECIES_WOOBAT"
               },
               {
                 "min_level": 8,
@@ -11934,6 +11934,75 @@
                 "min_level": 31,
                 "max_level": 37,
                 "species": "SPECIES_POLIWHIRL"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE702",
+          "base_label": "gRoute7020",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_MACHOP"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_SAWK"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_SAWK"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_THROH"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_THROH"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_TYROGUE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_TYROGUE"
+              },
+              {
+                "min_level": 17,
+                "max_level": 18,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 18,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_GURDURR"
+              },
+              {
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_MACHOP"
               }
             ]
           }

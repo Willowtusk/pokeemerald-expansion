@@ -1117,3 +1117,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DustroweGym_Main_Floor/scripts.inc"
 
 	.include "data/maps/Route701_2/scripts.inc"
+
+	.include "data/maps/Route702/scripts.inc"

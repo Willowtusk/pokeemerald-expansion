@@ -20,13 +20,16 @@ script ChoosingAStarter_Piplup{
                 setflag(FLAG_PIPLUP_STARTER)
                 setflag(FLAG_SYS_POKEMON_GET)
                 call(NicknamePartyMon)
+                goto(Starter_Obtained_Pokedex_Get)
             }
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Piplup!")
                 removeobject(2)
+                setvar(VAR_TALK_TO_MOM_1, 3)
                 setflag(FLAG_PIPLUP_STARTER)
                 call(NicknameBoxMon)
+                goto(Starter_Obtained_Pokedex_Get)
             }
             else{
                 hidemonpic
@@ -94,13 +97,16 @@ script ChoosingAStarter_Chikorita{
                 setflag(FLAG_CHIKORITA_STARTER)
                 setflag(FLAG_SYS_POKEMON_GET)
                 call(NicknamePartyMon)
+                goto(Starter_Obtained_Pokedex_Get)
             }
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Chikorita!")
                 removeobject(3)
+                setvar(VAR_TALK_TO_MOM_1, 3)
                 setflag(FLAG_CHIKORITA_STARTER)
                 call(NicknameBoxMon)
+                goto(Starter_Obtained_Pokedex_Get)
             }
             else{
                 hidemonpic
@@ -129,7 +135,7 @@ end
 script ChoosingAStarter_Fennekin{
     lockall
     if(!(flag(FLAG_FENNEKIN_STARTER) || flag(FLAG_CHIKORITA_STARTER) || flag(FLAG_PIPLUP_STARTER))){
-        showmonpic(SPECIES_FENNEKIN, 10,3)
+        showmonpic(SPECIES_FENNEKIN, 10, 3)
         playmoncry(SPECIES_FENNEKIN, CRY_MODE_ENCOUNTER)
         waitmoncry
         msgbox("Would you like to choose\nthe Fire Type Fennekin?", MSGBOX_YESNO)
@@ -144,13 +150,16 @@ script ChoosingAStarter_Fennekin{
                 setflag(FLAG_FENNEKIN_STARTER)
                 setflag(FLAG_SYS_POKEMON_GET)
                 call(NicknamePartyMon)
+                goto(Starter_Obtained_Pokedex_Get)
             }
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Fennekin!")
                 removeobject(4)
+                setvar(VAR_TALK_TO_MOM_1, 3)
                 setflag(FLAG_FENNEKIN_STARTER)
                 call(NicknameBoxMon)
+                goto(Starter_Obtained_Pokedex_Get)
             }
             else{
                 hidemonpic
@@ -160,7 +169,6 @@ script ChoosingAStarter_Fennekin{
         else{
             hidemonpic
             msgbox(Starter_NotChosen)
-
         }
     }
     else{
@@ -182,8 +190,8 @@ script Professor_ChooseYourStarter_MOVE_ONE{
     msgbox(format(
         "There you are!\n"
         "I've been trying to get ahold of you all day.\p"
-        "Have you ever thought about traveling the region?"
-        "Me and mom think it would be good for you to go out and see the world.\p"
+        "Have you ever thought about traveling the region?\p"
+        "Me and mom think it would be good for you\nto see the world.\p"
         "But, you can't travel the world without a companion can you?\p"
         "I think it's finally time for you to get a Pokemon {PLAYER}.\p"
         "My field research has allowed me to spare some Pokemon for your journey!\p"
@@ -251,4 +259,34 @@ script DAD_LAB_CONVO_1{
         closemessage
         releaseall
     }
+}
+
+script Choose_Starter{
+    lockall
+    msgbox("I should choose a Pokemon first.")
+    applymovement(OBJ_EVENT_ID_PLAYER, SIMPLE_MOVE_UP_ONE)
+    waitmovement(0)
+    closemessage
+    releaseall
+}
+
+script Starter_Obtained_Pokedex_Get{
+    lockall
+    turnobject(1, DIR_NORTH)
+    msgbox(format(
+        "So you chose that one?\p"
+        "In that case, you'll be needing this!\p"
+        "{PLAYER} Received the POKéDEX!"
+        ))
+    playfanfare(MUS_OBTAIN_ITEM)
+    waitmessage
+    waitfanfare
+    setflag(FLAG_SYS_POKEDEX_GET)
+    special(SetUnlockedPokedexFlags)
+    closemessage
+    return
+}
+
+movement SIMPLE_MOVE_UP_ONE{
+    walk_up
 }

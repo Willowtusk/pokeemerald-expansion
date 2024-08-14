@@ -7,7 +7,7 @@ SeafloorCavern_Room4_EventScript_Grunt3::
 	end
 
 SeafloorCavern_Room4_EventScript_Grunt4::
-	trainerbattle_single DUSTROWE_TRAINER_ALYSSA, SeafloorCavern_Room4_Text_Grunt4Intro, SeafloorCavern_Room4_Text_Grunt4Defeat
+	trainerbattle_single TRAINER_DUSTROWE_ALYSSA, SeafloorCavern_Room4_Text_Grunt4Intro, SeafloorCavern_Room4_Text_Grunt4Defeat
 	msgbox SeafloorCavern_Room4_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 

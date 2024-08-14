@@ -1,6 +1,9 @@
 #include "constants/trainers.h"
 #include "data.h"
 
+const u32 gTrainerFrontPic_HelixScientist[] = INCBIN_U32("graphics/trainers/front_pics/helix_scientist.4bpp.lz");
+const u32 gTrainerPalette_HelixScientist[] = INCBIN_U32("graphics/trainers/front_pics/helix_scientist.gbapal.lz");
+
 const u32 gTrainerFrontPic_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.4bpp.lz");
 const u32 gTrainerPalette_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.gbapal.lz");
 
@@ -401,6 +404,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(LEAF, Leaf),
     TRAINER_SPRITE(RS_BRENDAN, RubySapphireBrendan),
     TRAINER_SPRITE(RS_MAY, RubySapphireMay),
+    TRAINER_SPRITE(HELIX_SCIENTIST, HelixScientist),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

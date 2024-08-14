@@ -1,0 +1,232 @@
+mapscripts Route702_MapScripts{
+
+}
+
+script BULK_UP_OBTAINED{
+    lockall
+    giveitem(ITEM_TM08, 1)
+    removeobject(1)
+    setflag(FLAG_RECEIVED_TM_BULK_UP)
+    releaseall
+}
+
+script Martial_Gauntlet_Man{
+    lockall
+    faceplayer
+    if(var(VAR_MARTIAL_GAUNTLET) == 0){
+    msgbox(format(
+        "Stranger!\p"
+        "In order to pass through this area,\n"
+        "you must defeat the Martial Gauntlet!\p"
+        "A series of expert-trained martial artists who show no mercy!\p"
+        "If you manage to defeat all of us, you shall be rewarded!\p"
+        "Are you up to the challenge?"
+    ), MSGBOX_YESNO
+    )
+    if(var(VAR_RESULT) == YES){
+        turnobject(OBJ_EVENT_ID_PLAYER, DIR_SOUTH)
+        trainerbattle_single(TRAINER_BLACK_BELT_JOEY, BLACK_BELT_JOEY_INTRO, BLACK_BELT_JOEY_OUTRO, MARTIAL_GAUNTLET_1st_TRAINER_SUCCESS)
+    }
+    }
+    if(var(VAR_RESULT) == NO){
+        msgbox("Come back when you have a better answer!", MSGBOX_AUTOCLOSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, MOVE_LEFT_ONE)
+        waitmovement(0)
+    }
+    elif(var(VAR_MARTIAL_GAUNTLET) >= 1){
+        msgbox("The rest are stronger than me, good luck!")
+        closemessage
+    }
+    releaseall
+    end
+}
+
+
+text BLACK_BELT_JOEY_INTRO{
+    "Good answer!\p"
+    "Your first opponent shall be me!"
+}
+
+
+text BLACK_BELT_JOEY_OUTRO{
+    "Aha! Good workout!"
+}
+
+script MARTIAL_GAUNTLET_1st_TRAINER_SUCCESS{
+    setvar(VAR_MARTIAL_GAUNTLET, 1)
+}
+
+script Martial_Gauntlet_Alita{
+    trainerbattle_single(TRAINER_BATTLE_GIRL_ALITA, ALITA_INTRO, ALITA_OUTRO,)
+    msgbox("I think I need to work on my bicep curls\nmore..", MSGBOX_AUTOCLOSE)
+}
+
+text ALITA_INTRO{
+    "I'm next in line!\p"
+    "People call me the Battle Angel!"
+}
+
+text ALITA_OUTRO{
+    "Guess I need more training..."
+}
+
+
+
+
+
+script Martial_Gauntlet_Nathan{
+    trainerbattle_single(TRAINER_BLACK_BELT_NATHAN, NATHAN_INTRO, NATHAN_OUTRO, MARTIAL_GAUNTLET_SUCCESS)
+    msgbox("You sure gave us a thrashing trainer!", MSGBOX_AUTOCLOSE)
+}
+
+text NATHAN_INTRO{
+    "I'm the last Martial Gauntlet member.\p"
+    "Just try to withstand my assault!"
+}
+
+text NATHAN_OUTRO{
+    "You're like a piece of iron..."
+}
+
+
+script MARTIAL_GAUNTLET_SUCCESS{
+    msgbox(
+        "You really beat Johnny then didn't you!\p"
+        "As reward for beating all of us, take this."
+    )
+    closemessage
+    giveitem(ITEM_EXPERT_BELT, 1)
+    msgbox(
+        "That's an Expert Belt!\p"
+        "It slightly boosts the power of\nadvantageous moves!"
+    )
+    setvar(VAR_MARTIAL_GAUNTLET, 3)
+}
+
+
+script Talk_To_Gauntlet_Man_1{
+    lockall
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    goto(Martial_Gauntlet_Man)
+}
+
+
+script Talk_To_Gauntlet_Man_2{
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, MOVE_UP_ONE)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_SOUTH)
+    goto(Martial_Gauntlet_Man)
+}
+
+script Talk_To_Gauntlet_Man_3{
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, SIMPLE_MOVE_UP)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_SOUTH)
+    goto(Martial_Gauntlet_Man)
+}
+
+script Route702_Monferno{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_MONFERNO, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("FERRRNO", MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Route702_Mienfoo{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_MIENFOO, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("FOOOO", MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Route702_Machoke{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_MACHOKE, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("MAAAA", MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Monferno_Onlooker{
+    lockall
+    msgbox("Monferno! Attack with Fire Punch!")
+    applymovement(7, MOVE_RIGHT_ONE)
+    waitmovement(7)
+    playse(SE_EFFECTIVE)
+    delay(48)
+    applymovement(7, MOVE_LEFT_ONE)
+    waitmovement(7)
+    turnobject(7, DIR_EAST)
+    closemessage
+    releaseall
+}
+
+script Mienfoo_Onlooker{
+    lockall
+    msgbox("Mienfoo! Hit em with Retaliate!")
+    applymovement(6, MOVE_LEFT_ONE)
+    waitmovement(6)
+    playse(SE_EFFECTIVE)
+    delay(48)
+    applymovement(6, MOVE_RIGHT_ONE)
+    waitmovement(6)
+    turnobject(6, DIR_WEST)
+    closemessage
+    releaseall
+}
+
+
+script COOLTRAINER_ALLY{
+    lockall
+    faceplayer
+    if(!(defeated(TRAINER_ELITE_ALLY))){
+    msgbox(format(
+        "Why hello there trainer.\p"
+        "I'm a member of a group known as The Chosen.\p"
+        "We are tasked with finding suitable trainers to join us.\p"
+        "Are you one of them?"
+    ), MSGBOX_YESNO
+    )
+    if(var(VAR_RESULT) == YES){
+    trainerbattle_single(TRAINER_ELITE_ALLY, ALLY_INTRO, ALLY_OUTRO, ALLY_GIVE_LEFTOVERS)
+    }
+    }
+    elif(var(VAR_RESULT) == NO){
+        msgbox("Ah I see, how unfortunate.")
+        closemessage
+    }
+    elif(defeated(TRAINER_ELITE_ALLY)){
+        msgbox("We will be watching you.")
+    }
+    releaseall
+    end
+}
+
+text ALLY_INTRO{
+    "Then let us find out shall we?"
+}
+
+text ALLY_OUTRO{
+    "You are certainly promising."
+}
+
+script ALLY_GIVE_LEFTOVERS{
+    msgbox("Here take this for besting me.")
+    giveitem(ITEM_LEFTOVERS, 1)
+    return
+}
+
+movement MOVE_LEFT_ONE{
+    walk_left
+}
+
+movement MOVE_RIGHT_ONE{
+    walk_right
+}

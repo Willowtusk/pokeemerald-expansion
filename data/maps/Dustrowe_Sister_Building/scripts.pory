@@ -16,7 +16,7 @@ script Dustrowe_Sister_Building_Girl{
         msgbox(format(
             "I guess you talked some sense into him.\p"
             "Thanks for returning it to me\nI want you to have this.\p"
-            "Me and my brother used to teach\nour Pokémon this\p"
+            "Me and my brother used to teach\nour Pokémon this.\p"
             "We never lost a battle during those days..."
         ))
         closemessage

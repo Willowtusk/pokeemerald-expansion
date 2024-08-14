@@ -46,7 +46,7 @@ Optional fields for Pokemon:
           (Order does not matter)
     - EVs (252 HP / 128 Spe / 48 Def, defaults to all 0, is not capped at 512 total)
           (Order does not matter)
-    - Ball (Poke Ball or ITEM_POKE_BALL, defaults to Poke Ball
+    - Ball (Poke Ball or ITEM_POKE_BALL, defaults to Poke Ball)
     - Happiness (Number between 1 and 255)
     - Nature (Rash or NATURE_RASH, defaults to Hardy)
     - Shiny (Yes/No, defaults to No)
@@ -81,8 +81,29 @@ Gender: Male
 Music: Male
 Double Battle: No
 
-=== TRAINER_SAWYER_1 ===
-Name: SAWYER
+=== TRAINER_LEAH_1 ===
+Name: LEAH
+Class: Pkmn Trainer 1
+Pic: Arena Tycoon Greta
+Gender: Female
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Eevee (F)
+Level: 5
+Nature: Docile
+Ability: Anticipation
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiny: Yes
+Ball: Luxury Ball
+- Tail Whip
+- Growl
+- Lick
+- Tackle
+
+=== TRAINER_HIKER_MIKE_701 ===
+Name: MIKE
 Class: Hiker
 Pic: Hiker
 Gender: Male
@@ -91,308 +112,644 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Geodude
-Level: 21
+Level: 6
+Nature: Hasty
+Ability: Sturdy
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Rock Throw
+- Defense Curl
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Roggenrola
+Level: 6
+Ability: Sturdy
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Sand Attack
+- Mud Slap
+
+=== TRAINER_BILL_701 ===
+Name: BILL
+Class: Bug Catcher
+Pic: Bug Catcher
 Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GABRIELLE_1 ===
-Name: GABRIELLE
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Skitty
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Poochyena
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Zigzagoon
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Lotad
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Seedot
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Taillow
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_PETALBURG_WOODS ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MARCEL ===
-Name: MARCEL
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
+Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Manectric
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Wurmple
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- String Shot
+- Tackle
 
-Shiftry
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Cascoon
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Harden
+- String Shot
+- Tackle
 
-=== TRAINER_ALBERTO ===
-Name: ALBERTO
-Class: Bird Keeper
-Pic: Bird Keeper
+=== TRAINER_HELIX_GRUNT_LAMBDA_1 ===
+Name: GRUNT
+Class: Helix Grunt
+Pic: Aqua Grunt F
 Gender: Male
-Music: Cool
+Music: Aqua
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Pelipper
-Level: 30
+Solosis
+Level: 9
+Ability: Magic Guard
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Confuse Ray
+- Torment
+- Hidden Power
 
-Xatu
-Level: 30
+Unown L
+Level: 9
+Ability: Levitate
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Hidden Power
 
-=== TRAINER_ED ===
-Name: ED
-Class: Collector
-Pic: Collector
+=== TRAINER_HELIX_GRUNT_LAMBDA_2 ===
+Name: GRUNT
+Class: Helix Grunt
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Bronzor
+Level: 9
+Ability: Levitate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Confusion
+- Metal Sound
+- Gyro Ball
+
+Unown L
+Level: 9
+Ability: Levitate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Hidden Power
+
+=== TRAINER_HELIX_ADMIN_JENNINGS_1 ===
+Name: JENNINGS
+Class: Helix Admin
+Pic: Elite Four Glacia
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Mon Choices
+Mugshot: Purple
+
+Sableye
+Level: 10
+Nature: Bold
+Ability: Prankster
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Taunt
+- Double Team
+- Substitute
+- Night Shade
+
+Magnemite
+Level: 10
+Nature: Modest
+Ability: Levitate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Thunder Shock
+- Lock On
+- Thunder Wave
+- Sonic Boom
+
+Carbink
+Level: 12
+Nature: Calm
+Ability: Levitate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Rock Tomb
+- Toxic
+- Protect
+- Psybeam
+
+
+=== TRAINER_NINJA_OWEN ===
+Name: OWEN
+Class: Ninja Boy
+Pic: Ninja Boy
 Gender: Male
 Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Zangoose
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Seviper
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_DECLAN ===
-Name: DECLAN
-Class: Swimmer M
-Pic: Swimmer M
-Gender: Male
-Music: Swimmer
-Double Battle: No
-AI: Check Bad Move
-
-Gyarados
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
+Nincada
 Level: 11
+Ability: Compound Eyes
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Leech Life
+- Screech
+- Scratch
+- Metal Claw
 
-=== TRAINER_GRUNT_WEATHER_INST_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_NINJA_ALEC ===
+Name: ALEC
+Class: Ninja Boy
+Pic: Ninja Boy
 Gender: Male
-Music: Aqua
+Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
 Zubat
-Level: 27
+Level: 10
+Ability: Inner Focus
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Leech Life
+- Wing Attack
+- Bite
+- Supersonic
 
-Poochyena
-Level: 27
+Sneasel
+Level: 12
+Ability: Competitive
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ice Shard
+- Fake Out
+- Icy Wind
+- Hone Claws
 
-=== TRAINER_GRUNT_WEATHER_INST_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_NINJA_GABE ===
+Name: GABE
+Class: Ninja Boy
+Pic: Ninja Boy
 Gender: Male
-Music: Aqua
+Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Mon Choices
 
-Poochyena
-Level: 27
+Ninjask
+Level: 13
+Ability: Speed Boost
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Protect
+- Aerial Ace
+- Acid
+- Absorb
 
-Carvanha
-Level: 27
+Karrablast
+Level: 13
+Ability: Shell Armor
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Headbutt
+- Bug Bite
+- Razor Shell
+- Agility
 
-=== TRAINER_GRUNT_WEATHER_INST_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Shelmet @ Water Gem
+Level: 14
+Ability: Unburden
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Water Gun
+- Struggle Bug
+- Acid Spray
+- Final Gambit
+
+=== TRAINER_LILY_1 ===
+Name: LILY
+Class: Rival
+Pic: School Kid F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Mon Choices
+
+Sandshrew @ Smooth Rock
+Level: 14
+Ability: Sand Rush
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Sandstorm
+- Dig
+- Stealth Rock
+- Rock Throw
+
+Clefairy @ Sitrus Berry
+Level: 14
+Ability: Unaware
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Disarming Voice
+- Encore
+- Calm Mind
+- Baton Pass
+
+Swirlix @ Red Card
+Level: 14
+Ability: Sweet Veil
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Draining Kiss
+- Round
+- Energy Ball
+- Aromatherapy
+
+Winnie (Poochyena) (F) @ Muscle Band
+Level: 16
+Ability: Intimidate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Shiny: Yes
+- Bite
+- Scary Face
+- Take Down
+- Howl
+
+=== TRAINER_LEADER_JOHNNY ===
+Name: JOHNNY
+Class: Leader
+Pic: Hiker
 Gender: Male
-Music: Aqua
+Music: Elite Four
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Mon Choices
+Mugshot: Yellow
 
-Poochyena
-Level: 26
+Claydol @ Leftovers
+Level: 18
+Ability: Levitate
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Stealth Rock
+- Power Gem
+- Psywave
+- Earth Power
 
-Zubat
-Level: 26
+Geodude @ Hard Stone
+Level: 18
+Ability: Sturdy
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Power Up Punch
+- Rock Blast
+- Thunder Punch
+- Magnitude
+
+Diglett @ Focus Sash
+Level: 18
+Ability: Sand Veil
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Dig
+- Rock Blast
+- Feint Attack
+- Aerial Ace
+
+Hitmonlee @ Normal Gem
+Level: 19
+Ability: Unburden
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fake Out
+- Jump Kick
+- Knock Off
+- Blaze Kick
 
-Carvanha
-Level: 26
+Hitmonchan @ Expert Belt
+Level: 19
+Ability: Iron Fist
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Mach Punch
+- Sucker Punch
+- Power Up Punch
+- Thunder Punch
 
-=== TRAINER_GRUNT_MUSEUM_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Machamp @ Toxic Orb
+Level: 20
+Ability: Guts
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Facade
+- Bullet Punch
+- Power Up Punch
+- Dual Chop
+
+=== TRAINER_LASS_EMILY_701 ===
+Name: EMILY
+Class: Lass
+Pic: Lass
 Gender: Male
-Music: Aqua
+Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Carvanha
+Igglybuff
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Charm
+- Metronome
+
+Cleffa
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Cosmic Power
+- Stored Power
+
+=== TRAINER_DUSTROWE_MATT ===
+Name: MATT
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Tyrogue
 Level: 15
+Ability: Guts
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fake Out
+- Karate Chop
+- Foresight
+- Ice Punch
+
+Machop
+Level: 16
+Ability: Inner Focus
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bulk Up
+- Brick Break
+- Seismic Toss
+- Fire Punch
+
+Scraggy
+Level: 16
+Ability: Intimidate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Faint Attack
+- Low Kick
+- Zen Headbutt
+- Poison Jab
+
+=== TRAINER_DUSTROWE_ALYSSA ===
+Name: ALYSSA
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Cubone
+Level: 16
+Ability: Rock Head
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Bone Club
+- Double Kick
+- Iron Tail
+- Rock Throw
+
+Rhyhorn
+Level: 17
+Ability: Reckless
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Double Edge
+- Horn Attack
+- Bulldoze
+- Rock Blast
+
+Gligar
+Level: 17
+Ability: Hyper Cutter
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Wing Attack
+- Knock Off
+- Fury Cutter
+- Poison Tail
+
+=== TRAINER_ROUTE701_LARRY ===
+Name: LARRY
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Cyndaquil
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Ember
+- Rapid Spin
+- Growl
+- Quick Attack
+
+Combee
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Sweet Scent
+- Absorb
+- Wing Attack
+- Infestation
+
+Bonsly
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Rock Throw
+- Harden
+- Take Down
+- Fake Tears
+
+=== TRAINER_SCIENTIST_LARDO ===
+Name: LARDO
+Class: Scientist
+Pic: Helix Scientist
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability  
+
+Chansey
+Level: 8
+Nature: Calm
+Ability: Natural Cure
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tail Whip
+- Defense Curl
+- Copycat
+- Metronome
+
+Chansey
+Level: 8
+Nature: Calm
+Ability: Natural Cure
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tail Whip
+- Defense Curl
+- Copycat
+- Metronome
+
+Chansey
+Level: 8
+Nature: Calm
+Ability: Natural Cure
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tail Whip
+- Defense Curl
+- Copycat
+- Metronome 
+
+=== TRAINER_BLACK_BELT_JOEY ===
+Name: JOEY
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Machoke
+Level: 19
+Nature: Adamant
+Ability: Guts
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Seismic Toss
+- Bulk Up
+- Ice Punch
+- Blaze Kick 
+
+Heracross
+Level: 19
+Nature: Adamant
+Ability: Moxie
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Arm Thrust
+- Pin Missile
+- Aerial Ace
+- Throat Chop 
+
+
+=== TRAINER_BATTLE_GIRL_ALITA ===
+Name: ALITA
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Breloom @ Toxic Orb
+Level: 20
+Nature: Adamant
+Ability: Poison Heal
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Mach Punch
+- Seed Bomb
+- Brick Break
+- Protect 
+
+Combusken @ Charcoal
+Level: 20
+Nature: Jolly
+Ability: Speed Boost
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Aerial Ace
+- Fire Punch
+- Power Up Punch
+- Protect 
+
+Medicham @ Assault Vest
+Level: 21
+Nature: Docile
+Ability: Pure Power
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Force Palm
+- Psycho Cut
+- Thunder Punch
+- Ice Punch 
+
+
+=== TRAINER_BLACK_BELT_NATHAN ===
+Name: NATHAN
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Hitmontop @ Leftovers
+Level: 22
+Nature: Jolly
+Ability: Intimidate
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fake Out
+- Rapid Spin
+- Force Palm
+- Mach Punch
+
+Hariyama @ Expert Belt
+Level: 22
+Nature: Jolly
+Ability: Thick Fat
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Fake Out
+- Bulk Up
+- Knock Off
+- Ice Punch 
+
+Gurdurr @ Flame Orb
+Level: 23
+Nature: Docile
+Ability: Guts
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Knock Off
+- Mach Punch
+- Brick Break
+- Comet Punch
+
+=== TRAINER_ELITE_ALLY ===
+Name: ALLY
+Class: Chosen
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Mon Choices
+
+Mienshao @ Normal Gem
+Level: 24
+Nature: Jolly
+Ability: Regenerator
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Knock Off
+- Fake Out
+- High Jump Kick
+- U turn
+
+Primeape @ Choice Scarf
+Level: 24
+Nature: Jolly
+Ability: Defiant
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- U Turn
+- Gunk Shot
+- Brick Break
+- Rock Tomb
+
+Poliwrath @ Leftovers
+Level: 24
+Nature: Modest
+Ability: Water Absorb
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Scald
+- Ice Beam
+- Vacuum Wave
+- Mud Shot
+
+Bewear @ Silk Scarf
+Level: 25
+Nature: Adamant
+Ability: Fluffy
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Double Edge
+- Superpower
+- Shadow Claw
+- Swords Dance
+
 
 === TRAINER_GRUNT_MUSEUM_2 ===
 Name: GRUNT
@@ -8011,7 +8368,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Castform
+Castform Normal
 Level: 30
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Rain Dance
@@ -9221,7 +9578,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Castform
+Castform Normal
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Sunny Day

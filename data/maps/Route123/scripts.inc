@@ -125,7 +125,7 @@ Route123_EventScript_Alberto::
 	end
 
 Route123_EventScript_Ed::
-	trainerbattle_single DUSTROWE_TRAINER_MATT, Route123_Text_EdIntro, Route123_Text_EdDefeat
+	trainerbattle_single TRAINER_DUSTROWE_MATT, Route123_Text_EdIntro, Route123_Text_EdDefeat
 	msgbox Route123_Text_EdPostBattle, MSGBOX_AUTOCLOSE
 	end
 

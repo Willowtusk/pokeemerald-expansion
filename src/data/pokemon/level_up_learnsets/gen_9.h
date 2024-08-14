@@ -9984,12 +9984,8 @@ static const struct LevelUpMove sInfernapeLevelUpLearnset[] = {
 static const struct LevelUpMove sPiplupLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 4, MOVE_GROWL),
-<<<<<<< Updated upstream
-    LEVEL_UP_MOVE( 8, MOVE_WATER_GUN),
-=======
     LEVEL_UP_MOVE( 6, MOVE_WATER_GUN),
     LEVEL_UP_MOVE(8, MOVE_PECK),
->>>>>>> Stashed changes
     LEVEL_UP_MOVE(11, MOVE_CHARM),
     LEVEL_UP_MOVE(15, MOVE_PLUCK),
     LEVEL_UP_MOVE(18, MOVE_BUBBLE_BEAM),
@@ -15151,6 +15147,7 @@ static const struct LevelUpMove sFletchlingLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 5, MOVE_QUICK_ATTACK),
+    LEVEL_UP_MOVE( 8, MOVE_WING_ATTACK),
     LEVEL_UP_MOVE(10, MOVE_EMBER),
     LEVEL_UP_MOVE(15, MOVE_FLAME_CHARGE),
     LEVEL_UP_MOVE(20, MOVE_ACROBATICS),

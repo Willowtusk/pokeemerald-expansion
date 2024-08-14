@@ -62,7 +62,7 @@ Dustrowe_Sister_Building_Girl_Text_1:
 	.string "Thanks for returning it to me\n"
 	.string "I want you to have this.\p"
 	.string "Me and my brother used to teach\n"
-	.string "our Pokémon this\p"
+	.string "our Pokémon this.\p"
 	.string "We never lost a battle during those\n"
 	.string "days...$"
 

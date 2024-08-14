@@ -29,43 +29,43 @@ JENNINGS_BATTLE_1::
 
 
 JENNINGS_LEAVE_LAMBDA::
-# 59 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 57 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	lockall
-# 60 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 58 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	faceplayer
-# 61 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 59 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	msgbox JENNINGS_LEAVE_LAMBDA_Text_0
+# 63 "data/maps/Inside_Lambda_Lab/scripts.pory"
+	waitmessage
+# 64 "data/maps/Inside_Lambda_Lab/scripts.pory"
+	closemessage
 # 65 "data/maps/Inside_Lambda_Lab/scripts.pory"
-	waitmessage
-# 66 "data/maps/Inside_Lambda_Lab/scripts.pory"
-	closemessage
-# 67 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	giveitem ITEM_TM17
-# 68 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 66 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	msgbox JENNINGS_LEAVE_LAMBDA_Text_1
-# 74 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 72 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	waitmessage
-# 75 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 73 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	closemessage
-# 76 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 74 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 77 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 75 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	playse SE_DOOR
-# 78 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 76 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	removeobject 3
-# 79 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 77 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	removeobject 2
-# 80 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 78 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	removeobject 1
-# 81 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 79 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	setflag FLAG_JENNINGS_DEFEATED
-# 82 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 80 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	setvar VAR_JENNINGS_DEFEATED_LAMBDA, 1
-# 83 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 81 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	delay 48
-# 84 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 82 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 85 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 83 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	releaseall
 	return
 
@@ -79,18 +79,18 @@ LAMBDA_HELIXGRUNT_2_BATTLE_Text_0:
 	.string "Good luck against the boss kiddo.$"
 
 JENNINGS_LEAVE_LAMBDA_Text_0:
-# 62 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 60 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	.string "I suppose I should reward you\n"
 	.string "for your efforts.\p"
 	.string "Here take this TM.$"
 
 JENNINGS_LEAVE_LAMBDA_Text_1:
-# 69 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 67 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	.string "That contains the move Protect.\p"
 	.string "It will shield you from an\n"
 	.string "opponents move for one turn.\p"
 	.string "You may have thwarted our research\n"
-	.string "here.\p"
+	.string "here...\p"
 	.string "but this won't be the last\n"
 	.string "you see of Team Helix!$"
 
@@ -118,13 +118,11 @@ JENNINGS_1_INTRO::
 	.string "What am I doing here?\p"
 	.string "I should be asking you the same thing!\p"
 	.string "I work for the mighty Team Helix!\p"
-	.string "Formed by the remnants of Team Aqua\n"
-	.string "and Magma!\p"
 	.string "Our goal is to uncover the secrets of\n"
 	.string "the Pokemon genome.\p"
-	.string "and you will not stand in our way!$"
+	.string "You will not stand in our way!$"
 
 JENNINGS_1_OUTRO::
-# 52 "data/maps/Inside_Lambda_Lab/scripts.pory"
+# 50 "data/maps/Inside_Lambda_Lab/scripts.pory"
 	.string "You have some fight in you after all.\p"
 	.string "But you cannot deny us for long!$"

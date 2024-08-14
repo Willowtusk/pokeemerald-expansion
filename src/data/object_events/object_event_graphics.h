@@ -38,9 +38,9 @@ const u32 gObjectEventPic_RubySapphireMayNormal[] = INCBIN_U32("graphics/object_
 const u32 gObjectEventPic_RubySapphireMayRunning[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_may/running.4bpp");
 const u16 gObjectEventPal_RubySapphireMay[] = INCBIN_U16("graphics/object_events/palettes/ruby_sapphire_may.gbapal");
 const u16 gUnusedObjectEventPalette[] = INCBIN_U16("graphics/object_events/palettes/unused_palette.gbapal");
-const u16 gObjectEventPal_Null16[16] = {};
-const u16 gObjectEventPal_Null17[16] = {};
-const u16 gObjectEventPal_Null18[16] = {};
+const u16 gObjectEventPal_HELIXGRUNTFEMALE1[] = INCBIN_U16("graphics/object_events/pics/people/team_aqua/team_helix_f_1.gbapal");
+const u16 gObjectEventPal_HELIXGRUNTMALE1[] = INCBIN_U16("graphics/object_events/pics/people/team_aqua/team_helix_m_1.gbapal");
+const u16 gObjectEventPal_HELIXJENNINGS[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/helix_jennings.gbapal");
 const u16 gObjectEventPal_Null19[16] = {};
 const u16 gObjectEventPal_Null20[16] = {};
 const u16 gObjectEventPal_Null21[16] = {};
@@ -383,6 +383,7 @@ const u16 gObjectEventPal_Lugia[] = INCBIN_U16("graphics/object_events/palettes/
 const u16 gObjectEventPal_Substitute[] = INCBIN_U16("graphics/pokemon/question_mark/overworld.gbapal");
 
 const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
+
 
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");

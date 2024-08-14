@@ -17,7 +17,7 @@ script SCIENTIST_LAMBDA_2{
     lockall
     faceplayer
     msgbox(format(
-        "We're currently using this cave to\nobtain specimens\p"
+        "We're currently using this cave to\nobtain specimens.\p"
         "Please come back later."
     ))
     closemessage
@@ -27,4 +27,43 @@ script SCIENTIST_LAMBDA_2{
 script REMOVE_SCIENTIST_BLOCKING_CAVE{
     removeobject(2)
     setvar(VAR_JENNINGS_DEFEATED_LAMBDA, 2)
+}
+
+script Lambda_Chansey{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("SEYYY!")
+    fadescreen(FADE_TO_BLACK)
+    special(HealPlayerParty)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+    closemessage
+    fadescreen(FADE_FROM_BLACK)
+    release
+}
+
+script EV_Trainer_HP{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Would you like to help us with our research?\p"
+        "I can battle you to increase the\nhealth of your Pokémon."), MSGBOX_YESNO
+    )
+    if (var(VAR_RESULT) == YES){
+        trainerbattle_no_intro(TRAINER_SCIENTIST_LARDO, LARDO_LOSE)
+    }
+    else{
+        msgbox("Maybe you'll come around...")
+        closemessage
+        releaseall
+    }
+    closemessage
+    releaseall
+    end
+}
+
+text LARDO_LOSE{
+    "Thanks for your cooperation."
 }

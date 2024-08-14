@@ -1,10 +1,10 @@
 mapscripts DustroweGym_Main_Floor_MapScripts{
     MAP_SCRIPT_ON_TRANSITION{
-        if(defeated(DUSTROWE_TRAINER_MATT)){
+        if(defeated(TRAINER_DUSTROWE_MATT)){
             setflag(FLAG_TEMP_GYM_ROCK_1)
             setobjectxyperm(5, 11, 16)
         }
-        if(defeated(DUSTROWE_TRAINER_ALYSSA)){
+        if(defeated(TRAINER_DUSTROWE_ALYSSA)){
             setflag(FLAG_TEMP_GYM_ROCK_2)
             setobjectxyperm(6, 2, 10)
         }
@@ -46,6 +46,7 @@ script Gym_Leader_Johnny{
         "You sure gave me a run\nfor my money kid\p"
         "Go show all the other gyms\nhow strong ya are!"
     ))
+    closemessage
 
 }
 
@@ -104,7 +105,7 @@ script Give_Power_Up_Punch{
 
 
 script DUSTROWE_GYM_TRAINER_MATT{
-    trainerbattle_single(DUSTROWE_TRAINER_MATT, DUSTROWE_MATT_INTRO, DUSTROWE_MATT_OUTRO)
+    trainerbattle_single(TRAINER_DUSTROWE_MATT, DUSTROWE_MATT_INTRO, DUSTROWE_MATT_OUTRO)
     if (!flag(FLAG_TEMP_GYM_ROCK_1)){
         call(DUSTROWE_ROCK_BREAK_1)
         setobjectxyperm(5, 11, 16)
@@ -115,7 +116,7 @@ script DUSTROWE_GYM_TRAINER_MATT{
 }
 
 script DUSTROWE_GYM_TRAINER_ALYSSA{
-    trainerbattle_single(DUSTROWE_TRAINER_ALYSSA, DUSTROWE_ALYSSA_INTRO, DUSTROWE_ALYSSA_OUTRO)
+    trainerbattle_single(TRAINER_DUSTROWE_ALYSSA, DUSTROWE_ALYSSA_INTRO, DUSTROWE_ALYSSA_OUTRO)
     if (!flag(FLAG_TEMP_GYM_ROCK_2)){
         call(DUSTROWE_ROCK_BREAK_2)
         setobjectxyperm(6, 2, 10)
@@ -186,5 +187,14 @@ script DUSTROWE_ROCK_BREAK_2{
     waitmovement(6)
     turnobject(6, DIR_WEST)
     delay(48)
+    releaseall
+}
+
+script Johnnys_Machamp{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_MACHAMP, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("CHAAMP!", MSGBOX_AUTOCLOSE)
     releaseall
 }

@@ -10,11 +10,11 @@ script Dustrowe_Brother_Building_Brother{
             "I think I made my sister\nmad again...\p"
             "I keep mistaking her makeup\nfor my body lotion..\p"
             "Maybe I need some glasses or something.\p"
-            "Would you mind returning these to her for me?\p"
+            "Would you mind returning these to her for me?"
         ))
         closemessage
         msgbox(format(
-            "Received the Makeup!\p"
+            "Received the Makeup!"
         
         ))
         playfanfare(MUS_OBTAIN_ITEM)

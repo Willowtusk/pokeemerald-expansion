@@ -54,5 +54,5 @@ Dustrowe_Building_2_Camper_Text_0:
 
 Dustrowe_Building_2_Fossil_Text_0:
 # 30 "data/maps/Dustrowe_Building_2/scripts.pory"
-	.string "A beautiful fossil!\p"
-	.string "Bet this will fetch a good price$"
+	.string "... Quite an ugly fossil.\p"
+	.string "No collector would want this.$"
