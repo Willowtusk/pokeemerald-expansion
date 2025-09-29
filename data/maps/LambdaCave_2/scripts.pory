@@ -1,0 +1,71 @@
+mapscripts LambdaCave_2_MapScripts{
+
+
+}
+
+script Lambda_Cave_Camper_Cole{
+
+    trainerbattle_single(TRAINER_CAMPER_COLE, CAMPER_COLE_INTRO, CAMPER_COLE_OUTRO)
+    goto(Rematch_Trainer_CAMPER_COLE)
+}
+
+text CAMPER_COLE_INTRO{
+    "I love these new shoes!\p"
+    "They give me so much energy!"
+}
+
+text CAMPER_COLE_OUTRO{
+    "Even though you beat me\n"
+    "I can still walk for miles!"
+}
+
+script Rematch_Trainer_CAMPER_COLE{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_CAMPER_COLE, CAMPER_COLE_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+
+
+script Lambda_Cave_Hiker_Joel{
+
+    trainerbattle_single(TRAINER_HIKER_JOEL, HIKER_JOEL_INTRO, HIKER_JOEL_OUTRO)
+    goto(Rematch_Trainer_HIKER_JOEL)
+}
+
+text HIKER_JOEL_INTRO{
+    "My legs are killing me!\p"
+    "How about a battle to take\nthe edge off?"
+}
+
+text HIKER_JOEL_OUTRO{
+    "On the bright side my legs\ndon't hurt anymore!"
+}
+
+
+
+script Rematch_Trainer_HIKER_JOEL{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_HIKER_JOEL, HIKER_JOEL_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+
+script LAMBDA_CAVE_NUGGET_OBTAINED{
+    lockall
+    giveitem(ITEM_NUGGET, 1)
+    removeobject(2)
+    setflag(FLAG_ITEM_LAMBDACAVE_NUGGET)
+    releaseall
+}
+

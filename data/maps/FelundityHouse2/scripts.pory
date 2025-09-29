@@ -1,0 +1,27 @@
+mapscripts FelundityHouse2_MapScripts{
+
+}
+
+script FelundityHomeschoolBoy{
+    lockall
+    faceplayer
+    msgbox(format("Woahhh, Mega Evolution sounds so cool!"))
+    waitmessage
+    releaseall
+}
+
+script FelundityHomeschoolGirl{
+    lockall
+    faceplayer
+    msgbox(format("My favorite water Pokémon is Milotic!"))
+    waitmessage
+    releaseall
+}
+
+script FelundityHomeschoolDad{
+    lockall
+    faceplayer
+    msgbox(format("I've had to homeschool my kids ever since they shut the public school down due to the water supply issue, sigh"))
+    waitmessage
+    releaseall
+}

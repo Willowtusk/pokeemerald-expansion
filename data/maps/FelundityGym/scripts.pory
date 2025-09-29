@@ -1,0 +1,34 @@
+mapscripts FelundityGym_MapScripts{
+
+}
+
+script FelundityGymSupporter{
+    lockall
+    faceplayer
+    msgbox(format("Howdy friend! You like this place? The leader Diana made her gym a multi-story department store! I've also heard she likes cats. . .\p Feel free to shop around in here, you'll need it! \pP.S... The trainers here also like to make use of various items they've bought here in battle, keep your guard up! "))
+    waitmessage
+    releaseall
+}
+
+script FelundityGymClerk1{
+    lockall
+    faceplayer
+    msgbox(format("Welcome to the Felundity Town Gym!\p Came to stock up on supplies before the gym eh?"))
+    waitmessage
+    pokemart(FelundityGymMart1)
+    msgbox("Good luck!")
+    closemessage
+    releaseall
+}
+
+mart FelundityGymMart1{
+    ITEM_POTION
+    ITEM_POKE_BALL
+    ITEM_REPEL
+    ITEM_ESCAPE_ROPE
+    ITEM_NORMAL_GEM
+    ITEM_BURN_HEAL
+    ITEM_PARALYZE_HEAL
+    ITEM_ICE_HEAL
+}
+

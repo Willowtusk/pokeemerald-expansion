@@ -1,0 +1,248 @@
+mapscripts GapPass_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION{
+        if(var(VAR_GAP_PASS_PUZZLE) == 1){
+            setobjectxyperm(4, 11, 9)
+        }
+    }
+
+
+}
+
+script Scientist_Magnemite{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_MAGNEMITE, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("It seems to be searching for something.", MSGBOX_AUTOCLOSE)
+    releaseall
+}
+
+script Scientist_A_GapPass{
+    trainerbattle_single(TRAINER_GAP_PASS_SCIENTIST_A, SCIENTIST_A_GAP_PASS_INTRO, SCIENTIST_A_GAP_PASS_OUTRO)
+    msgbox("I wish I could go fly a balloon...", MSGBOX_AUTOCLOSE)
+   
+}
+
+
+text SCIENTIST_A_GAP_PASS_INTRO{
+    "Hey, who said you could be here?"
+}
+
+text SCIENTIST_A_GAP_PASS_OUTRO{
+    "We're doing important work here!"
+}
+
+script Scientist_B_GapPass{
+    trainerbattle_single(TRAINER_GAP_PASS_SCIENTIST_B, SCIENTIST_B_GAP_PASS_INTRO, SCIENTIST_B_GAP_PASS_OUTRO)
+    msgbox
+    (
+        "My favorite rock comes from volcanoes!", MSGBOX_AUTOCLOSE
+    )
+   
+}
+
+text SCIENTIST_B_GAP_PASS_INTRO{
+    "Oooh I wonder what kind of\n"
+    "biological DNA is left in these\l"
+    "old rocks!"
+}
+
+text SCIENTIST_B_GAP_PASS_OUTRO{
+    "I just wanted to be a geologist.."
+}
+
+
+script Scientist_C_GapPass{
+    trainerbattle_single(TRAINER_GAP_PASS_SCIENTIST_C, SCIENTIST_C_GAP_PASS_INTRO, SCIENTIST_C_GAP_PASS_OUTRO)
+    msgbox(
+        "G for guanine, C for cytosine..\n"
+        "Hey what are you doing still\l"
+        "listening!", MSGBOX_AUTOCLOSE
+    )
+   
+}
+
+
+text SCIENTIST_C_GAP_PASS_INTRO{
+    "We don't take kindly to\n"
+    "intruders."
+}
+
+text SCIENTIST_C_GAP_PASS_OUTRO{
+    "You have spirit."
+}
+
+script Scientist_D_GapPass{
+    lockall
+    faceplayer
+    if(var(VAR_GAP_PASS_PUZZLE) == 0){
+        msgbox
+        (
+            "Before I can let you pass kid\n"
+            "I have to see if you have the\l"
+            "intellect necessary to converse\l"
+            "with our boss.\p"
+            "If you answer correctly I'll move.\p"
+            "If you don't answer correctly\n"
+            "however, you'll have to start\l"
+            "from scratch.\p"
+            "Are you ready?", MSGBOX_YESNO
+        )
+        if (var(VAR_RESULT) == YES){
+        goto(Puzzle_Question_1)           
+        }
+
+        if(var(VAR_RESULT) == NO){
+            msgbox("Well I guess I can't let\n"
+            "you pass then!")
+            closemessage
+            releaseall
+        }
+    }
+    else{
+        msgbox("You certainly know your science.", MSGBOX_AUTOCLOSE)
+        releaseall
+    }   
+}
+
+script Dr_Wallen_GapPass{
+    lockall
+    faceplayer
+    msgbox
+    (format(
+        "So, you must be the one"
+        "meddling in our affairs."
+        "Do you see the writings on"
+        "these walls?"
+        "They must be thousands of years old."
+        "Some even say the first fossils were"
+        "found in this very cave."
+        "However, my research here is complete."
+        "I have pressing matters to attend to,"
+        "so if you're so eager to meddle in my"
+        "affairs, come by my lab near" 
+        "Felundity Town."
+    ))
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_DOOR)
+    removeobject(3)
+    removeobject(2)
+    removeobject(1)
+    removeobject(4)
+    removeobject(5)
+    removeobject(6)
+    setflag(FLAG_GAP_PASS_PUZZLE)
+    setvar(VAR_GAP_PASS_PUZZLE, 2)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+}
+
+script Wallen_Introduction{
+    lockall
+    playse(SE_PIN)
+    applymovement(6, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(6, WALK_RIGHT_THREE)
+    waitmovement(0)
+    applymovement(6, WALK_DOWN_FIVE)
+    waitmovement(0)
+    goto(Dr_Wallen_GapPass)
+}
+
+movement WALK_RIGHT_THREE{
+    walk_right * 3
+}
+
+movement WALK_DOWN_FIVE{
+    walk_down * 5
+}
+
+script Puzzle_Question_1{
+    msgbox
+    (
+        "What element has an atomic number\n"
+        "of 2?"
+    )   
+    dynmultichoice(25, 5, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Hydrogen", "Carbon", "Helium")
+    dynmultipush("Hydrogen", 0)
+    dynmultipush("Carbon", 1)
+    dynmultipush("Helium", 2)
+    if(var(VAR_RESULT) == 2){
+        goto (Puzzle_Question_2)
+    }
+    else{
+        goto(GP_Puzzle_Fail)
+    }
+
+}
+
+script Puzzle_Question_2{
+    msgbox
+    (
+        "Correct!", MSGBOX_AUTOCLOSE
+    )
+    msgbox
+    (
+        "What rock is known as\n"
+        "volcanic glass?"
+    )
+    dynmultichoice(25, 5, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "Obsidian", "Granite", "Limestone")
+    dynmultipush("Obsidian", 0)
+    dynmultipush("Granite", 1)
+    dynmultipush("Limestone", 2)
+    if(var(VAR_RESULT) == 0){
+        goto(Puzzle_Question_3)
+
+    }
+    else{
+        goto(GP_Puzzle_Fail)
+    }
+}
+
+script Puzzle_Question_3{
+    msgbox("Correct!", MSGBOX_AUTOCLOSE)
+    msgbox
+    (
+        "What one letter code stands for\n"
+        "Valine?"
+    )
+    dynmultichoice(25, 5, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE, "C", "V", "Y")
+    dynmultipush("C", 0)
+    dynmultipush("V", 1)
+    dynmultipush("Y", 2)
+    if(var(VAR_RESULT) == 1){
+        goto(Gap_Pass_Puzzle_Victory)
+    }
+    else{
+        goto(GP_Puzzle_Fail)
+    }
+}
+
+script Gap_Pass_Puzzle_Victory{
+    msgbox("Correct!", MSGBOX_AUTOCLOSE)
+    msgbox
+    (
+        "Well you did it kid, congrats.\p"
+        "You've earned the honor of talking to\n"
+        "the boss, Dr. Wallen."
+    )
+    lockall
+    waitmessage
+    closemessage
+    applymovement(4, SIMPLE_MOVE_UP_ONE)
+    waitmovement(0)
+    applymovement(4, MOVE_LEFT_ONE)
+    waitmovement(0)
+    turnobject(4, DIR_EAST)
+    addvar(VAR_GAP_PASS_PUZZLE, 1)
+    setobjectxyperm(4, 11, 9)
+    delay(48)
+    releaseall
+}
+
+script GP_Puzzle_Fail{
+    msgbox("Incorrect, try again.")
+    closemessage
+    releaseall
+}

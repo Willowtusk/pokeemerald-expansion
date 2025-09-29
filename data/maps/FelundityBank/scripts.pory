@@ -1,0 +1,62 @@
+mapscripts FelundityBank_MapScripts{
+
+}
+
+script BankMan1{
+    lockall
+    faceplayer
+    msgbox(format("What do you want??"))
+    waitmessage
+    releaseall
+}
+
+script BankMan2{
+    lockall
+    faceplayer
+    msgbox(format("Can't you see I'm busy here?"))
+    waitmessage
+    releaseall
+}
+
+script BankMan3{
+    lockall
+    faceplayer
+    msgbox(format("If I don't take out a loan right now, I'm done for...."))
+    waitmessage
+    releaseall
+}
+
+script BankWoman1{
+    lockall
+    faceplayer
+    msgbox(format("Time to cash in my paycheck!"))
+    waitmessage
+    releaseall
+}
+
+script BankWoman2{
+    lockall
+    faceplayer
+    msgbox(format("Geez, this place takes forever"))
+    waitmessage
+    releaseall
+}
+
+script BankWoman3{
+    lockall
+    faceplayer
+    msgbox(format("I've been waiting here for 8 hours, ugh"))
+    waitmessage
+    releaseall
+}
+
+script BankEmployee{
+    lockall
+    faceplayer
+    msgbox(format("I'm sorry, but we're still undergoing renovations. Please do come back soon"))
+    waitmessage
+    releaseall
+}
+
+
+

@@ -1,0 +1,44 @@
+mapscripts Aerith_House_MapScripts{
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_TALK_TO_MOM_1, 3: Aerith_First_Interaction
+    ]
+}
+
+script Aerith_First_Interaction{
+    lockall
+    playse(SE_PIN)
+    applymovement(1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(48)
+    applymovement(1, WALK_DOWN_THREE)
+    waitmovement(0)
+    msgbox(format(
+        "Oh! I wasen't expecting anyone today, who are you?\p"
+        "... ... ...\p"
+        "So you're my new neighbor!\p"
+        "I'm Aerith, nice to meet you!\p"
+        "I was just about to head to the market in town for groceries."
+        "You should join me, it'll be fun!"
+    ))
+    closemessage
+    applymovement(1, RIGHT_ONE_DOWN_ONE)
+    waitmovement(0)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    setflag(FLAG_AERITH_HOUSE_INTERACTION)
+    playse(SE_DOOR)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    clearflag(FLAG_AERITH_MARKET_INTERACTION)
+    setvar(VAR_TALK_TO_MOM_1, 4)
+    releaseall
+}
+
+movement RIGHT_ONE_DOWN_ONE{
+    walk_right 
+    walk_down
+}
+
+movement WALK_DOWN_THREE{
+    walk_down * 3
+}

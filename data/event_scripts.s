@@ -1119,3 +1119,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route701_2/scripts.inc"
 
 	.include "data/maps/Route702/scripts.inc"
+
+	.include "data/maps/AerithsHouse/scripts.inc"
+
+	.include "data/maps/Aerith_House/scripts.inc"

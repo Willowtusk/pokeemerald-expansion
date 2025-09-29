@@ -1,0 +1,59 @@
+mapscripts FelundityGym3F_MapScripts{
+
+}
+
+script FelundityGymClerk3{
+    lockall
+    faceplayer
+    msgbox(format("Aiiiipom"))
+    waitmessage
+    pokemart(FelundityGymMart3)
+    msgbox("Pom Pom!")
+    closemessage
+    releaseall
+}
+
+mart FelundityGymMart3{
+    ITEM_ROCK_INCENSE
+    ITEM_LUCK_INCENSE
+    ITEM_ROSE_INCENSE
+    ITEM_SEA_INCENSE
+    ITEM_PURE_INCENSE
+}
+
+script FelundityGymFisherman{
+    trainerbattle_single(FELUNDITY_FISHERMAN_MIKE, FishermanMikeIntro, FishermanMikeOutro)
+    msgbox(format("Atleast I got some quality fishing line from here!"))
+}
+
+text FishermanMikeIntro{
+    format(
+    "Say, do you know if they\n carry bait here?")
+}
+
+text FishermanMikeOutro{
+    format(
+    "No hook or line, just stinker...")
+}
+
+script FelundityGymCoolTrainer{
+    trainerbattle_single(TRAINER_ACE_BELINDA, BelindaIntro, BelindaOutro)
+    msgbox(format("Yea you're the real deal alright.\p Diana's waiting for you in the next room"))
+}
+
+text BelindaIntro{
+    format(
+    "Well well, you've gotten this far"
+    "Let's see what you're made of!")
+}
+
+text BelindaOutro{
+    "No way!"
+}
+
+
+
+
+
+
+

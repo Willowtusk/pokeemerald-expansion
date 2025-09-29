@@ -1,0 +1,41 @@
+mapscripts FelundityPokemonCenter_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Felundity_Town_Respawn_OnTransition
+
+}
+
+script Felundity_Town_Respawn_OnTransition{
+    setrespawn(HEAL_LOCATION_FELUNDITY_TOWN_MAIN)
+    end
+}
+
+script Felundity_Nurse_Script{
+    lock
+    faceplayer
+    msgbox("Hi there!\nwould you like me to heal your party?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        incrementgamestat(GAME_STAT_USED_POKECENTER)
+        applymovement(2, Common_Movement_WalkInPlaceFasterLeft)
+        waitmovement(0)
+        dofieldeffect(FLDEFF_POKECENTER_HEAL)
+        waitfieldeffect(FLDEFF_POKECENTER_HEAL)
+        applymovement(2, Common_Movement_WalkInPlaceFasterDown)
+        waitmovement(0)
+        special(HealPlayerParty)
+        msgbox("Come again soon!")
+        waitmessage
+        release
+        end
+    }
+    else{
+        msgbox("Have a nice day", MSGBOX_NPC)
+    }
+}
+
+
+script GameboyKid_Felundity{
+    lockall
+    faceplayer
+    msgbox(format("Oh boy, do I LOVE my new Nintendo Switch 2!"))
+    waitmessage
+    releaseall
+}

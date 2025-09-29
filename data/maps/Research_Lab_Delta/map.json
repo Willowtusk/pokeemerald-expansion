@@ -1,0 +1,134 @@
+{
+  "id": "MAP_RESEARCH_LAB_DELTA",
+  "name": "Research_Lab_Delta",
+  "layout": "LAYOUT_RESEARCH_LAB_DELTA",
+  "music": "MUS_AQUA_MAGMA_HIDEOUT",
+  "region_map_section": "MAPSEC_RESEARCH_OUTPOST_DELTA",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_MAGMA",
+  "connections": [
+    {
+      "map": "MAP_FELUNDITY_TOWN_MAIN",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_FELUNDITY_TOWN_MAIN",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_RESEARCH_LAB_DELTA_2",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 8,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKETGRUNTM",
+      "x": 0,
+      "y": 14,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "8",
+      "script": "Rocket_Arny_Battle",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ROCKETGRUNTF",
+      "x": 7,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 19,
+      "y": 35,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DELTA_LAB_ETHER_OBTAINED",
+      "flag": "FLAG_DELTA_LAB_ETHER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LEADERDIANA",
+      "x": 7,
+      "y": 24,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "DELTA_LAB_DIANA",
+      "flag": "FLAG_DIANA_DELTA_LAB"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PURRLOIN)",
+      "x": 5,
+      "y": 16,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Purrloin_Saved",
+      "flag": "FLAG_PURRLOIN_SAVED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+      "x": 7,
+      "y": 23,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Helix_Grunt_Delta_Bridge",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

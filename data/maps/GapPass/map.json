@@ -1,0 +1,126 @@
+{
+  "id": "MAP_GAP_PASS",
+  "name": "GapPass",
+  "layout": "LAYOUT_GAP_PASS",
+  "music": "MUS_RG_MT_MOON",
+  "region_map_section": "MAPSEC_NONE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 8,
+      "y": 18,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "6",
+      "script": "Scientist_A_GapPass",
+      "flag": "FLAG_GAP_PASS_PUZZLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 7,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Scientist_B_GapPass",
+      "flag": "FLAG_GAP_PASS_PUZZLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 20,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Scientist_C_GapPass",
+      "flag": "FLAG_GAP_PASS_PUZZLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 12,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Scientist_D_GapPass",
+      "flag": "FLAG_GAP_PASS_PUZZLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAGNEMITE)",
+      "x": 13,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Scientist_Magnemite",
+      "flag": "FLAG_GAP_PASS_PUZZLE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
+      "x": 9,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Dr_Wallen_GapPass",
+      "flag": "FLAG_GAP_PASS_PUZZLE"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 12,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE702_2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_FOREST1",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_GAP_PASS_PUZZLE",
+      "var_value": "1",
+      "script": "Wallen_Introduction"
+    }
+  ],
+  "bg_events": [
+
+  ]
+}

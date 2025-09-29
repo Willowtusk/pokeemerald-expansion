@@ -1,0 +1,286 @@
+mapscripts FelundityForest2_MapScripts{
+
+}
+
+script Felundity_Forest_Boy1{
+
+    lockall
+    faceplayer
+    msgbox("You notice how much this looks\n"
+    "like a cat's paw?\p"
+    )
+    closemessage
+    releaseall
+}
+
+script Felundity_Forest_Girl1{
+
+    lockall
+    faceplayer
+    msgbox("I love cats!")
+    closemessage
+    releaseall
+}
+
+script Felundity_Forest_Girl2{
+
+    lockall
+    faceplayer
+    if (flag(FLAG_CAT_LADY_NEST_BALL) == FALSE){
+        msgbox("Do you like Pokémon that look\n"
+        "like cats?\p"
+        "Here take these!")
+        giveitem(ITEM_NEST_BALL, 10)
+        setflag(FLAG_CAT_LADY_NEST_BALL)
+    }
+   else{
+    msgbox("Now go catch some felines!")
+   }
+  
+    closemessage
+    releaseall
+}
+
+
+script FelundityForestL{
+    lockall
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(48)
+    playse(SE_LEDGE)
+    applymovement(8, HopUpInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Hey!"))
+    waitmessage
+    playse(SE_LEDGE)
+    applymovement(8, HopUpInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Don't you dare mess with my sweet skitty! Just who even are you?"))
+    waitmessage
+    playse(SE_LEDGE)
+    applymovement(6, HopDownInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Miss, we need your Pokémon to conduct some quick tests. It will only take a minute and then you'll have your precious skitty back I promise."))
+    waitmessage
+    msgbox(format("Why you....."))
+    waitmessage
+    delay(48)
+    applymovement(8, FaceDown)
+    waitmovement(0)
+    delay(48)
+    playse(SE_LEDGE)
+    applymovement(8, HopDownInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Oh! A trainer!"))
+    waitmessage
+    closemessage
+    applymovement(8, MediumMoveDown)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Please, help me save my skitty! I would fight back but I've become so weak as of late and haven't had time to rest. Won't you help?"))
+    waitmessage
+    applymovement(8, Up2_Left1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Up3)
+    waitmovement(8)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(6, FaceRight)
+    waitmovement(0)
+    delay(24)
+    msgbox(format("Take this thing back to the lab Sally, and quick!"))
+    waitmessage
+    closemessage
+    delay(24)
+    applymovement(9, Escape)
+    applymovement(7, Escape)
+    waitmovement(9)
+    waitmovement(7)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(9)
+    removeobject(7)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    applymovement(6, FaceDown)
+    waitmovement(0)
+    applymovement(6, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(format("Alright kid, you think you can take me and save your friend's pet huh? No one gets in the way of Team Helix!"))
+    trainerbattle_no_intro(TRAINER_HELIX_GRUNT_MAX, TEAM_HELIX_GRUNT_MAX_OUTRO,)
+    goto(HELIX_LEAVES_FELUNDITY_FOREST)
+
+
+}
+
+script FelundityForestR{
+    lockall
+    playse(SE_PIN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(48)
+    playse(SE_LEDGE)
+    applymovement(8, HopUpInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Hey!"))
+    waitmessage
+    playse(SE_LEDGE)
+    applymovement(8, HopUpInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Don't you dare mess with my sweet skitty! Just who even are you?"))
+    waitmessage
+    playse(SE_LEDGE)
+    applymovement(6, HopDownInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Miss, we need your Pokémon to conduct some quick tests. It will only take a minute and then you'll have your precious skitty back I promise."))
+    waitmessage
+    msgbox(format("Why you....."))
+    waitmessage
+    delay(48)
+    applymovement(8, FaceDown)
+    waitmovement(0)
+    delay(48)
+    playse(SE_LEDGE)
+    applymovement(8, HopDownInPlace)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Oh! A trainer!"))
+    waitmessage
+    closemessage
+    applymovement(8, Right1Down2)
+    waitmovement(0)
+    delay(48)
+    msgbox(format("Please, help me save my skitty! I would fight back but I've become so weak as of late and haven't had time to rest. Won't you help?"))
+    waitmessage
+    applymovement(8, Up2Left2)
+    applymovement(OBJ_EVENT_ID_PLAYER, Up3Left1FaceUp)
+    waitmovement(8)
+    waitmovement(OBJ_EVENT_ID_PLAYER)
+    applymovement(6, FaceRight)
+    waitmovement(0)
+    delay(24)
+    msgbox(format("Take this thing back to the lab Sally, and quick!"))
+    waitmessage
+    delay(24)
+    applymovement(9, Escape)
+    applymovement(7, Escape)
+    waitmovement(9)
+    waitmovement(7)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(9)
+    removeobject(7)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    applymovement(6, FaceDown)
+    waitmovement(0)
+    applymovement(6, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(format("Alright kid, you think you can take me and save your friend's pet huh? No one gets in the way of Team Helix!"))
+    trainerbattle_no_intro(TRAINER_HELIX_GRUNT_MAX, TEAM_HELIX_GRUNT_MAX_OUTRO,)
+    goto(HELIX_LEAVES_FELUNDITY_FOREST)
+
+}
+
+movement Hop_twice{
+    jump_in_place_up *2
+}
+
+movement DoubleExclamation{
+    emote_double_exclamation_mark
+}
+
+movement Up2_Left1{
+
+    walk_up * 2
+    walk_left
+    face_player
+}
+
+movement Up3{
+    walk_up * 3
+}
+
+movement Escape{
+    walk_up * 5
+    walk_left * 3
+    walk_up * 3
+}
+
+
+text TEAM_HELIX_GRUNT_MAX_OUTRO{
+    "Oooo, you've got some moves!"
+}
+
+script HELIX_LEAVES_FELUNDITY_FOREST{
+    lockall
+    msgbox(format("Hehe, you got me kid. Time to report back to base!"))
+    waitmessage
+    closemessage
+    applymovement(6, Escape)
+    waitmovement(6)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(6)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    applymovement(8, SIMPLE_MOVE_UP)
+    waitmovement(0)
+    msgbox("Get back here!!")
+    waitmessage
+    closemessage
+    applymovement(8, Escape)
+    waitmovement(8)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(8)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_FELUNDITY_FOREST, 1)
+    setflag(FLAG_FELUNDITY_SCENARIO)
+    releaseall
+    
+}
+
+movement FaceDown{
+    face_down
+}
+
+movement FaceRight{
+    face_right
+}
+
+movement WalkInPlaceDown{
+    walk_in_place_down
+}
+
+movement MediumMoveDown{
+    walk_down * 2
+}
+
+movement Right1Down2{
+    walk_right
+    walk_down * 2
+}
+
+movement Up2Left2{
+    walk_up * 2
+    walk_left * 2
+    face_player
+}
+
+movement Up3Left1FaceUp{
+    walk_up * 3
+    walk_left
+    face_up
+}
+
+movement HopDownInPlace{
+    jump_in_place_down
+}
+
+movement HopUpInPlace{
+    jump_in_place_up
+}

@@ -1,0 +1,30 @@
+mapscripts FelundityFlowerShop_MapScripts{
+
+}
+
+script FlowershopClerk{
+    lockall
+    faceplayer
+    msgbox(format("Welcome to Felundity's Flower Shop! How can I help you on this fine day?"))
+    waitmessage
+    pokemart(Felundity_Flower_Mart)
+    msgbox(format("Hope to see you again soon!"))
+    closemessage
+    releaseall
+}
+
+mart Felundity_Flower_Mart{
+    ITEM_LEEK
+    ITEM_SITRUS_BERRY
+    ITEM_ORAN_BERRY
+    ITEM_LUM_BERRY
+    ITEM_BERRY_JUICE
+}
+
+script FlowershopCustomer{
+    lockall
+    faceplayer
+    msgbox(format("Oh how lovely to see a fellow flower enthusiast! Do you have a favorite flower dear?"))
+    waitmessage
+    releaseall
+}

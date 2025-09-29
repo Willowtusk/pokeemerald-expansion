@@ -1,0 +1,248 @@
+{
+  "id": "MAP_FELUNDITY_TOWN_MAIN",
+  "name": "FelundityTownMain",
+  "layout": "LAYOUT_FELUNDITY_TOWN_MAIN",
+  "music": "MUS_RUSTBORO",
+  "region_map_section": "MAPSEC_FELUNDITY_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_FELUNDITY_TOWN",
+      "offset": 6,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_RESEARCH_LAB_DELTA",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MEOWTH)",
+      "x": 26,
+      "y": 36,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_RIGHT_DOWN_LEFT",
+      "movement_range_x": 4,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FelundityMeowth",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 26,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_UP_RIGHT_DOWN_LEFT",
+      "movement_range_x": 4,
+      "movement_range_y": 4,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "KidChasingMeowth",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 21,
+      "y": 49,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_12"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 39,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TIMBURR)",
+      "x": 7,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TwirlingTimburrFelundity",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
+      "x": 8,
+      "y": 1,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "BoyWithTimburrFelundity",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 21,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MenBlockingGymFelundity",
+      "flag": "FLAG_WALLEN_DEFEATED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 22,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MenBlockingGymFelundity",
+      "flag": "FLAG_WALLEN_DEFEATED"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 6,
+      "y": 37,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FelundityOldMan",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 21,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_HOUSE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 36,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_BANK",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_FLOWER_SHOP",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_BAIT_SHOP",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_POKEMON_CENTER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_POKE_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_FELUNDITY_GYM",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "FelundityFlowerShopSign"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "FelundityFishingShopSign"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "FelundityBankShopSign"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "FelundityGymSign"
+    }
+  ]
+}

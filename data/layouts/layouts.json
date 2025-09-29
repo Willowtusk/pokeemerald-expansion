@@ -4630,6 +4630,26 @@
       "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Route702/border.bin",
       "blockdata_filepath": "data/layouts/Route702/map.bin"
+    },
+    {
+      "id": "LAYOUT_AERITHS_HOUSE",
+      "name": "AerithsHouse_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/AerithsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/AerithsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_AERITH_HOUSE",
+      "name": "Aerith_House_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Aerith_House/border.bin",
+      "blockdata_filepath": "data/layouts/Aerith_House/map.bin"
     }
   ]
 }

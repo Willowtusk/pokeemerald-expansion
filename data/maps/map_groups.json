@@ -111,7 +111,9 @@
     "Players_Room",
     "SelunaPokemonLab",
     "LeahsHouse",
-    "SelunaMarket"
+    "SelunaMarket",
+    "AerithsHouse",
+    "Aerith_House"
   ],
   "gMapGroup_IndoorLambda": [
     "Inside_Lambda_Lab"

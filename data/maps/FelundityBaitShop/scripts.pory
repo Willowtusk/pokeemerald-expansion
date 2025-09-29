@@ -1,0 +1,23 @@
+mapscripts FelundityBaitShop_MapScripts{
+
+}
+
+script FelundityBaitShopMan{
+    lockall
+    faceplayer
+    msgbox(format("Ohoho, a new customer! Come for the treasure O the sea have ya?"))
+    waitmessage
+    pokemart(Felundity_Bait_Shop)
+    msgbox(format("Have a good one!"))
+    closemessage
+    releaseall
+}
+
+mart Felundity_Bait_Shop{
+    ITEM_WATER_GEM
+    ITEM_MYSTIC_WATER
+    ITEM_DIVE_BALL
+    ITEM_DAMP_ROCK
+    ITEM_BIG_MALASADA
+}
+

@@ -1,0 +1,118 @@
+mapscripts Research_Lab_Delta_MapScripts{
+}
+
+
+script Rocket_Archer_Battle{   
+    trainerbattle_single(TRAINER_ROCKET_ARCHER, ROCKET_ARCHER_1_INTRO, ROCKET_ARCHER_1_OUTRO, ARCHER_LEAVE_1)
+    msgbox("How did you beat me??")
+    closemessage
+}
+
+text ROCKET_ARCHER_1_INTRO{
+    format("What might you be doing? This is a restricted area and I, Archer will not permit you to pass!")
+}
+
+text ROCKET_ARCHER_1_OUTRO{
+    format("This won't be the last you hear of Team Rocket....")
+}
+
+script ARCHER_LEAVE_1{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Team Rocket isn't defeated that easily... see you around kid."
+    ))
+    waitmessage
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_EXIT)
+    removeobject(2)
+    setflag(FLAG_ARCHER_DEFEAT_1)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+}
+
+script Rocket_Arny_Battle{   
+    trainerbattle_single(TRAINER_ROCKET_ARNY, ROCKET_ARNY_INTRO, ROCKET_ARNY_OUTRO)
+    msgbox(format("Ugh I'll be demoted for this..."))
+    waitmessage
+    closemessage
+}
+
+text ROCKET_ARNY_INTRO{
+    format("Who are you? Team Rocket doesn't allow visitors!")
+}
+
+text ROCKET_ARNY_OUTRO{
+    format("No way....")
+}
+
+script Rocket_Amy{
+    lockall
+    faceplayer
+    msgbox(format(
+    "Oh! I wasen't expecting to see an outsider here! . . . What am I doing here? Well, I don't actually like being in Team Rocket and just joined for the paycheck. I come here to try and relax sometimes"))
+    waitmessage
+    closemessage
+    releaseall
+}
+
+
+script DELTA_LAB_ETHER_OBTAINED{
+    lockall
+    giveitem(ITEM_ETHER, 3)
+    removeobject(5)
+    setflag(FLAG_DELTA_LAB_ETHER)
+    releaseall
+}
+
+script DELTA_LAB_DIANA{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Oh hi strong trainer! It appears Team Rocket and Team Helix have joined forces and snatched my Pokémon from me!\p Would you mind helping me get them back from these grubby evildoers?\p I'll go ahead and see if I can find who's behind all of this, good luck!")
+    )
+    waitmessage
+    closemessage
+    applymovement(6, walk_left_seven)
+    waitmovement(6)
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_EXIT)
+    removeobject(6)
+    setflag(FLAG_DIANA_DELTA_LAB)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    releaseall
+}
+
+movement walk_left_seven{
+    walk_left * 7
+}
+
+script Purrloin_Saved{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_PURRLOIN, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox(format("Purrr...\p The Purrloin seems to take a liking to you and tags along!"))
+    waitmessage
+    fadescreen(FADE_TO_BLACK)
+    removeobject(7)
+    setflag(FLAG_PURRLOIN_SAVED)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    closemessage
+    releaseall
+}
+
+script Helix_Grunt_Delta_Bridge{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Wow... that Diana is pretty strong. She thrashed me in less than a minute!"
+    ))
+    waitmessage
+    closemessage
+    releaseall
+}

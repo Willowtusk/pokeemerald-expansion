@@ -1,0 +1,38 @@
+mapscripts FelundityPokeMart_MapScripts{
+
+}
+
+script FelundityMartMachop{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_MACHOP, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox("Maaaa!", MSGBOX_AUTOCLOSE)
+    waitmessage
+    releaseall
+}
+
+script Felundity_Mart_Clerk{
+    lockall
+    faceplayer
+    message(
+        "Welcome to Felundity!\p"
+        "What are you looking for?"
+    )
+    waitmessage
+    pokemart(Felundity_Mart)
+    msgbox("Thanks for shopping!")
+    closemessage
+    releaseall
+}
+
+mart Felundity_Mart{
+    ITEM_POTION
+    ITEM_POKE_BALL
+    ITEM_REPEL
+    ITEM_ESCAPE_ROPE
+    ITEM_TM11
+    ITEM_BURN_HEAL
+    ITEM_PARALYZE_HEAL
+    ITEM_ICE_HEAL
+}

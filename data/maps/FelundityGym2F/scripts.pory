@@ -1,0 +1,43 @@
+mapscripts FelundityGym2F_MapScripts{
+
+}
+
+script FelundityGymClerk2{
+    lockall
+    faceplayer
+    msgbox(format("Welcome! So nice to see a new challenger!"))
+    waitmessage
+    pokemart(FelundityGymMart2)
+    msgbox("You got this!")
+    closemessage
+    releaseall
+}
+
+mart FelundityGymMart2{
+    ITEM_FAST_BALL
+    ITEM_HEAL_BALL
+    ITEM_QUICK_BALL
+    ITEM_TIMER_BALL
+}
+
+script FelundityGymGuitarist{
+    trainerbattle_single(TRAINER_GUITARIST_SAM, GuitaristSamIntro, GuitaristSamOutro)
+    msgbox(format("I should probably just buy a whole new guitar at this point, ugh"))
+}
+
+
+text GuitaristSamIntro{
+    format(
+    "Ay, you got any guitar\n supplies on ya?\p"
+    ". . .\p"
+    "Not gonna answer me huh?"
+    "Maybe battling will shock my guitar into working again!")
+}
+
+text GuitaristSamOutro{
+    format(
+    "Well now I need new strings...")
+}
+
+
+

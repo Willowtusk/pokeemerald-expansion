@@ -1,0 +1,44 @@
+mapscripts Research_Lab_Delta_2_MapScripts{
+}
+
+script Helix_Grunt_Mave{   
+    trainerbattle_single(TRAINER_HELIX_MAVE, HELIX_MAVE_INTRO, HELIX_MAVE_OUTRO)
+    msgbox(format("Our admin Archer will stop the both of you!"))
+    waitmessage
+    closemessage
+}
+
+text HELIX_MAVE_INTRO{
+    format("Are you with that meddling gym leader? Prepare to be crushed!")
+}
+
+text HELIX_MAVE_OUTRO{
+    format("So what if our work is hurting the water supply of the town?\p We need to power our hydraulics!")
+}
+
+script Helix_Grunt_Able{
+    lockall
+    faceplayer
+    msgbox(format(
+        "Huff....\p Huff....\p Need to get my steps in for today"
+    ))
+    waitmessage
+    closemessage
+    releaseall
+}
+
+script Diana_Glameow{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_GLAMEOW, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox(format("Glaaaam... this must be one of Diana's Pokémon!\p It looks like it wants to come with you!"))
+    waitmessage
+    fadescreen(FADE_TO_BLACK)
+    removeobject(3)
+    setflag(FLAG_GLAMEOW_SAVED)
+    delay(48)
+    fadescreen(FADE_FROM_BLACK)
+    closemessage
+    releaseall
+}

@@ -1,0 +1,106 @@
+mapscripts FelundityGym4F_MapScripts{
+
+}
+
+script FelunditySarahTrainer{
+    trainerbattle_single(TRAINER_FELUNDITY_SARAH, FelunditySarahIntro, FelunditySarahOutro)
+    msgbox(format("Now I have to fix my hair..."))
+}
+
+text FelunditySarahIntro{
+    format(
+    "Aww you're cute\n but are you strong?")
+}
+
+text FelunditySarahOutro{
+    format(
+    "You're even stronger than you are cute!")
+}
+
+script FelundityAubreyTrainer{
+    trainerbattle_single(TRAINER_FELUNDITY_AUBREY, FelundityAubreyIntro, FelundityAubreyOutro)
+    msgbox(format("Time to have a candy bar and recharge!"))
+}
+
+text FelundityAubreyIntro{
+    format(
+    "Diana gives me all the sweets!\p"
+    "I'm so hyper and ready to\n take you down!")
+}
+
+text FelundityAubreyOutro{
+    "Now I'm all tuckered out"
+}
+
+script FelundityLitten{
+    lockall
+    faceplayer
+    msgbox(format("Liiii!"))
+    waitmessage
+    msgbox(format("Litten looks happy to see you!"))
+    waitmessage
+    releaseall
+}
+
+script FelundityShinx{
+    lockall
+    faceplayer
+    msgbox(format("Ouch! The Shinx sparked you!"))
+    waitmessage
+    releaseall
+}
+
+script FelundityDelcatty{
+    lockall
+    faceplayer
+    msgbox(format("Meooow"))
+    waitmessage
+    releaseall
+}
+
+script LeaderDiana{
+    trainerbattle_single(TRAINER_LEADER_DIANA, LeaderDianaIntro, LeaderDianaOutro, Leader_Diana_Defeated)
+    msgbox(format("I heard of some uproar with this Team Helix over in Cinderbrook City as well. Could you check on my friend Julia while you're there?"))
+}
+
+text LeaderDianaIntro{
+    format(
+    "Oh, look who we have here!"
+    "The trainer who helped save"
+    "my precious Skitty!\p"
+    "Well trainer, are you\n prepared?\p"
+    "My felines are ready to\n get their claws dirty!")
+}
+
+text LeaderDianaOutro{
+    "Pawsitively Magnificent!"
+}
+
+script Leader_Diana_Defeated{
+    message (Felundity_Town_Tabby_Badge_Received)
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("With the TABBY BADGE, you'll be able to make use of the HM move Rock Smash. You should take this too"))
+    setflag(FLAG_BADGE02_GET)
+    setflag(FLAG_DEFEATED_DEWFORD_GYM)
+    goto(Give_Return)
+    end
+}
+
+text Felundity_Town_Tabby_Badge_Received{
+    format(
+    "{PLAYER} received the TABBY BADGE"
+    "from DIANA.")
+}
+
+script Give_Return{
+    giveitem(ITEM_TM27)
+    msgbox(format(
+        "This contains the move"
+        "RETURN, which gets stronger the friendlier you are with your Pokémon pals!"
+    ))
+    closemessage
+    return
+}
+
+

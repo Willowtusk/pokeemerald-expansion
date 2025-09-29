@@ -79,6 +79,8 @@
 #define MAP_SELUNA_POKEMON_LAB (3 | (1 << 8))
 #define MAP_LEAHS_HOUSE        (4 | (1 << 8))
 #define MAP_SELUNA_MARKET      (5 | (1 << 8))
+#define MAP_AERITHS_HOUSE      (6 | (1 << 8))
+#define MAP_AERITH_HOUSE       (7 | (1 << 8))
 
 // gMapGroup_IndoorLambda
 #define MAP_INSIDE_LAMBDA_LAB (0 | (2 << 8))

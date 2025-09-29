@@ -1,0 +1,30 @@
+mapscripts FelundityHouse1_MapScripts{
+
+}
+
+script TMScald{
+    lockall
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    msgbox(format("Owch! These dishes are hot! . . .\p You notice something shiny under the sink "))
+    waitmessage
+    istypeinparty(TYPE_WATER)
+    goto_if_eq(GET_TM_SCALD)
+    msgbox(format("The dishes are too hot to grab it!"))
+    waitmessage
+    releaseall
+}
+
+script GET_TM_SCALD{
+    msgbox("Would you like to use your water\n Pokémon to douse the dishes?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        playse(MUS_SURF)
+        waitse
+        giveitem(ITEM_TM20, 1)
+        setvar(VAR_TM_SCALD_OBTAINED, 1)
+        releaseall
+    }
+    else{
+        return
+    }
+}
+

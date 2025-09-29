@@ -1,0 +1,96 @@
+mapscripts LambdaCave_3_MapScripts{
+
+
+}
+
+script Lambda_Cave_Gentleman_Marko{
+
+    trainerbattle_single(TRAINER_GENTLEMAN_MARKO, GENTLEMAN_MARKO_INTRO, GENTLEMAN_MARKO_OUTRO)
+    goto(Rematch_Trainer_GENTLEMAN_MARKO)
+}
+
+text GENTLEMAN_MARKO_INTRO{
+    "I seem to have forgotten my keys..\p"
+    "Good thing this Pokémon can be used\n"
+    "as a substitute!"
+}
+
+text GENTLEMAN_MARKO_OUTRO{
+    "I better get home now I suppose..."
+}
+
+script Rematch_Trainer_GENTLEMAN_MARKO{
+    msgbox(format(
+        "Want to rematch this Trainer?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            trainerbattle_no_intro(TRAINER_GENTLEMAN_MARKO, GENTLEMAN_MARKO_OUTRO)
+        }
+        else{
+            closemessage
+            end
+        }
+}
+
+script Mawile_Cave_Battle{
+    lockall
+    faceplayer
+    msgbox("The wild Mawile looks hungry....", MSGBOX_AUTOCLOSE)
+    playmoncry(SPECIES_MAWILE, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry
+    setwildbattle(SPECIES_MAWILE, 15, ITEM_LEFTOVERS)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT) == B_OUTCOME_CAUGHT){
+        call(Caught_Mawile)
+    }
+    elif(var(VAR_RESULT)== B_OUTCOME_WON){
+        call(Won_Mawile)
+    }
+    elif(var(VAR_RESULT) == B_OUTCOME_RAN){
+        call(RanAway_Mawile)
+    }
+    elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+        call(RanAway_Mawile)
+    }
+    waitmessage
+    releaseall
+}
+
+script Won_Mawile{
+    fadescreen(FADE_TO_BLACK)
+    removeobject(3)
+    setflag(FLAG_LAMBDA_CAVE_MAWILE)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox("You Defeated the Mawile!")
+    return
+}
+
+script Caught_Mawile{
+    fadescreen(FADE_TO_BLACK)
+    removeobject(3)
+    setflag(FLAG_LAMBDA_CAVE_MAWILE)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox("You caught Mawile")
+    return
+}
+
+script RanAway_Mawile{
+    playmoncry(SPECIES_MAWILE, CRY_MODE_ENCOUNTER)
+    msgbox("The Mawile eyes you hungrily.. but leaves.", MSGBOX_AUTOCLOSE)
+    delay(20)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(3)
+    setflag(FLAG_LAMBDA_CAVE_MAWILE)
+    fadescreen(FADE_FROM_BLACK)
+    return
+}
+
+
+script LAMBDA_CAVE_STAR_PIECE_OBTAINED{
+    lockall
+    giveitem(ITEM_STAR_PIECE, 1)
+    removeobject(1)
+    setflag(FLAG_ITEM_LAMBDACAVE_STAR_PIECE)
+    releaseall
+}

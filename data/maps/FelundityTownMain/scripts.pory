@@ -1,0 +1,79 @@
+mapscripts FelundityTownMain_MapScripts{
+    
+}
+
+
+script FelundityFlowerShopSign{
+    lockall
+    msgbox("Aromella's Flower Shop")
+    releaseall
+}
+
+script FelundityFishingShopSign{
+    lockall
+    msgbox("Daingler's Bait Shop")
+    releaseall
+}
+
+script FelundityBankShopSign{
+    lockall
+    msgbox("Felundity Bank")
+    releaseall
+}
+
+script FelundityGymSign{
+    lockall
+    msgbox(format("Felundity Gym/Department Store"))
+    releaseall
+}
+
+script FelundityMeowth{
+    lockall
+    faceplayer
+    playmoncry(SPECIES_MEOWTH, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    msgbox(format("Meoo"))
+    waitmessage
+    releaseall
+}
+
+script KidChasingMeowth{
+    lockall
+    faceplayer
+    msgbox(format("Hey! Get back here Meowth, you stole my allowance for the week!"))
+    waitmessage
+    releaseall
+}
+
+script TwirlingTimburrFelundity{
+   lockall
+   playmoncry(SPECIES_TIMBURR, CRY_MODE_ENCOUNTER)
+   waitmoncry
+   msgbox("Urrrr...", MSGBOX_AUTOCLOSE)
+   waitmessage
+   releaseall
+}
+
+script BoyWithTimburrFelundity{
+    lockall
+    faceplayer
+    msgbox(format("Timburr here ran into the fence while we were playing... I hope he's gonna be okay"))
+    waitmessage
+    releaseall
+}
+
+script MenBlockingGymFelundity{
+    lockall
+    faceplayer
+    msgbox(format("Sorry future champ, our gym leader Diana is currently going after the thugs that abducted her poor Pokémon. You could try to go after her I suppose, although it is dangerous. There's a lab to the west of town that is a bit shady, maybe start there?"))
+    waitmessage
+    releaseall
+}
+
+script FelundityOldMan{
+    lockall
+    faceplayer
+    msgbox(format("I've lived here all my life and never once seen the water this color. Has our water supply been tainted?"))
+    waitmessage
+    releaseall
+}
