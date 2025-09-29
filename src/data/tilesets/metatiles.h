@@ -249,3 +249,6 @@ const u16 gMetatileAttributes_Shady_Forest[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_Research_Outpost_Delta[] = INCBIN_U16("data/tilesets/secondary/research_outpost_delta/metatiles.bin");
 const u16 gMetatileAttributes_Research_Outpost_Delta[] = INCBIN_U16("data/tilesets/secondary/research_outpost_delta/metatile_attributes.bin");
+
+const u16 gMetatiles_RecompiledGeneral[] = INCBIN_U16("data/tilesets/primary/recompiled_general/metatiles.bin");
+const u16 gMetatileAttributes_RecompiledGeneral[] = INCBIN_U16("data/tilesets/primary/recompiled_general/metatile_attributes.bin");

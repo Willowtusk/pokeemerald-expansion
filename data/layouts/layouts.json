@@ -4836,7 +4836,7 @@
       "name": "PorytilesTutorial_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_RecompiledGeneral",
       "secondary_tileset": "gTileset_Research_Outpost_Delta",
       "border_filepath": "data/layouts/PorytilesTutorial/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTutorial/map.bin"

@@ -981,3 +981,14 @@ const struct Tileset gTileset_Research_Outpost_Delta =
     .metatileAttributes = gMetatileAttributes_Research_Outpost_Delta,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_RecompiledGeneral =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_RecompiledGeneral,
+    .palettes = gTilesetPalettes_RecompiledGeneral,
+    .metatiles = gMetatiles_RecompiledGeneral,
+    .metatileAttributes = gMetatileAttributes_RecompiledGeneral,
+    .callback = NULL,
+};
