@@ -282,6 +282,55 @@ static const struct SpriteFrameImage sPicTable_Nurse[] = {
     overworld_frame(gObjectEventPic_Nurse, 2, 4, 3),
 };
 
+const struct SpriteFrameImage gObjectEventPicTable_LEADERDIANA[] = {
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 0),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 1),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 2),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 3),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 4),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 5),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 6),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 7),
+    overworld_frame(gObjectEventPic_LEADERDIANA, 2, 4, 8),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_ROCKETARCHER[] = {
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 1),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 2),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 3),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 4),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 5),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 6),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 7),
+    overworld_frame(gObjectEventPic_ROCKETARCHER, 2, 4, 8),
+};
+
+const struct SpriteFrameImage gObjectEventPicTable_ROCKETGRUNTF[] = {
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 1),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 2),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 3),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 4),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 5),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 6),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 7),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTF, 2, 4, 8),
+};
+
+
+const struct SpriteFrameImage gObjectEventPicTable_ROCKETGRUNTM[] = {
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 0),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 1),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 2),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 3),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 4),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 5),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 6),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 7),
+    overworld_frame(gObjectEventPic_ROCKETGRUNTM, 2, 4, 8),
+};
+
 static const struct SpriteFrameImage sPicTable_ProfBirch[] = {
     overworld_ascending_frames(gObjectEventPic_ProfBirch, 2, 4),
 };

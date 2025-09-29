@@ -382,6 +382,8 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     TRAINER_CLASS(HELIX_ADMIN, "HELIX ADMIN", 20),
     TRAINER_CLASS(SCIENTIST, "SCIENTIST", 5),
     TRAINER_CLASS(CHOSEN, "CHOSEN", 7),
+    TRAINER_CLASS(ROCKET_ADMIN, "ROCKET ADMIN", 20),
+    TRAINER_CLASS(ROCKET_GRUNT, "ROCKET GRUNT", 7)
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =
@@ -5402,6 +5404,8 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_ADMIN:
         case TRAINER_CLASS_MAGMA_LEADER:
+        case TRAINER_CLASS_HELIX_ADMIN:
+        case TRAINER_CLASS_ROCKET_ADMIN:
             PlayBGM(MUS_VICTORY_AQUA_MAGMA);
             break;
         case TRAINER_CLASS_LEADER:

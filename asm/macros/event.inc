@@ -2321,3 +2321,9 @@
 	.macro togglefakertc
 	callnative Script_ToggleFakeRtc
 	.endm
+
+
+	.macro istypeinparty type:req
+	callnative ScrCmd_istypeinparty
+	.byte \type
+	.endm

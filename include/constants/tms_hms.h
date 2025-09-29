@@ -21,7 +21,7 @@
     F(PROTECT) \
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
-    F(SAFEGUARD) \
+    F(SCALD) \
     F(FRUSTRATION) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \

@@ -39,7 +39,7 @@ SELUNA_LILY_INTERACTION_1::
 # 31 "data/maps/SelunaTown_General/scripts.pory"
 	setvar VAR_MYNPC_FIRST_INTERACTION, 2
 # 32 "data/maps/SelunaTown_General/scripts.pory"
-	setflag FLAG_LEAH_HOUSE_INTERACTION
+	setflag FLAG_AERITH_HOUSE_INTERACTION
 # 33 "data/maps/SelunaTown_General/scripts.pory"
 	releaseall
 	return
@@ -125,11 +125,11 @@ Selune_Town_Lab_Sign::
 	return
 
 
-Selune_Town_Leahs_House_Sign::
+Seluna_Town_Aerith_House_Sign::
 # 80 "data/maps/SelunaTown_General/scripts.pory"
 	lockall
 # 81 "data/maps/SelunaTown_General/scripts.pory"
-	msgbox Selune_Town_Leahs_House_Sign_Text_0
+	msgbox Seluna_Town_Aerith_House_Sign_Text_0
 # 84 "data/maps/SelunaTown_General/scripts.pory"
 	closemessage
 # 85 "data/maps/SelunaTown_General/scripts.pory"
@@ -184,9 +184,9 @@ Selune_Town_Lab_Sign_Text_0:
 # 73 "data/maps/SelunaTown_General/scripts.pory"
 	.string "Seluna Town Pokemon Lab$"
 
-Selune_Town_Leahs_House_Sign_Text_0:
+Seluna_Town_Aerith_House_Sign_Text_0:
 # 82 "data/maps/SelunaTown_General/scripts.pory"
-	.string "Leah's House$"
+	.string "Aerith's House$"
 
 Route_701_Access_Text_0:
 # 92 "data/maps/SelunaTown_General/scripts.pory"

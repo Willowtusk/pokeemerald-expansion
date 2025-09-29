@@ -509,6 +509,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_HELIXGRUNTFEMALE1,     OBJ_EVENT_PAL_TAG_HELIX_GRUNT_F_1},
     {gObjectEventPal_HELIXGRUNTMALE1,       OBJ_EVENT_PAL_TAG_HELIX_GRUNT_M_1},
     {gObjectEventPal_HELIXJENNINGS,         OBJ_EVENT_PAL_TAG_HELIX_JENNINGS},
+    {gObjectEventPal_LEADERDIANA,           OBJ_EVENT_PAL_TAG_LEADERDIANA},
+    {gObjectEventPal_ROCKETARCHER,          OBJ_EVENT_PAL_TAG_ROCKETARCHER},
+    {gObjectEventPal_ROCKETGRUNTF,          OBJ_EVENT_PAL_TAG_ROCKETGRUNTF},
+    {gObjectEventPal_ROCKETGRUNTM,          OBJ_EVENT_PAL_TAG_ROCKETGRUNTM},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},

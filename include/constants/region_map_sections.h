@@ -220,7 +220,11 @@
 #define MAPSEC_LAMBDA_CAVE                  0xD8
 #define MAPSEC_DUSTROWE_PATH                0xD9
 #define MAPSEC_DUSTROWE_CITY                0xE1
-#define MAPSEC_NONE                         0xE2
+#define MAPSEC_ROUTE_702                    0xE2
+#define MAPSEC_FELUNDITY_FOREST             0xE3
+#define MAPSEC_FELUNDITY_TOWN               0xE4
+#define MAPSEC_RESEARCH_OUTPOST_DELTA       0xE5
+#define MAPSEC_NONE                         0xE6
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

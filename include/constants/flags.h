@@ -506,17 +506,17 @@
 #define FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL 0x1D8
 #define FLAG_ENABLE_JUAN_MATCH_CALL          0x1D9
 
-#define FLAG_JENNINGS_DEFEATED                   0x1DA // Unused Flag
+#define FLAG_JENNINGS_DEFEATED               0x1DA // Unused Flag
 
 #define FLAG_SHOWN_MYSTIC_TICKET             0x1DB
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_PIPLUP_STARTER                   0x1DE // Unused Flag
-#define FLAG_CHIKORITA_STARTER                    0x1DF // Unused Flag
-#define FLAG_FENNEKIN_STARTER                   0x1E0 // Unused Flag
-#define FLAG_LEAH_HOUSE_INTERACTION                    0x1E1 // Unused Flag
-#define FLAG_LEAH_MARKET_INTERACTION                   0x1E2 // Unused Flag
+#define FLAG_PIPLUP_STARTER              0x1DE // Unused Flag
+#define FLAG_CHIKORITA_STARTER           0x1DF // Unused Flag
+#define FLAG_FENNEKIN_STARTER            0x1E0 // Unused Flag
+#define FLAG_AERITH_HOUSE_INTERACTION    0x1E1 // Unused Flag
+#define FLAG_AERITH_MARKET_INTERACTION   0x1E2 // Unused Flag
 #define FLAG_HARD_STONE                  0x1E3 // Unused Flag
 
 // Mystery Gift Flags (Unknown)
@@ -654,17 +654,17 @@
 
 #define FLAG_EXP_SHARE_ON  0x264 // Unused Flag
 #define FLAG_SOFT_SAND  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
+#define FLAG_GAP_PASS_PUZZLE  0x266 // Unused Flag
+#define FLAG_CAT_LADY_NEST_BALL  0x267 // Unused Flag
+#define FLAG_FELUNDITY_ETHER  0x268 // Unused Flag
+#define FLAG_FELUNDITY_BIGMUSHROOM  0x269 // Unused Flag
+#define FLAG_FELUNDITY_SCENARIO  0x26A // Unused Flag
+#define FLAG_ARCHER_DEFEAT_1  0x26B // Unused Flag
+#define FLAG_DELTA_LAB_ETHER  0x26C // Unused Flag
+#define FLAG_WALLEN_DEFEATED  0x26D // Unused Flag
+#define FLAG_DIANA_DELTA_LAB  0x26E // Unused Flag
+#define FLAG_PURRLOIN_SAVED  0x26F // Unused Flag
+#define FLAG_GLAMEOW_SAVED  0x270 // Unused Flag
 #define FLAG_UNUSED_0x271  0x271 // Unused Flag
 #define FLAG_UNUSED_0x272  0x272 // Unused Flag
 #define FLAG_UNUSED_0x273  0x273 // Unused Flag
@@ -1174,7 +1174,7 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
-#define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
+#define FLAG_ITEM_ROUTE_701_BRIGHT_POWDER                           0x468 // Unused Flag
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
@@ -1182,16 +1182,16 @@
 #define FLAG_SMOKE_BALL_OBTAINED                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
-#define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
+#define FLAG_LAMBDA_CAVE_MAWILE                                     0x470 // Unused Flag
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_ITEM_LAMBDACAVE_STAR_PIECE                             0x472 // Unused Flag
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
 #define FLAG_ITEM_ROUTE_111_ELIXIR                                  0x476
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
-#define FLAG_ITEM_ROUTE_701_BRIGHT_POWDER                                           0x479 // Unused Flag
+#define FLAG_ITEM_LAMBDACAVE_NUGGET                                 0x479 // Unused Flag
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C

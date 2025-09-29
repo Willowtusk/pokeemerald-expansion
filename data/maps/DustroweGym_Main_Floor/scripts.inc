@@ -207,17 +207,17 @@ DUSTROWE_ROCK_BREAK_2::
 	return
 
 
-Johnnys_Machamp::
+Johnnys_Machoke::
 # 194 "data/maps/DustroweGym_Main_Floor/scripts.pory"
 	lockall
 # 195 "data/maps/DustroweGym_Main_Floor/scripts.pory"
 	faceplayer
 # 196 "data/maps/DustroweGym_Main_Floor/scripts.pory"
-	playmoncry SPECIES_MACHAMP, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_MACHOKE, CRY_MODE_ENCOUNTER
 # 197 "data/maps/DustroweGym_Main_Floor/scripts.pory"
 	waitmoncry
 # 198 "data/maps/DustroweGym_Main_Floor/scripts.pory"
-	msgbox Johnnys_Machamp_Text_0, MSGBOX_AUTOCLOSE
+	msgbox Johnnys_Machoke_Text_0, MSGBOX_AUTOCLOSE
 # 199 "data/maps/DustroweGym_Main_Floor/scripts.pory"
 	releaseall
 	return
@@ -273,9 +273,9 @@ DUSTROWE_ROCK_BREAK_1_Text_0:
 # 143 "data/maps/DustroweGym_Main_Floor/scripts.pory"
 	.string "HIIIIYA$"
 
-Johnnys_Machamp_Text_0:
+Johnnys_Machoke_Text_0:
 # 198 "data/maps/DustroweGym_Main_Floor/scripts.pory"
-	.string "CHAAMP!$"
+	.string "CHOKEE!$"
 
 Leader_Johnny_Intro::
 # 53 "data/maps/DustroweGym_Main_Floor/scripts.pory"

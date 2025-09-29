@@ -29,7 +29,7 @@ script SELUNA_LILY_INTERACTION_1{
     removeobject(LOCALID_MYNPC)
     setflag(FLAG_SELUNA_CAVE_HIDE_MYNPC)
     setvar(VAR_MYNPC_FIRST_INTERACTION, 2)
-    setflag(FLAG_LEAH_HOUSE_INTERACTION)
+    setflag(FLAG_AERITH_HOUSE_INTERACTION)
     releaseall
 }
 
@@ -76,10 +76,10 @@ script Selune_Town_Lab_Sign{
     releaseall
 }
 
-script Selune_Town_Leahs_House_Sign{
+script Seluna_Town_Aerith_House_Sign{
     lockall
     msgbox(
-        "Leah's House"
+        "Aerith's House"
     )
     closemessage
     releaseall

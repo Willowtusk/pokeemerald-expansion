@@ -56,12 +56,13 @@ script CAMPER_LARRY_Route701{
 }
 
 text LARRY_701_INTRO{
-    "Hope you brought your camping supplies!\p"
+    "Hope you brought your camping supplies!\l"
     "I know I did!"
 }
 
 text LARRY_701_OUTRO{
-    "Guess I should have brought more firewood."
+    "Guess I should have brought more\n"
+    "firewood!"
 }
 
 script Rematch_Trainer_CAMPER_LARRY_701{

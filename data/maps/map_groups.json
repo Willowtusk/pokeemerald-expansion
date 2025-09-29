@@ -4,6 +4,7 @@
     "gMapGroup_IndoorSeluna",
     "gMapGroup_IndoorLambda",
     "gMapGroup_IndoorDustrowe",
+    "gMapGroup_IndoorFelundity",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -98,21 +99,30 @@
     "Underwater_Route125",
     "SelunaTown_General",
     "Route701",
+    "Route701_2",
     "Research_Lab_Lambda",
     "LambdaCave",
+    "LambdaCave_2",
+    "LambdaCave_3",
     "Dustrowe_Path",
     "DustroweCity",
-    "Route701_2",
-    "Route702"
+    "Route702",
+    "Route702_2",
+    "GapPass",
+    "FelundityForest1",
+    "FelundityForest2",
+    "FelundityTown",
+    "FelundityTownMain",
+    "Research_Lab_Delta",
+    "PorytilesTutorial",
+    "Research_Lab_Delta_2"
   ],
   "gMapGroup_IndoorSeluna": [
     "SelunaCave",
     "PlayerHouse",
     "Players_Room",
     "SelunaPokemonLab",
-    "LeahsHouse",
     "SelunaMarket",
-    "AerithsHouse",
     "Aerith_House"
   ],
   "gMapGroup_IndoorLambda": [
@@ -126,6 +136,19 @@
     "Dustrowe_Sister_Building",
     "Dustrowe_Brother_Building",
     "DustroweGym_Main_Floor"
+  ],
+  "gMapGroup_IndoorFelundity": [
+    "FelundityHouse1",
+    "FelundityBank",
+    "FelundityHouse2",
+    "FelundityFlowerShop",
+    "FelundityBaitShop",
+    "FelundityPokemonCenter",
+    "FelundityPokeMart",
+    "FelundityGym",
+    "FelundityGym2F",
+    "FelundityGym3F",
+    "FelundityGym4F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

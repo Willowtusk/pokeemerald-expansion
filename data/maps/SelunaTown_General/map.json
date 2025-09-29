@@ -2,7 +2,7 @@
   "id": "MAP_SELUNA_TOWN_GENERAL",
   "name": "SelunaTown_General",
   "layout": "LAYOUT_SELUNA_TOWN_GENERAL",
-  "music": "MUS_DEWFORD",
+  "music": "MUS_OLDALE",
   "region_map_section": "MAPSEC_SELUNA_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -60,7 +60,7 @@
       "x": 18,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_LEAHS_HOUSE",
+      "dest_map": "MAP_AERITH_HOUSE",
       "dest_warp_id": "0"
     },
     {
@@ -311,7 +311,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "Selune_Town_Leahs_House_Sign"
+      "script": "Seluna_Town_Aerith_House_Sign"
     }
   ]
 }

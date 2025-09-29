@@ -12006,6 +12006,213 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_LAMBDA_CAVE_2",
+          "base_label": "gLambdaCave_20",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_ROGGENROLA"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_ESPURR"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_ESPURR"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_ROGGENROLA"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_LITWICK"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_LAMBDA_CAVE_3",
+          "base_label": "gLambdaCave_30",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_LITWICK"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_ROGGENROLA"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_ESPURR"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_ESPURR"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_ROGGENROLA"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 9,
+                "species": "SPECIES_WOOBAT"
+              },
+              {
+                "min_level": 8,
+                "max_level": 10,
+                "species": "SPECIES_LITWICK"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_FELUNDITY_FOREST2",
+          "base_label": "gFelundityForest20",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_MEOWTH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_SKITTY"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_PURRLOIN"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_SPRIGATITO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_MEOWTH_ALOLA"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_SKITTY"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_GLAMEOW"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 20,
+                "max_level": 21,
+                "species": "SPECIES_SPRIGATITO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_PURRLOIN"
+              }
+            ]
+          }
         }
       ]
     },

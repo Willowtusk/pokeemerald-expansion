@@ -9,7 +9,7 @@ mapscripts SelunaCave_MapScripts {
 
 script GYM_RENOVATION_SIGN{
     lockall
-    msgbox("Under Renovations for the Seluna Gym")
+    msgbox("Under Renovations for the Seluna Gym.")
     closemessage
     releaseall
 }
@@ -27,7 +27,7 @@ script UMBRA_OLD_MAN{
     msgbox(format(
         "Hey youngster, how'd you end up here?\p"
         "You must be the new kid who just moved in.\p"
-        "Best get back to your family, a cave is no place for children"
+        "Best get back to your family, a cave is no place for children."
         ))
     closemessage
     setvar(VAR_OLD_MAN_SELUNACAVE, 1)

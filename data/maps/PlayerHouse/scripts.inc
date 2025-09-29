@@ -55,7 +55,7 @@ MOM_FIRST_VISIT_1:
 # 41 "data/maps/PlayerHouse/scripts.pory"
 	setvar VAR_TALK_TO_MOM_1, 1
 # 42 "data/maps/PlayerHouse/scripts.pory"
-	setflag FLAG_LEAH_MARKET_INTERACTION
+	setflag FLAG_AERITH_MARKET_INTERACTION
 # 44 "data/maps/PlayerHouse/scripts.pory"
 	closemessage
 # 45 "data/maps/PlayerHouse/scripts.pory"

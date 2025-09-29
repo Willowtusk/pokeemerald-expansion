@@ -2468,6 +2468,28 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
     return TRUE;
 }
 
+void ScrCmd_istypeinparty(struct ScriptContext *ctx)
+{
+    u8 i;
+    u16 species;
+    u8 type = ScriptReadByte(ctx);
+    struct Pokemon *pokemon;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        pokemon = &gPlayerParty[i];
+        if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG))
+        {
+            species = GetMonData(pokemon, MON_DATA_SPECIES);
+            if (gSpeciesInfo[species].types[0] == type || gSpeciesInfo[species].types[1] == type)
+            {
+                gSpecialVar_Result = TRUE;
+                return;
+            }
+        }
+    }
+    gSpecialVar_Result = FALSE;
+}
+
 void ScriptSetDoubleBattleFlag(struct ScriptContext *ctx)
 {
     sIsScriptedWildDouble = TRUE;

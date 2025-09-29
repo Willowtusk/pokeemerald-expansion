@@ -39,7 +39,7 @@ script MOM_FIRST_VISIT{
             
         ))
         setvar(VAR_TALK_TO_MOM_1, 1)
-        setflag(FLAG_LEAH_MARKET_INTERACTION)
+        setflag(FLAG_AERITH_MARKET_INTERACTION)
         
         closemessage
         releaseall

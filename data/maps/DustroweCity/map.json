@@ -129,7 +129,7 @@
       "elevation": 0,
       "var": "VAR_TALK_TO_MOM_1",
       "var_value": "6",
-      "script": "NULL"
+      "script": "DEFEAT_RIVAL_1"
     },
     {
       "type": "trigger",
@@ -138,7 +138,7 @@
       "elevation": 0,
       "var": "VAR_TALK_TO_MOM_1",
       "var_value": "6",
-      "script": "NULL"
+      "script": "DEFEAT_RIVAL_1"
     }
   ],
   "bg_events": [

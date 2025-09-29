@@ -1086,8 +1086,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/SelunaPokemonLab/scripts.inc"
 
-	.include "data/maps/LeahsHouse/scripts.inc"
-
 	.include "data/maps/SelunaMarket/scripts.inc"
 
 	.include "data/maps/Route701/scripts.inc"
@@ -1120,6 +1118,48 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/Route702/scripts.inc"
 
-	.include "data/maps/AerithsHouse/scripts.inc"
+	.include "data/maps/LambdaCave_2/scripts.inc"
+
+	.include "data/maps/LambdaCave_3/scripts.inc"
+
+	.include "data/maps/Route702_2/scripts.inc"
+
+	.include "data/maps/GapPass/scripts.inc"
 
 	.include "data/maps/Aerith_House/scripts.inc"
+
+	.include "data/maps/FelundityForest1/scripts.inc"
+
+	.include "data/maps/FelundityForest2/scripts.inc"
+
+	.include "data/maps/FelundityTown/scripts.inc"
+
+	.include "data/maps/FelundityTownMain/scripts.inc"
+
+	.include "data/maps/FelundityHouse1/scripts.inc"
+
+	.include "data/maps/FelundityBank/scripts.inc"
+
+	.include "data/maps/FelundityHouse2/scripts.inc"
+
+	.include "data/maps/FelundityFlowerShop/scripts.inc"
+
+	.include "data/maps/FelundityBaitShop/scripts.inc"
+
+	.include "data/maps/FelundityPokemonCenter/scripts.inc"
+
+	.include "data/maps/FelundityPokeMart/scripts.inc"
+
+	.include "data/maps/FelundityGym/scripts.inc"
+
+	.include "data/maps/FelundityGym2F/scripts.inc"
+
+	.include "data/maps/FelundityGym3F/scripts.inc"
+
+	.include "data/maps/FelundityGym4F/scripts.inc"
+
+	.include "data/maps/Research_Lab_Delta/scripts.inc"
+
+	.include "data/maps/PorytilesTutorial/scripts.inc"
+
+	.include "data/maps/Research_Lab_Delta_2/scripts.inc"

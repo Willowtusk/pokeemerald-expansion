@@ -87,55 +87,55 @@ CAMPER_LARRY_Route701::
 
 
 Rematch_Trainer_CAMPER_LARRY_701::
-# 68 "data/maps/Route701_2/scripts.pory"
+# 69 "data/maps/Route701_2/scripts.pory"
 	msgbox Rematch_Trainer_CAMPER_LARRY_701_Text_0, MSGBOX_YESNO
-# 70 "data/maps/Route701_2/scripts.pory"
+# 71 "data/maps/Route701_2/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Rematch_Trainer_CAMPER_LARRY_701_1
-# 74 "data/maps/Route701_2/scripts.pory"
+# 75 "data/maps/Route701_2/scripts.pory"
 	closemessage
 	end
 
 Rematch_Trainer_CAMPER_LARRY_701_1:
-# 71 "data/maps/Route701_2/scripts.pory"
+# 72 "data/maps/Route701_2/scripts.pory"
 	trainerbattle_no_intro TRAINER_ROUTE701_LARRY, LARRY_701_OUTRO
 	return
 
 
 Route_701_Lass_Battle::
-# 80 "data/maps/Route701_2/scripts.pory"
-	trainerbattle_single TRAINER_LASS_EMILY_701, Route_701_Lass_Intro, Route_701_Lass_Outro
 # 81 "data/maps/Route701_2/scripts.pory"
+	trainerbattle_single TRAINER_LASS_EMILY_701, Route_701_Lass_Intro, Route_701_Lass_Outro
+# 82 "data/maps/Route701_2/scripts.pory"
 	goto Rematch_Trainer_LASS_EMILY
 	return
 
 
 Rematch_Trainer_LASS_EMILY::
-# 85 "data/maps/Route701_2/scripts.pory"
+# 86 "data/maps/Route701_2/scripts.pory"
 	msgbox Rematch_Trainer_CAMPER_LARRY_701_Text_0, MSGBOX_YESNO
-# 87 "data/maps/Route701_2/scripts.pory"
+# 88 "data/maps/Route701_2/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Rematch_Trainer_LASS_EMILY_1
-# 91 "data/maps/Route701_2/scripts.pory"
+# 92 "data/maps/Route701_2/scripts.pory"
 	closemessage
 	end
 
 Rematch_Trainer_LASS_EMILY_1:
-# 88 "data/maps/Route701_2/scripts.pory"
+# 89 "data/maps/Route701_2/scripts.pory"
 	trainerbattle_no_intro TRAINER_LASS_EMILY_701, Route_701_Lass_Outro
 	return
 
 
 SEA_INCENSE_OBTAINED::
-# 105 "data/maps/Route701_2/scripts.pory"
-	lockall
 # 106 "data/maps/Route701_2/scripts.pory"
-	giveitem ITEM_SEA_INCENSE, 1
+	lockall
 # 107 "data/maps/Route701_2/scripts.pory"
-	removeobject 7
+	giveitem ITEM_SEA_INCENSE, 1
 # 108 "data/maps/Route701_2/scripts.pory"
-	setflag FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE
+	removeobject 7
 # 109 "data/maps/Route701_2/scripts.pory"
+	setflag FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE
+# 110 "data/maps/Route701_2/scripts.pory"
 	releaseall
 	return
 
@@ -162,22 +162,23 @@ BOY_ROUTE701_Text_0:
 	.string "I'm a long way from home...$"
 
 Rematch_Trainer_CAMPER_LARRY_701_Text_0:
-# 69 "data/maps/Route701_2/scripts.pory"
+# 70 "data/maps/Route701_2/scripts.pory"
 	.string "Want to rematch this Trainer?$"
 
 LARRY_701_INTRO::
 # 58 "data/maps/Route701_2/scripts.pory"
-	.string "Hope you brought your camping supplies!\p"
+	.string "Hope you brought your camping supplies!\l"
 	.string "I know I did!$"
 
 LARRY_701_OUTRO::
 # 63 "data/maps/Route701_2/scripts.pory"
-	.string "Guess I should have brought more firewood.$"
+	.string "Guess I should have brought more\n"
+	.string "firewood!$"
 
 Route_701_Lass_Intro::
-# 96 "data/maps/Route701_2/scripts.pory"
+# 97 "data/maps/Route701_2/scripts.pory"
 	.string "I just love cute Pokémon!$"
 
 Route_701_Lass_Outro::
-# 100 "data/maps/Route701_2/scripts.pory"
+# 101 "data/maps/Route701_2/scripts.pory"
 	.string "Aww my cuties didn't win.$"

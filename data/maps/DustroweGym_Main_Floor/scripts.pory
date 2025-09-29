@@ -190,11 +190,11 @@ script DUSTROWE_ROCK_BREAK_2{
     releaseall
 }
 
-script Johnnys_Machamp{
+script Johnnys_Machoke{
     lockall
     faceplayer
-    playmoncry(SPECIES_MACHAMP, CRY_MODE_ENCOUNTER)
+    playmoncry(SPECIES_MACHOKE, CRY_MODE_ENCOUNTER)
     waitmoncry
-    msgbox("CHAAMP!", MSGBOX_AUTOCLOSE)
+    msgbox("CHOKEE!", MSGBOX_AUTOCLOSE)
     releaseall
 }

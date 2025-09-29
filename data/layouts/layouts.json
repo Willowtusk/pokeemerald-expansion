@@ -4462,16 +4462,6 @@
       "blockdata_filepath": "data/layouts/SelunaPokemonLab/map.bin"
     },
     {
-      "id": "LAYOUT_LEAHS_HOUSE",
-      "name": "LeahsHouse_Layout",
-      "width": 15,
-      "height": 15,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/LeahsHouse/border.bin",
-      "blockdata_filepath": "data/layouts/LeahsHouse/map.bin"
-    },
-    {
       "id": "LAYOUT_SELUNA_MARKET",
       "name": "SelunaMarket_Layout",
       "width": 12,
@@ -4632,24 +4622,234 @@
       "blockdata_filepath": "data/layouts/Route702/map.bin"
     },
     {
-      "id": "LAYOUT_AERITHS_HOUSE",
-      "name": "AerithsHouse_Layout",
-      "width": 20,
-      "height": 20,
+      "id": "LAYOUT_LAMBDA_CAVE_2",
+      "name": "LambdaCave_2_Layout",
+      "width": 60,
+      "height": 35,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/AerithsHouse/border.bin",
-      "blockdata_filepath": "data/layouts/AerithsHouse/map.bin"
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/LambdaCave_2/border.bin",
+      "blockdata_filepath": "data/layouts/LambdaCave_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_LAMBDA_CAVE_3",
+      "name": "LambdaCave_3_Layout",
+      "width": 22,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/LambdaCave_3/border.bin",
+      "blockdata_filepath": "data/layouts/LambdaCave_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE702_2",
+      "name": "Route702_2_Layout",
+      "width": 54,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route702_2/border.bin",
+      "blockdata_filepath": "data/layouts/Route702_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_GAP_PASS",
+      "name": "GapPass_Layout",
+      "width": 25,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GapPass/border.bin",
+      "blockdata_filepath": "data/layouts/GapPass/map.bin"
     },
     {
       "id": "LAYOUT_AERITH_HOUSE",
       "name": "Aerith_House_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Aerith_House/border.bin",
+      "blockdata_filepath": "data/layouts/Aerith_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_FOREST1",
+      "name": "FelundityForest1_Layout",
+      "width": 10,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/FelundityForest1/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityForest1/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_FOREST2",
+      "name": "FelundityForest2_Layout",
+      "width": 48,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/FelundityForest2/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityForest2/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_TOWN",
+      "name": "FelundityTown_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/FelundityTown/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_TOWN_MAIN",
+      "name": "FelundityTownMain_Layout",
+      "width": 46,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/FelundityTownMain/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityTownMain/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_HOUSE1",
+      "name": "FelundityHouse1_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/FelundityHouse1/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityHouse1/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_BANK",
+      "name": "FelundityBank_Layout",
+      "width": 18,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/FelundityBank/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityBank/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_HOUSE2",
+      "name": "FelundityHouse2_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonSchool",
+      "border_filepath": "data/layouts/FelundityHouse2/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityHouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_FLOWER_SHOP",
+      "name": "FelundityFlowerShop_Layout",
+      "width": 15,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PrettyPetalFlowerShop",
+      "border_filepath": "data/layouts/FelundityFlowerShop/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityFlowerShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_BAIT_SHOP",
+      "name": "FelundityBaitShop_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/FelundityBaitShop/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityBaitShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_POKEMON_CENTER",
+      "name": "FelundityPokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/FelundityPokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityPokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_POKE_MART",
+      "name": "FelundityPokeMart_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/FelundityPokeMart/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityPokeMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_GYM",
+      "name": "FelundityGym_Layout",
+      "width": 12,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/FelundityGym/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_GYM2F",
+      "name": "FelundityGym2F_Layout",
+      "width": 10,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/FelundityGym2F/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityGym2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_GYM3F",
+      "name": "FelundityGym3F_Layout",
+      "width": 16,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/FelundityGym3F/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityGym3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_FELUNDITY_GYM4F",
+      "name": "FelundityGym4F_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/FelundityGym4F/border.bin",
+      "blockdata_filepath": "data/layouts/FelundityGym4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RESEARCH_LAB_DELTA",
+      "name": "Research_Lab_Delta_Layout",
+      "width": 20,
+      "height": 38,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Research_Lab_Delta/border.bin",
+      "blockdata_filepath": "data/layouts/Research_Lab_Delta/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORYTILES_TUTORIAL",
+      "name": "PorytilesTutorial_Layout",
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Aerith_House/border.bin",
-      "blockdata_filepath": "data/layouts/Aerith_House/map.bin"
+      "secondary_tileset": "gTileset_Research_Outpost_Delta",
+      "border_filepath": "data/layouts/PorytilesTutorial/border.bin",
+      "blockdata_filepath": "data/layouts/PorytilesTutorial/map.bin"
+    },
+    {
+      "id": "LAYOUT_RESEARCH_LAB_DELTA_2",
+      "name": "Research_Lab_Delta_2_Layout",
+      "width": 16,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Research_Lab_Delta_2/border.bin",
+      "blockdata_filepath": "data/layouts/Research_Lab_Delta_2/map.bin"
     }
   ]
 }

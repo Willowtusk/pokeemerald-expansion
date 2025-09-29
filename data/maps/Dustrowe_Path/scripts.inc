@@ -33,8 +33,6 @@ DUSTROWE_PATH_LILY_BATTLE::
 	delay 48
 # 21 "data/maps/Dustrowe_Path/scripts.pory"
 	trainerbattle_single TRAINER_LILY_1, LILY_DUSTROWE_INTRO, LILY_DUSTROWE_OUTRO, LILY_AND_WINNIE_LEAVE_DUSTROWE
-# 22 "data/maps/Dustrowe_Path/scripts.pory"
-	setvar VAR_TALK_TO_MOM_1, 7
 	return
 
 
@@ -74,100 +72,102 @@ LILY_AND_WINNIE_LEAVE_DUSTROWE::
 # 52 "data/maps/Dustrowe_Path/scripts.pory"
 	removeobject 1
 # 53 "data/maps/Dustrowe_Path/scripts.pory"
-	setflag FLAG_LILY_DEFEATED_1
+	setvar VAR_TALK_TO_MOM_1, 7
 # 54 "data/maps/Dustrowe_Path/scripts.pory"
+	setflag FLAG_LILY_DEFEATED_1
+# 55 "data/maps/Dustrowe_Path/scripts.pory"
 	releaseall
 	return
 
 
-# 69 "data/maps/Dustrowe_Path/scripts.pory"
+# 70 "data/maps/Dustrowe_Path/scripts.pory"
 LILY_LEAVES_DUSTROWE_PATH:
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 70 "data/maps/Dustrowe_Path/scripts.pory"
+# 71 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
 	step_end
 
-# 73 "data/maps/Dustrowe_Path/scripts.pory"
-WINNIE_LEAVES_DUSTROWE_PATH:
 # 74 "data/maps/Dustrowe_Path/scripts.pory"
+WINNIE_LEAVES_DUSTROWE_PATH:
+# 75 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_down
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
-# 75 "data/maps/Dustrowe_Path/scripts.pory"
+# 76 "data/maps/Dustrowe_Path/scripts.pory"
 	walk_right
 	step_end
 
 HIKER_DUSTROWE_PATH::
-# 79 "data/maps/Dustrowe_Path/scripts.pory"
-	lockall
 # 80 "data/maps/Dustrowe_Path/scripts.pory"
-	faceplayer
+	lockall
 # 81 "data/maps/Dustrowe_Path/scripts.pory"
+	faceplayer
+# 82 "data/maps/Dustrowe_Path/scripts.pory"
 	msgbox HIKER_DUSTROWE_PATH_Text_0
-# 85 "data/maps/Dustrowe_Path/scripts.pory"
-	waitmessage
 # 86 "data/maps/Dustrowe_Path/scripts.pory"
+	waitmessage
+# 87 "data/maps/Dustrowe_Path/scripts.pory"
 	releaseall
 	return
 
 
 QUICK_CLAW_OBTAINED::
-# 90 "data/maps/Dustrowe_Path/scripts.pory"
-	lockall
 # 91 "data/maps/Dustrowe_Path/scripts.pory"
-	giveitem ITEM_QUICK_CLAW, 1
+	lockall
 # 92 "data/maps/Dustrowe_Path/scripts.pory"
-	removeobject 5
+	giveitem ITEM_QUICK_CLAW, 1
 # 93 "data/maps/Dustrowe_Path/scripts.pory"
-	setflag FLAG_RECEIVED_QUICK_CLAW
+	removeobject 5
 # 94 "data/maps/Dustrowe_Path/scripts.pory"
+	setflag FLAG_RECEIVED_QUICK_CLAW
+# 95 "data/maps/Dustrowe_Path/scripts.pory"
 	releaseall
 	return
 
 
 SHARP_BEAK_OBTAINED::
-# 98 "data/maps/Dustrowe_Path/scripts.pory"
-	lockall
 # 99 "data/maps/Dustrowe_Path/scripts.pory"
-	giveitem ITEM_SHARP_BEAK, 1
+	lockall
 # 100 "data/maps/Dustrowe_Path/scripts.pory"
-	removeobject 4
+	giveitem ITEM_SHARP_BEAK, 1
 # 101 "data/maps/Dustrowe_Path/scripts.pory"
-	setflag FLAG_RECEIVED_SHARP_BEAK
+	removeobject 4
 # 102 "data/maps/Dustrowe_Path/scripts.pory"
+	setflag FLAG_RECEIVED_SHARP_BEAK
+# 103 "data/maps/Dustrowe_Path/scripts.pory"
 	releaseall
 	return
 
@@ -194,13 +194,13 @@ LILY_AND_WINNIE_LEAVE_DUSTROWE_Text_3:
 	.string "I'll see you later {PLAYER}!$"
 
 HIKER_DUSTROWE_PATH_Text_0:
-# 82 "data/maps/Dustrowe_Path/scripts.pory"
+# 83 "data/maps/Dustrowe_Path/scripts.pory"
 	.string "Howdy there partner!\p"
 	.string "Up ahead you'll hit Dustrowe City.\n"
 	.string "A miner's paradise!$"
 
 LILY_DUSTROWE_INTRO::
-# 57 "data/maps/Dustrowe_Path/scripts.pory"
+# 58 "data/maps/Dustrowe_Path/scripts.pory"
 	.string "Oh Hey {PLAYER}!\p"
 	.string "I was wondering when I would\nsee you again!\p"
 	.string "I'm just taking WINNIE out\nfor a little stroll.\p"
@@ -208,5 +208,5 @@ LILY_DUSTROWE_INTRO::
 	.string "Here, let me show you all the\ncool friends i've caught!$"
 
 LILY_DUSTROWE_OUTRO::
-# 65 "data/maps/Dustrowe_Path/scripts.pory"
+# 66 "data/maps/Dustrowe_Path/scripts.pory"
 	.string "Hehe that was fun!$"

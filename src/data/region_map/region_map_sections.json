@@ -1758,6 +1758,38 @@
       "y": 0,
       "width": 1,
       "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_702",
+      "name": "Route 702",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_FELUNDITY_FOREST",
+      "name": "Felundity Forest",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_FELUNDITY_TOWN",
+      "name": "Felundity Town",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    }
+    {
+      "map_section": "MAPSEC_RESEARCH_OUTPOST_DELTA",
+      "name": "Delta Facility",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }

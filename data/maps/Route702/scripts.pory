@@ -25,7 +25,8 @@ script Martial_Gauntlet_Man{
     )
     if(var(VAR_RESULT) == YES){
         turnobject(OBJ_EVENT_ID_PLAYER, DIR_SOUTH)
-        trainerbattle_single(TRAINER_BLACK_BELT_JOEY, BLACK_BELT_JOEY_INTRO, BLACK_BELT_JOEY_OUTRO, MARTIAL_GAUNTLET_1st_TRAINER_SUCCESS)
+        trainerbattle_no_intro(TRAINER_BLACK_BELT_JOEY, BLACK_BELT_JOEY_OUTRO,)
+        goto(MARTIAL_GAUNTLET_1st_TRAINER_SUCCESS)
     }
     }
     if(var(VAR_RESULT) == NO){
@@ -41,11 +42,6 @@ script Martial_Gauntlet_Man{
     end
 }
 
-
-text BLACK_BELT_JOEY_INTRO{
-    "Good answer!\p"
-    "Your first opponent shall be me!"
-}
 
 
 text BLACK_BELT_JOEY_OUTRO{
@@ -122,7 +118,7 @@ script Talk_To_Gauntlet_Man_2{
 script Talk_To_Gauntlet_Man_3{
     lockall
     applymovement(OBJ_EVENT_ID_PLAYER, SIMPLE_MOVE_UP)
-    waitmovement(0)
+    waitmovement(0)  
     turnobject(OBJ_EVENT_ID_PLAYER, DIR_SOUTH)
     goto(Martial_Gauntlet_Man)
 }
@@ -183,7 +179,7 @@ script Mienfoo_Onlooker{
 }
 
 
-script COOLTRAINER_ALLY{
+script CHOSEN_ALLY{
     lockall
     faceplayer
     if(!(defeated(TRAINER_ELITE_ALLY))){
@@ -195,12 +191,12 @@ script COOLTRAINER_ALLY{
     ), MSGBOX_YESNO
     )
     if(var(VAR_RESULT) == YES){
-    trainerbattle_single(TRAINER_ELITE_ALLY, ALLY_INTRO, ALLY_OUTRO, ALLY_GIVE_LEFTOVERS)
-    }
+    trainerbattle_single(TRAINER_ELITE_ALLY, ALLY_INTRO, ALLY_OUTRO, ALLY_GIVE_CHOICE_SCARF)
     }
     elif(var(VAR_RESULT) == NO){
         msgbox("Ah I see, how unfortunate.")
         closemessage
+    }
     }
     elif(defeated(TRAINER_ELITE_ALLY)){
         msgbox("We will be watching you.")
@@ -217,9 +213,9 @@ text ALLY_OUTRO{
     "You are certainly promising."
 }
 
-script ALLY_GIVE_LEFTOVERS{
+script ALLY_GIVE_CHOICE_SCARF{
     msgbox("Here, take this for besting me.", MSGBOX_AUTOCLOSE)
-    giveitem(ITEM_LEFTOVERS, 1)
+    giveitem(ITEM_CHOICE_SCARF, 1)
     releaseall
 }
 

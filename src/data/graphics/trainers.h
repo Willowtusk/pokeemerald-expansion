@@ -1,8 +1,29 @@
 #include "constants/trainers.h"
 #include "data.h"
 
+const u32 gTrainerFrontPic_RocketGruntM[] = INCBIN_U32("graphics/trainers/front_pics/rocket_m.4bpp.lz");
+const u32 gTrainerPalette_RocketGruntM[] = INCBIN_U32("graphics/trainers/front_pics/rocket_m.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketGruntF[] = INCBIN_U32("graphics/trainers/front_pics/rocket_f.4bpp.lz");
+const u32 gTrainerPalette_RocketGruntF[] = INCBIN_U32("graphics/trainers/front_pics/rocket_f.gbapal.lz");
+
+const u32 gTrainerFrontPic_RocketArcher[] = INCBIN_U32("graphics/trainers/front_pics/archer.4bpp.lz");
+const u32 gTrainerPalette_RocketArcher[] = INCBIN_U32("graphics/trainers/front_pics/archer.gbapal.lz");
+
+const u32 gTrainerFrontPic_GymLeaderDiana[] = INCBIN_U32("graphics/trainers/front_pics/gym_leader_diana.4bpp.lz");
+const u32 gTrainerPalette_GymLeaderDiana[] = INCBIN_U32("graphics/trainers/front_pics/gym_leader_diana.gbapal.lz");
+
+const u32 gTrainerFrontPic_RivalAerith[] = INCBIN_U32("graphics/trainers/front_pics/rival_aerith.4bpp.lz");
+const u32 gTrainerPalette_RivalAerith[] = INCBIN_U32("graphics/trainers/front_pics/rival_aerith.gbapal.lz");
+
 const u32 gTrainerFrontPic_HelixScientist[] = INCBIN_U32("graphics/trainers/front_pics/helix_scientist.4bpp.lz");
 const u32 gTrainerPalette_HelixScientist[] = INCBIN_U32("graphics/trainers/front_pics/helix_scientist.gbapal.lz");
+
+const u32 gTrainerFrontPic_GymLeaderJohnny[] = INCBIN_U32("graphics/trainers/front_pics/gym_leader_johnny.4bpp.lz");
+const u32 gTrainerPalette_GymLeaderJohnny[] = INCBIN_U32("graphics/trainers/front_pics/gym_leader_johnny.gbapal.lz");
+
+const u32 gTrainerFrontPic_ChosenFemale[] = INCBIN_U32("graphics/trainers/front_pics/chosen_female.4bpp.lz");
+const u32 gTrainerPalette_ChosenFemale[] = INCBIN_U32("graphics/trainers/front_pics/chosen_female.gbapal.lz");
 
 const u32 gTrainerFrontPic_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.4bpp.lz");
 const u32 gTrainerPalette_Hiker[] = INCBIN_U32("graphics/trainers/front_pics/hiker.gbapal.lz");
@@ -405,6 +426,13 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(RS_BRENDAN, RubySapphireBrendan),
     TRAINER_SPRITE(RS_MAY, RubySapphireMay),
     TRAINER_SPRITE(HELIX_SCIENTIST, HelixScientist),
+    TRAINER_SPRITE(GYM_LEADER_JOHNNY, GymLeaderJohnny),
+    TRAINER_SPRITE(CHOSEN_FEMALE, ChosenFemale),
+    TRAINER_SPRITE(RIVAL_AERITH, RivalAerith),
+    TRAINER_SPRITE(GYM_LEADER_DIANA, GymLeaderDiana),
+    TRAINER_SPRITE(ROCKET_ARCHER, RocketArcher),
+    TRAINER_SPRITE(ROCKET_GRUNT_F, RocketGruntF),
+    TRAINER_SPRITE(ROCKET_GRUNT_M, RocketGruntM),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

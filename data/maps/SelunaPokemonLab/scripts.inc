@@ -62,7 +62,7 @@ ChoosingAStarter_Piplup_9:
 
 ChoosingAStarter_Piplup_12:
 # 15 "data/maps/SelunaPokemonLab/scripts.pory"
-	clearflag FLAG_LEAH_HOUSE_INTERACTION
+	clearflag FLAG_AERITH_HOUSE_INTERACTION
 # 16 "data/maps/SelunaPokemonLab/scripts.pory"
 	setvar VAR_TALK_TO_MOM_1, 3
 # 17 "data/maps/SelunaPokemonLab/scripts.pory"
@@ -70,7 +70,7 @@ ChoosingAStarter_Piplup_12:
 # 18 "data/maps/SelunaPokemonLab/scripts.pory"
 	msgbox ChoosingAStarter_Piplup_Text_1
 # 19 "data/maps/SelunaPokemonLab/scripts.pory"
-	removeobject 2
+	removeobject 4
 # 20 "data/maps/SelunaPokemonLab/scripts.pory"
 	setflag FLAG_PIPLUP_STARTER
 # 21 "data/maps/SelunaPokemonLab/scripts.pory"
@@ -87,7 +87,7 @@ ChoosingAStarter_Piplup_13:
 # 27 "data/maps/SelunaPokemonLab/scripts.pory"
 	msgbox ChoosingAStarter_Piplup_Text_1
 # 28 "data/maps/SelunaPokemonLab/scripts.pory"
-	removeobject 2
+	removeobject 4
 # 29 "data/maps/SelunaPokemonLab/scripts.pory"
 	setvar VAR_TALK_TO_MOM_1, 3
 # 30 "data/maps/SelunaPokemonLab/scripts.pory"
@@ -196,7 +196,7 @@ ChoosingAStarter_Chikorita_9:
 
 ChoosingAStarter_Chikorita_12:
 # 92 "data/maps/SelunaPokemonLab/scripts.pory"
-	clearflag FLAG_LEAH_HOUSE_INTERACTION
+	clearflag FLAG_AERITH_HOUSE_INTERACTION
 # 93 "data/maps/SelunaPokemonLab/scripts.pory"
 	setvar VAR_TALK_TO_MOM_1, 3
 # 94 "data/maps/SelunaPokemonLab/scripts.pory"
@@ -293,7 +293,7 @@ ChoosingAStarter_Fennekin_9:
 
 ChoosingAStarter_Fennekin_12:
 # 145 "data/maps/SelunaPokemonLab/scripts.pory"
-	clearflag FLAG_LEAH_HOUSE_INTERACTION
+	clearflag FLAG_AERITH_HOUSE_INTERACTION
 # 146 "data/maps/SelunaPokemonLab/scripts.pory"
 	setvar VAR_TALK_TO_MOM_1, 3
 # 147 "data/maps/SelunaPokemonLab/scripts.pory"
@@ -301,7 +301,7 @@ ChoosingAStarter_Fennekin_12:
 # 148 "data/maps/SelunaPokemonLab/scripts.pory"
 	msgbox ChoosingAStarter_Fennekin_Text_1
 # 149 "data/maps/SelunaPokemonLab/scripts.pory"
-	removeobject 4
+	removeobject 2
 # 150 "data/maps/SelunaPokemonLab/scripts.pory"
 	setflag FLAG_FENNEKIN_STARTER
 # 151 "data/maps/SelunaPokemonLab/scripts.pory"
@@ -318,7 +318,7 @@ ChoosingAStarter_Fennekin_13:
 # 157 "data/maps/SelunaPokemonLab/scripts.pory"
 	msgbox ChoosingAStarter_Fennekin_Text_1
 # 158 "data/maps/SelunaPokemonLab/scripts.pory"
-	removeobject 4
+	removeobject 2
 # 159 "data/maps/SelunaPokemonLab/scripts.pory"
 	setvar VAR_TALK_TO_MOM_1, 3
 # 160 "data/maps/SelunaPokemonLab/scripts.pory"
@@ -540,7 +540,7 @@ Professor_ChooseYourStarter_MOVE_TWO_Text_0:
 	.string "Have you ever thought about traveling\n"
 	.string "the region?\p"
 	.string "Me and mom think it would be good for\n"
-	.string "you to go out and see the world.\p"
+	.string "you.\p"
 	.string "But, you can't travel the world without\n"
 	.string "a companion can you?\p"
 	.string "I think it's finally time for you to get\n"
@@ -553,8 +553,7 @@ DAD_LAB_CONVO_1_Text_0:
 # 248 "data/maps/SelunaPokemonLab/scripts.pory"
 	.string "You should go see our new neighbor that\n"
 	.string "just moved in last week.\p"
-	.string "She seems nice, I think her name is\n"
-	.string "Leah.$"
+	.string "Now what was her name again?$"
 
 DAD_LAB_CONVO_1_Text_1:
 # 256 "data/maps/SelunaPokemonLab/scripts.pory"

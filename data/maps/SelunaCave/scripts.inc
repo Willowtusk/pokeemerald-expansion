@@ -67,7 +67,7 @@ SELUNA_OLD_MAN_DIALOGUE_1::
 
 GYM_RENOVATION_SIGN_Text_0:
 # 12 "data/maps/SelunaCave/scripts.pory"
-	.string "Under Renovations for the Seluna Gym$"
+	.string "Under Renovations for the Seluna Gym.$"
 
 UMBRA_OLD_MAN_Text_0:
 # 28 "data/maps/SelunaCave/scripts.pory"
@@ -75,7 +75,7 @@ UMBRA_OLD_MAN_Text_0:
 	.string "You must be the new kid who just moved\n"
 	.string "in.\p"
 	.string "Best get back to your family, a cave is\n"
-	.string "no place for children$"
+	.string "no place for children.$"
 
 SELUNA_OLD_MAN_DIALOGUE_1_Text_0:
 # 43 "data/maps/SelunaCave/scripts.pory"

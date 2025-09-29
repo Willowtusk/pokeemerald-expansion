@@ -9257,7 +9257,7 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Oran Berry"),
         .pluralName = _("Oran Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 200,
         .holdEffect = HOLD_EFFECT_RESTORE_HP,
         .holdEffectParam = 10,
         .description = COMPOUND_STRING(
@@ -9318,7 +9318,7 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Sitrus Berry"),
         .pluralName = _("Sitrus Berries"),
-        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 20,
+        .price = (I_BERRY_PRICE >= GEN_8) ? 80 : 200,
         #if I_SITRUS_BERRY_HEAL >= GEN_4
             .holdEffect = HOLD_EFFECT_RESTORE_PCT_HP,
             .holdEffectParam = 25,
@@ -10688,19 +10688,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_GIGA_DRAIN,
     },
 
-    [ITEM_TM_SAFEGUARD] =
+    [ITEM_TM_SCALD] =
     {
         .name = _("TM20"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Prevents status\n"
-            "abnormality with a\n"
-            "mystical power."),
+            "Shoots a jet of\n"
+            "hot water that\n"
+            "may cause burn."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_SAFEGUARD,
+        .secondaryId = MOVE_SCALD,
     },
 
     [ITEM_TM_FRUSTRATION] =

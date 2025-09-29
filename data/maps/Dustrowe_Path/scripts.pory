@@ -19,7 +19,7 @@ script DUSTROWE_PATH_LILY_BATTLE{
     waitmovement(0)
     delay(48)
     trainerbattle_single(TRAINER_LILY_1, LILY_DUSTROWE_INTRO, LILY_DUSTROWE_OUTRO, LILY_AND_WINNIE_LEAVE_DUSTROWE)
-    setvar(VAR_TALK_TO_MOM_1, 7)
+    
 }
 
 
@@ -50,6 +50,7 @@ script LILY_AND_WINNIE_LEAVE_DUSTROWE{
     waitmovement(1)
     removeobject(2)
     removeobject(1)
+    setvar(VAR_TALK_TO_MOM_1, 7)
     setflag(FLAG_LILY_DEFEATED_1)
     releaseall
 }

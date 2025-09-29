@@ -20,13 +20,13 @@ mart Seluna_Mart{
     ITEM_TM10
 }
 
-script Leah_Market_Battle{
+script Aerith_Market_Battle{
 
-    trainerbattle_single(TRAINER_LEAH_1, Leah_Market_Intro, Leah_Market_Outro, Leah_Market_Leave)
+    trainerbattle_single(TRAINER_AERITH_1, Aerith_Market_Intro, Aerith_Market_Outro, Aerith_Market_Leave)
 }
 
 
-text Leah_Market_Intro{
+text Aerith_Market_Intro{
     "Hey {PLAYER}!\p"
     "This market has so much cool stuff!\p"
     "I forgot to mention this, but I\n"
@@ -34,12 +34,12 @@ text Leah_Market_Intro{
     "In fact, we should battle right now!"
 }
 
-text Leah_Market_Outro{
-    "Wow you just got your first Pokemon\n"
-    "and you're already that strong?\p"
+text Aerith_Market_Outro{
+    "You just got your first Pokemon\n"
+    "and you're already that strong?"
 }
 
-script Leah_Market_Leave{
+script Aerith_Market_Leave{
     lockall
     msgbox(format(
         "Wow you're crazy strong!\p"
@@ -66,7 +66,7 @@ script Leah_Market_Leave{
     ))
     fadescreen(FADE_TO_BLACK)
     removeobject(2)
-    setflag(FLAG_LEAH_MARKET_INTERACTION)
+    setflag(FLAG_AERITH_MARKET_INTERACTION)
     fadescreen(FADE_FROM_BLACK)
     setvar(VAR_TALK_TO_MOM_1, 6)
     releaseall

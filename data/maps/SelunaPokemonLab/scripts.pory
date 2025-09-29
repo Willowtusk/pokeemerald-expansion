@@ -12,11 +12,11 @@ script ChoosingAStarter_Piplup{
         if(var(VAR_RESULT) == YES){
             givemon (SPECIES_PIPLUP, 5)
             if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
-                clearflag(FLAG_LEAH_HOUSE_INTERACTION)
+                clearflag(FLAG_AERITH_HOUSE_INTERACTION)
                 setvar(VAR_TALK_TO_MOM_1, 3)
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Piplup!")
-                removeobject(2)
+                removeobject(4)
                 setflag(FLAG_PIPLUP_STARTER)
                 setflag(FLAG_SYS_POKEMON_GET)
                 call(NicknamePartyMon)
@@ -25,7 +25,7 @@ script ChoosingAStarter_Piplup{
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Piplup!")
-                removeobject(2)
+                removeobject(4)
                 setvar(VAR_TALK_TO_MOM_1, 3)
                 setflag(FLAG_PIPLUP_STARTER)
                 call(NicknameBoxMon)
@@ -89,7 +89,7 @@ script ChoosingAStarter_Chikorita{
         if(var(VAR_RESULT) == YES){
             givemon (SPECIES_CHIKORITA, 5)
             if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
-                clearflag(FLAG_LEAH_HOUSE_INTERACTION)
+                clearflag(FLAG_AERITH_HOUSE_INTERACTION)
                 setvar(VAR_TALK_TO_MOM_1, 3)
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Chikorita!")
@@ -142,11 +142,11 @@ script ChoosingAStarter_Fennekin{
         if(var(VAR_RESULT) == YES){
             givemon (SPECIES_FENNEKIN, 5)
             if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
-                clearflag(FLAG_LEAH_HOUSE_INTERACTION)
+                clearflag(FLAG_AERITH_HOUSE_INTERACTION)
                 setvar(VAR_TALK_TO_MOM_1, 3)
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Fennekin!")
-                removeobject(4)
+                removeobject(2)
                 setflag(FLAG_FENNEKIN_STARTER)
                 setflag(FLAG_SYS_POKEMON_GET)
                 call(NicknamePartyMon)
@@ -155,7 +155,7 @@ script ChoosingAStarter_Fennekin{
             elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
                 playfanfare(MUS_OBTAIN_ITEM)
                 msgbox("Received Fennekin!")
-                removeobject(4)
+                removeobject(2)
                 setvar(VAR_TALK_TO_MOM_1, 3)
                 setflag(FLAG_FENNEKIN_STARTER)
                 call(NicknameBoxMon)
@@ -216,7 +216,7 @@ script Professor_ChooseYourStarter_MOVE_TWO{
         "There you are!\n"
         "I've been trying to get ahold of you all day.\p"
         "Have you ever thought about traveling the region?\p"
-        "Me and mom think it would be good for you to go out and see the world.\p"
+        "Me and mom think it would be good for you.\p"
         "But, you can't travel the world without a companion can you?\p"
         "I think it's finally time for you to get a Pokemon {PLAYER}.\p"
         "My field research has allowed me to spare some Pokemon for your journey!\p"
@@ -246,7 +246,7 @@ script DAD_LAB_CONVO_1{
     if (var(VAR_TALK_TO_MOM_1) <= 5){
         msgbox(format(
         "You should go see our new neighbor that just moved in last week.\p"
-        "She seems nice, I think her name is Leah."
+        "Now what was her name again?"
     ))
     closemessage
     releaseall
